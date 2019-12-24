@@ -11,13 +11,15 @@ module.exports = {
         'error': 'var(--text-error-color)',
         'hover': 'var(--text-hover-color)',
         'focus': 'var(--text-focus-color)',
+        'skill': 'var(--text-skill-color)',
       },
       backgroundColor: {
         page: 'var(--page-background-color)',
         card: 'var(--card-background-color)',
         button: 'var(--button-background-color)',
-        header: 'var(--header-background-color)'
-
+        header: 'var(--header-background-color)',
+        skill: 'var(--skill-background-color)',
+        contact: 'var(--contact-background-color)',
       }
     }
   },

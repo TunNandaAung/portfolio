@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-cloak>
     <div id="nav" class="bg-header">
       <div class="md:px-8">
         <nav class="relative flex flex-wrap items-center justify-between md:py-4">
@@ -33,13 +33,13 @@
             class="hidden md:block md:ml-10 md:flex md:items-baseline md:justify-between md:bg-transparent"
           >
             <div class="lg:absolute inset-0 flex items-center justify-center">
-              <a href="#" class="text-sm font-medium text-default hover:text-hover">Home</a>
-              <a href="#" class="ml-10 text-sm font-medium text-default hover:text-hover">Skill</a>
-              <a href="#" class="ml-10 text-sm font-medium text-default hover:text-hover">Contact</a>
+              <a href="#" class="text-lg font-medium text-default hover:text-hover">Home</a>
+              <a href="#" class="ml-10 text-lg font-medium text-default hover:text-hover">Skill</a>
+              <a href="#" class="ml-10 text-lg font-medium text-default hover:text-hover">Contact</a>
             </div>
 
             <div class="ml-10 relative flex items-baseline">
-              <a href="#" class="text-sm font-medium text-default hover:text-hover">Contact</a>
+              <a href="#" class="text-lg font-medium text-default hover:text-hover">Contact</a>
               <!--  <a href="#" class="ml-8 px-3 py-2 font-medium text-center text-sm rounded-lg bg-gray-300 text-gray-900 hover:bg-gray-400 focus:outline-none focus:bg-gray-400">Create Account</a>
               -->
               <a

@@ -748,7 +748,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", {}, [
     _c(
       "div",
       { staticClass: "bg-header", attrs: { id: "nav" } },
@@ -1038,7 +1038,7 @@ var staticRenderFns = [
               "a",
               {
                 staticClass:
-                  "text-sm font-medium text-default hover:text-hover",
+                  "text-lg font-medium text-default hover:text-hover",
                 attrs: { href: "#" }
               },
               [_vm._v("Home")]
@@ -1048,7 +1048,7 @@ var staticRenderFns = [
               "a",
               {
                 staticClass:
-                  "ml-10 text-sm font-medium text-default hover:text-hover",
+                  "ml-10 text-lg font-medium text-default hover:text-hover",
                 attrs: { href: "#" }
               },
               [_vm._v("Skill")]
@@ -1058,7 +1058,7 @@ var staticRenderFns = [
               "a",
               {
                 staticClass:
-                  "ml-10 text-sm font-medium text-default hover:text-hover",
+                  "ml-10 text-lg font-medium text-default hover:text-hover",
                 attrs: { href: "#" }
               },
               [_vm._v("Contact")]
@@ -1070,7 +1070,7 @@ var staticRenderFns = [
           _c(
             "a",
             {
-              staticClass: "text-sm font-medium text-default hover:text-hover",
+              staticClass: "text-lg font-medium text-default hover:text-hover",
               attrs: { href: "#" }
             },
             [_vm._v("Contact")]

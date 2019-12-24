@@ -726,17 +726,40 @@ video {
 
 .theme-dark {
   --page-background-color: #17181e;
-  --card-background-color: #1f2027;
+  --card-background-color: #383866;
   --button-background-color: #59b6f9;
   --header-background-color: #1f224e;
+  --skill-background-color: #2e315a;
+  --contact-background-color: #292c57;
   --text-default-color: #fff;
   --text-muted-color: rgba(255, 255, 255, 0.5);
   --text-muted-light-color: rgba(255, 255, 255, 0.3);
   --text-hover-color: #3182CE;
   --text-focus-color: rgb(189, 183, 183);
   --text-accent-color: #47cdff;
+  --text-skill-color: #b9c2da;
   --text-accent-light-color: #8ae2fe;
   --text-error-color: red;
+}
+
+.section {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.card {
+  border-radius: 0.25rem;
+  padding: 2rem;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+}
+
+li {
+  color: var(--text-skill-color);
+  font-size: 1.125rem;
+}
+
+[v-cloak] {
+  display: none;
 }
 
 .sr-only {
@@ -1207,6 +1230,10 @@ video {
   background-color: var(--text-focus-color);
 }
 
+.bg-skill {
+  background-color: var(--skill-background-color);
+}
+
 .bg-page {
   background-color: var(--page-background-color);
 }
@@ -1221,6 +1248,10 @@ video {
 
 .bg-header {
   background-color: var(--header-background-color);
+}
+
+.bg-contact {
+  background-color: var(--contact-background-color);
 }
 
 .hover\:bg-transparent:hover {
@@ -1627,6 +1658,10 @@ video {
   background-color: var(--text-focus-color);
 }
 
+.hover\:bg-skill:hover {
+  background-color: var(--skill-background-color);
+}
+
 .hover\:bg-page:hover {
   background-color: var(--page-background-color);
 }
@@ -1641,6 +1676,10 @@ video {
 
 .hover\:bg-header:hover {
   background-color: var(--header-background-color);
+}
+
+.hover\:bg-contact:hover {
+  background-color: var(--contact-background-color);
 }
 
 .focus\:bg-transparent:focus {
@@ -2047,6 +2086,10 @@ video {
   background-color: var(--text-focus-color);
 }
 
+.focus\:bg-skill:focus {
+  background-color: var(--skill-background-color);
+}
+
 .focus\:bg-page:focus {
   background-color: var(--page-background-color);
 }
@@ -2061,6 +2104,10 @@ video {
 
 .focus\:bg-header:focus {
   background-color: var(--header-background-color);
+}
+
+.focus\:bg-contact:focus {
+  background-color: var(--contact-background-color);
 }
 
 .bg-bottom {
@@ -2543,6 +2590,10 @@ video {
   border-color: var(--text-focus-color);
 }
 
+.border-skill {
+  border-color: var(--text-skill-color);
+}
+
 .hover\:border-transparent:hover {
   border-color: transparent;
 }
@@ -2943,6 +2994,10 @@ video {
   border-color: var(--text-focus-color);
 }
 
+.hover\:border-skill:hover {
+  border-color: var(--text-skill-color);
+}
+
 .focus\:border-transparent:focus {
   border-color: transparent;
 }
@@ -3341,6 +3396,10 @@ video {
 
 .focus\:border-focus:focus {
   border-color: var(--text-focus-color);
+}
+
+.focus\:border-skill:focus {
+  border-color: var(--text-skill-color);
 }
 
 .rounded-none {
@@ -8233,6 +8292,26 @@ video {
   color: var(--text-focus-color);
 }
 
+.placeholder-skill::-webkit-input-placeholder {
+  color: var(--text-skill-color);
+}
+
+.placeholder-skill::-moz-placeholder {
+  color: var(--text-skill-color);
+}
+
+.placeholder-skill:-ms-input-placeholder {
+  color: var(--text-skill-color);
+}
+
+.placeholder-skill::-ms-input-placeholder {
+  color: var(--text-skill-color);
+}
+
+.placeholder-skill::placeholder {
+  color: var(--text-skill-color);
+}
+
 .focus\:placeholder-transparent:focus::-webkit-input-placeholder {
   color: transparent;
 }
@@ -10253,6 +10332,26 @@ video {
   color: var(--text-focus-color);
 }
 
+.focus\:placeholder-skill:focus::-webkit-input-placeholder {
+  color: var(--text-skill-color);
+}
+
+.focus\:placeholder-skill:focus::-moz-placeholder {
+  color: var(--text-skill-color);
+}
+
+.focus\:placeholder-skill:focus:-ms-input-placeholder {
+  color: var(--text-skill-color);
+}
+
+.focus\:placeholder-skill:focus::-ms-input-placeholder {
+  color: var(--text-skill-color);
+}
+
+.focus\:placeholder-skill:focus::placeholder {
+  color: var(--text-skill-color);
+}
+
 .pointer-events-none {
   pointer-events: none;
 }
@@ -10896,6 +10995,10 @@ video {
   color: var(--text-focus-color);
 }
 
+.text-skill {
+  color: var(--text-skill-color);
+}
+
 .hover\:text-transparent:hover {
   color: transparent;
 }
@@ -11300,6 +11403,10 @@ video {
   color: var(--text-focus-color);
 }
 
+.hover\:text-skill:hover {
+  color: var(--text-skill-color);
+}
+
 .focus\:text-transparent:focus {
   color: transparent;
 }
@@ -11702,6 +11809,10 @@ video {
 
 .focus\:text-focus:focus {
   color: var(--text-focus-color);
+}
+
+.focus\:text-skill:focus {
+  color: var(--text-skill-color);
 }
 
 .text-xs {
@@ -12626,6 +12737,10 @@ video {
     background-color: var(--text-focus-color);
   }
 
+  .sm\:bg-skill {
+    background-color: var(--skill-background-color);
+  }
+
   .sm\:bg-page {
     background-color: var(--page-background-color);
   }
@@ -12640,6 +12755,10 @@ video {
 
   .sm\:bg-header {
     background-color: var(--header-background-color);
+  }
+
+  .sm\:bg-contact {
+    background-color: var(--contact-background-color);
   }
 
   .sm\:hover\:bg-transparent:hover {
@@ -13046,6 +13165,10 @@ video {
     background-color: var(--text-focus-color);
   }
 
+  .sm\:hover\:bg-skill:hover {
+    background-color: var(--skill-background-color);
+  }
+
   .sm\:hover\:bg-page:hover {
     background-color: var(--page-background-color);
   }
@@ -13060,6 +13183,10 @@ video {
 
   .sm\:hover\:bg-header:hover {
     background-color: var(--header-background-color);
+  }
+
+  .sm\:hover\:bg-contact:hover {
+    background-color: var(--contact-background-color);
   }
 
   .sm\:focus\:bg-transparent:focus {
@@ -13466,6 +13593,10 @@ video {
     background-color: var(--text-focus-color);
   }
 
+  .sm\:focus\:bg-skill:focus {
+    background-color: var(--skill-background-color);
+  }
+
   .sm\:focus\:bg-page:focus {
     background-color: var(--page-background-color);
   }
@@ -13480,6 +13611,10 @@ video {
 
   .sm\:focus\:bg-header:focus {
     background-color: var(--header-background-color);
+  }
+
+  .sm\:focus\:bg-contact:focus {
+    background-color: var(--contact-background-color);
   }
 
   .sm\:bg-bottom {
@@ -13962,6 +14097,10 @@ video {
     border-color: var(--text-focus-color);
   }
 
+  .sm\:border-skill {
+    border-color: var(--text-skill-color);
+  }
+
   .sm\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -14362,6 +14501,10 @@ video {
     border-color: var(--text-focus-color);
   }
 
+  .sm\:hover\:border-skill:hover {
+    border-color: var(--text-skill-color);
+  }
+
   .sm\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -14760,6 +14903,10 @@ video {
 
   .sm\:focus\:border-focus:focus {
     border-color: var(--text-focus-color);
+  }
+
+  .sm\:focus\:border-skill:focus {
+    border-color: var(--text-skill-color);
   }
 
   .sm\:rounded-none {
@@ -19652,6 +19799,26 @@ video {
     color: var(--text-focus-color);
   }
 
+  .sm\:placeholder-skill::-webkit-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .sm\:placeholder-skill::-moz-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .sm\:placeholder-skill:-ms-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .sm\:placeholder-skill::-ms-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .sm\:placeholder-skill::placeholder {
+    color: var(--text-skill-color);
+  }
+
   .sm\:focus\:placeholder-transparent:focus::-webkit-input-placeholder {
     color: transparent;
   }
@@ -21672,6 +21839,26 @@ video {
     color: var(--text-focus-color);
   }
 
+  .sm\:focus\:placeholder-skill:focus::-webkit-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .sm\:focus\:placeholder-skill:focus::-moz-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .sm\:focus\:placeholder-skill:focus:-ms-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .sm\:focus\:placeholder-skill:focus::-ms-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .sm\:focus\:placeholder-skill:focus::placeholder {
+    color: var(--text-skill-color);
+  }
+
   .sm\:pointer-events-none {
     pointer-events: none;
   }
@@ -22315,6 +22502,10 @@ video {
     color: var(--text-focus-color);
   }
 
+  .sm\:text-skill {
+    color: var(--text-skill-color);
+  }
+
   .sm\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -22719,6 +22910,10 @@ video {
     color: var(--text-focus-color);
   }
 
+  .sm\:hover\:text-skill:hover {
+    color: var(--text-skill-color);
+  }
+
   .sm\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -23121,6 +23316,10 @@ video {
 
   .sm\:focus\:text-focus:focus {
     color: var(--text-focus-color);
+  }
+
+  .sm\:focus\:text-skill:focus {
+    color: var(--text-skill-color);
   }
 
   .sm\:text-xs {
@@ -24046,6 +24245,10 @@ video {
     background-color: var(--text-focus-color);
   }
 
+  .md\:bg-skill {
+    background-color: var(--skill-background-color);
+  }
+
   .md\:bg-page {
     background-color: var(--page-background-color);
   }
@@ -24060,6 +24263,10 @@ video {
 
   .md\:bg-header {
     background-color: var(--header-background-color);
+  }
+
+  .md\:bg-contact {
+    background-color: var(--contact-background-color);
   }
 
   .md\:hover\:bg-transparent:hover {
@@ -24466,6 +24673,10 @@ video {
     background-color: var(--text-focus-color);
   }
 
+  .md\:hover\:bg-skill:hover {
+    background-color: var(--skill-background-color);
+  }
+
   .md\:hover\:bg-page:hover {
     background-color: var(--page-background-color);
   }
@@ -24480,6 +24691,10 @@ video {
 
   .md\:hover\:bg-header:hover {
     background-color: var(--header-background-color);
+  }
+
+  .md\:hover\:bg-contact:hover {
+    background-color: var(--contact-background-color);
   }
 
   .md\:focus\:bg-transparent:focus {
@@ -24886,6 +25101,10 @@ video {
     background-color: var(--text-focus-color);
   }
 
+  .md\:focus\:bg-skill:focus {
+    background-color: var(--skill-background-color);
+  }
+
   .md\:focus\:bg-page:focus {
     background-color: var(--page-background-color);
   }
@@ -24900,6 +25119,10 @@ video {
 
   .md\:focus\:bg-header:focus {
     background-color: var(--header-background-color);
+  }
+
+  .md\:focus\:bg-contact:focus {
+    background-color: var(--contact-background-color);
   }
 
   .md\:bg-bottom {
@@ -25382,6 +25605,10 @@ video {
     border-color: var(--text-focus-color);
   }
 
+  .md\:border-skill {
+    border-color: var(--text-skill-color);
+  }
+
   .md\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -25782,6 +26009,10 @@ video {
     border-color: var(--text-focus-color);
   }
 
+  .md\:hover\:border-skill:hover {
+    border-color: var(--text-skill-color);
+  }
+
   .md\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -26180,6 +26411,10 @@ video {
 
   .md\:focus\:border-focus:focus {
     border-color: var(--text-focus-color);
+  }
+
+  .md\:focus\:border-skill:focus {
+    border-color: var(--text-skill-color);
   }
 
   .md\:rounded-none {
@@ -31072,6 +31307,26 @@ video {
     color: var(--text-focus-color);
   }
 
+  .md\:placeholder-skill::-webkit-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .md\:placeholder-skill::-moz-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .md\:placeholder-skill:-ms-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .md\:placeholder-skill::-ms-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .md\:placeholder-skill::placeholder {
+    color: var(--text-skill-color);
+  }
+
   .md\:focus\:placeholder-transparent:focus::-webkit-input-placeholder {
     color: transparent;
   }
@@ -33092,6 +33347,26 @@ video {
     color: var(--text-focus-color);
   }
 
+  .md\:focus\:placeholder-skill:focus::-webkit-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .md\:focus\:placeholder-skill:focus::-moz-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .md\:focus\:placeholder-skill:focus:-ms-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .md\:focus\:placeholder-skill:focus::-ms-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .md\:focus\:placeholder-skill:focus::placeholder {
+    color: var(--text-skill-color);
+  }
+
   .md\:pointer-events-none {
     pointer-events: none;
   }
@@ -33735,6 +34010,10 @@ video {
     color: var(--text-focus-color);
   }
 
+  .md\:text-skill {
+    color: var(--text-skill-color);
+  }
+
   .md\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -34139,6 +34418,10 @@ video {
     color: var(--text-focus-color);
   }
 
+  .md\:hover\:text-skill:hover {
+    color: var(--text-skill-color);
+  }
+
   .md\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -34541,6 +34824,10 @@ video {
 
   .md\:focus\:text-focus:focus {
     color: var(--text-focus-color);
+  }
+
+  .md\:focus\:text-skill:focus {
+    color: var(--text-skill-color);
   }
 
   .md\:text-xs {
@@ -35466,6 +35753,10 @@ video {
     background-color: var(--text-focus-color);
   }
 
+  .lg\:bg-skill {
+    background-color: var(--skill-background-color);
+  }
+
   .lg\:bg-page {
     background-color: var(--page-background-color);
   }
@@ -35480,6 +35771,10 @@ video {
 
   .lg\:bg-header {
     background-color: var(--header-background-color);
+  }
+
+  .lg\:bg-contact {
+    background-color: var(--contact-background-color);
   }
 
   .lg\:hover\:bg-transparent:hover {
@@ -35886,6 +36181,10 @@ video {
     background-color: var(--text-focus-color);
   }
 
+  .lg\:hover\:bg-skill:hover {
+    background-color: var(--skill-background-color);
+  }
+
   .lg\:hover\:bg-page:hover {
     background-color: var(--page-background-color);
   }
@@ -35900,6 +36199,10 @@ video {
 
   .lg\:hover\:bg-header:hover {
     background-color: var(--header-background-color);
+  }
+
+  .lg\:hover\:bg-contact:hover {
+    background-color: var(--contact-background-color);
   }
 
   .lg\:focus\:bg-transparent:focus {
@@ -36306,6 +36609,10 @@ video {
     background-color: var(--text-focus-color);
   }
 
+  .lg\:focus\:bg-skill:focus {
+    background-color: var(--skill-background-color);
+  }
+
   .lg\:focus\:bg-page:focus {
     background-color: var(--page-background-color);
   }
@@ -36320,6 +36627,10 @@ video {
 
   .lg\:focus\:bg-header:focus {
     background-color: var(--header-background-color);
+  }
+
+  .lg\:focus\:bg-contact:focus {
+    background-color: var(--contact-background-color);
   }
 
   .lg\:bg-bottom {
@@ -36802,6 +37113,10 @@ video {
     border-color: var(--text-focus-color);
   }
 
+  .lg\:border-skill {
+    border-color: var(--text-skill-color);
+  }
+
   .lg\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -37202,6 +37517,10 @@ video {
     border-color: var(--text-focus-color);
   }
 
+  .lg\:hover\:border-skill:hover {
+    border-color: var(--text-skill-color);
+  }
+
   .lg\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -37600,6 +37919,10 @@ video {
 
   .lg\:focus\:border-focus:focus {
     border-color: var(--text-focus-color);
+  }
+
+  .lg\:focus\:border-skill:focus {
+    border-color: var(--text-skill-color);
   }
 
   .lg\:rounded-none {
@@ -42492,6 +42815,26 @@ video {
     color: var(--text-focus-color);
   }
 
+  .lg\:placeholder-skill::-webkit-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .lg\:placeholder-skill::-moz-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .lg\:placeholder-skill:-ms-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .lg\:placeholder-skill::-ms-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .lg\:placeholder-skill::placeholder {
+    color: var(--text-skill-color);
+  }
+
   .lg\:focus\:placeholder-transparent:focus::-webkit-input-placeholder {
     color: transparent;
   }
@@ -44512,6 +44855,26 @@ video {
     color: var(--text-focus-color);
   }
 
+  .lg\:focus\:placeholder-skill:focus::-webkit-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .lg\:focus\:placeholder-skill:focus::-moz-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .lg\:focus\:placeholder-skill:focus:-ms-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .lg\:focus\:placeholder-skill:focus::-ms-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .lg\:focus\:placeholder-skill:focus::placeholder {
+    color: var(--text-skill-color);
+  }
+
   .lg\:pointer-events-none {
     pointer-events: none;
   }
@@ -45155,6 +45518,10 @@ video {
     color: var(--text-focus-color);
   }
 
+  .lg\:text-skill {
+    color: var(--text-skill-color);
+  }
+
   .lg\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -45559,6 +45926,10 @@ video {
     color: var(--text-focus-color);
   }
 
+  .lg\:hover\:text-skill:hover {
+    color: var(--text-skill-color);
+  }
+
   .lg\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -45961,6 +46332,10 @@ video {
 
   .lg\:focus\:text-focus:focus {
     color: var(--text-focus-color);
+  }
+
+  .lg\:focus\:text-skill:focus {
+    color: var(--text-skill-color);
   }
 
   .lg\:text-xs {
@@ -46886,6 +47261,10 @@ video {
     background-color: var(--text-focus-color);
   }
 
+  .xl\:bg-skill {
+    background-color: var(--skill-background-color);
+  }
+
   .xl\:bg-page {
     background-color: var(--page-background-color);
   }
@@ -46900,6 +47279,10 @@ video {
 
   .xl\:bg-header {
     background-color: var(--header-background-color);
+  }
+
+  .xl\:bg-contact {
+    background-color: var(--contact-background-color);
   }
 
   .xl\:hover\:bg-transparent:hover {
@@ -47306,6 +47689,10 @@ video {
     background-color: var(--text-focus-color);
   }
 
+  .xl\:hover\:bg-skill:hover {
+    background-color: var(--skill-background-color);
+  }
+
   .xl\:hover\:bg-page:hover {
     background-color: var(--page-background-color);
   }
@@ -47320,6 +47707,10 @@ video {
 
   .xl\:hover\:bg-header:hover {
     background-color: var(--header-background-color);
+  }
+
+  .xl\:hover\:bg-contact:hover {
+    background-color: var(--contact-background-color);
   }
 
   .xl\:focus\:bg-transparent:focus {
@@ -47726,6 +48117,10 @@ video {
     background-color: var(--text-focus-color);
   }
 
+  .xl\:focus\:bg-skill:focus {
+    background-color: var(--skill-background-color);
+  }
+
   .xl\:focus\:bg-page:focus {
     background-color: var(--page-background-color);
   }
@@ -47740,6 +48135,10 @@ video {
 
   .xl\:focus\:bg-header:focus {
     background-color: var(--header-background-color);
+  }
+
+  .xl\:focus\:bg-contact:focus {
+    background-color: var(--contact-background-color);
   }
 
   .xl\:bg-bottom {
@@ -48222,6 +48621,10 @@ video {
     border-color: var(--text-focus-color);
   }
 
+  .xl\:border-skill {
+    border-color: var(--text-skill-color);
+  }
+
   .xl\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -48622,6 +49025,10 @@ video {
     border-color: var(--text-focus-color);
   }
 
+  .xl\:hover\:border-skill:hover {
+    border-color: var(--text-skill-color);
+  }
+
   .xl\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -49020,6 +49427,10 @@ video {
 
   .xl\:focus\:border-focus:focus {
     border-color: var(--text-focus-color);
+  }
+
+  .xl\:focus\:border-skill:focus {
+    border-color: var(--text-skill-color);
   }
 
   .xl\:rounded-none {
@@ -53912,6 +54323,26 @@ video {
     color: var(--text-focus-color);
   }
 
+  .xl\:placeholder-skill::-webkit-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .xl\:placeholder-skill::-moz-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .xl\:placeholder-skill:-ms-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .xl\:placeholder-skill::-ms-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .xl\:placeholder-skill::placeholder {
+    color: var(--text-skill-color);
+  }
+
   .xl\:focus\:placeholder-transparent:focus::-webkit-input-placeholder {
     color: transparent;
   }
@@ -55932,6 +56363,26 @@ video {
     color: var(--text-focus-color);
   }
 
+  .xl\:focus\:placeholder-skill:focus::-webkit-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .xl\:focus\:placeholder-skill:focus::-moz-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .xl\:focus\:placeholder-skill:focus:-ms-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .xl\:focus\:placeholder-skill:focus::-ms-input-placeholder {
+    color: var(--text-skill-color);
+  }
+
+  .xl\:focus\:placeholder-skill:focus::placeholder {
+    color: var(--text-skill-color);
+  }
+
   .xl\:pointer-events-none {
     pointer-events: none;
   }
@@ -56575,6 +57026,10 @@ video {
     color: var(--text-focus-color);
   }
 
+  .xl\:text-skill {
+    color: var(--text-skill-color);
+  }
+
   .xl\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -56979,6 +57434,10 @@ video {
     color: var(--text-focus-color);
   }
 
+  .xl\:hover\:text-skill:hover {
+    color: var(--text-skill-color);
+  }
+
   .xl\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -57381,6 +57840,10 @@ video {
 
   .xl\:focus\:text-focus:focus {
     color: var(--text-focus-color);
+  }
+
+  .xl\:focus\:text-skill:focus {
+    color: var(--text-skill-color);
   }
 
   .xl\:text-xs {

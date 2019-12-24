@@ -1,8 +1,10 @@
 .theme-dark {
     --page-background-color: #17181e;
-    --card-background-color: #1f2027;
+    --card-background-color: #383866;
     --button-background-color: #59b6f9;
     --header-background-color: #1f224e;
+    --skill-background-color: #2e315a;
+    --contact-background-color: #292c57;
 
     --text-default-color: #fff;
     --text-muted-color: rgba(255, 255, 255, 0.5);
@@ -10,6 +12,7 @@
     --text-hover-color: #3182CE;
     --text-focus-color: rgb(189, 183, 183);
     --text-accent-color: #47cdff;
+    --text-skill-color: #b9c2da;
     --text-accent-light-color: #8ae2fe;
     --text-error-color: red;
 }
