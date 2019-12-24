@@ -12,6 +12,7 @@ module.exports = {
         'hover': 'var(--text-hover-color)',
         'focus': 'var(--text-focus-color)',
         'skill': 'var(--text-skill-color)',
+        'link': 'var(--text-link-color)',
       },
       backgroundColor: {
         page: 'var(--page-background-color)',

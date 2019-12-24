@@ -5,8 +5,14 @@
 @import 'transition';
 @import 'themes/dark';
 
-.section {
-    @apply px-32;
+main {
+    scroll-snap-type: y mandatory;
+}
+
+
+
+section{
+    scroll-snap-align: start;
 }
 
 .card{

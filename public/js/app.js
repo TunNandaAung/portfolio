@@ -225,6 +225,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1049,9 +1055,9 @@ var staticRenderFns = [
               {
                 staticClass:
                   "ml-10 text-lg font-medium text-default hover:text-hover",
-                attrs: { href: "#" }
+                attrs: { href: "#skills" }
               },
-              [_vm._v("Skill")]
+              [_vm._v("Skills")]
             ),
             _vm._v(" "),
             _c(
@@ -1059,7 +1065,7 @@ var staticRenderFns = [
               {
                 staticClass:
                   "ml-10 text-lg font-medium text-default hover:text-hover",
-                attrs: { href: "#" }
+                attrs: { href: "#contact" }
               },
               [_vm._v("Contact")]
             )

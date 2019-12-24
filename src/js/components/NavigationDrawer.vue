@@ -34,8 +34,14 @@
           >
             <div class="lg:absolute inset-0 flex items-center justify-center">
               <a href="#" class="text-lg font-medium text-default hover:text-hover">Home</a>
-              <a href="#" class="ml-10 text-lg font-medium text-default hover:text-hover">Skill</a>
-              <a href="#" class="ml-10 text-lg font-medium text-default hover:text-hover">Contact</a>
+              <a
+                href="#skills"
+                class="ml-10 text-lg font-medium text-default hover:text-hover"
+              >Skills</a>
+              <a
+                href="#contact"
+                class="ml-10 text-lg font-medium text-default hover:text-hover"
+              >Contact</a>
             </div>
 
             <div class="ml-10 relative flex items-baseline">
