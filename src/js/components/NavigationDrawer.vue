@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-gray-200" style="min-height: 640px;">
-    <div id="nav" class="bg-white shadow">
+  <div class="min-h-full">
+    <div id="nav" class="bg-header shadow">
       <div class="md:px-8">
         <nav class="relative flex flex-wrap items-center justify-between md:py-4">
           <div class="relative z-10 flex-shrink-0 pl-4 py-4 md:p-0">
@@ -12,7 +12,7 @@
               ref="openButton"
               @click="open"
               type="button"
-              class="block text-gray-600 focus:outline-none focus:text-gray-900"
+              class="block text-default focus:outline-none focus:text-focus"
               aria-label="Menu"
             >
               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -33,21 +33,18 @@
             class="hidden md:block md:ml-10 md:flex md:items-baseline md:justify-between md:bg-transparent"
           >
             <div class="lg:absolute inset-0 flex items-center justify-center">
-              <a href="#" class="text-sm font-medium text-gray-900 hover:text-gray-700">Products</a>
-              <a
-                href="#"
-                class="ml-10 text-sm font-medium text-gray-900 hover:text-gray-700"
-              >Marketplace</a>
-              <a href="#" class="ml-10 text-sm font-medium text-gray-900 hover:text-gray-700">About</a>
+              <a href="#" class="text-sm font-medium text-default hover:text-hover">Home</a>
+              <a href="#" class="ml-10 text-sm font-medium text-default hover:text-hover">Skill</a>
+              <a href="#" class="ml-10 text-sm font-medium text-default hover:text-hover">Contact</a>
             </div>
 
             <div class="ml-10 relative flex items-baseline">
-              <a href="#" class="text-sm font-medium text-gray-900 hover:text-gray-700">Log in</a>
+              <a href="#" class="text-sm font-medium text-default hover:text-hover">Contact</a>
               <!--  <a href="#" class="ml-8 px-3 py-2 font-medium text-center text-sm rounded-lg bg-gray-300 text-gray-900 hover:bg-gray-400 focus:outline-none focus:bg-gray-400">Create Account</a>
               -->
               <a
                 href="#"
-                class="ml-6 font-medium text-center text-xs border border-grey px-3 py-2 rounded-full text-black font-bold hover:bg-blue-102 hover:text-white focus:outline-none focus:bg-blue-102"
+                class="ml-6 font-medium text-center text-xs border border-grey px-3 py-2 rounded-full text-default font-bold hover:bg-white hover:text-black focus:outline-none focus:bg-blue-102"
               >Create Account</a>
             </div>
           </div>
@@ -82,15 +79,15 @@
         >
           <div
             v-show="isOpen"
-            class="z-10 fixed inset-y-0 right-0 max-w-xs w-full bg-white transition-transform overflow-y-auto"
+            class="z-10 fixed inset-y-0 right-0 max-w-xs w-full bg-header transition-transform overflow-y-auto"
           >
-            <div class="relative z-10 bg-white">
+            <div class="relative z-10 bg-header">
               <div :class="isOpen ? 'block' : 'hidden'" class="absolute top-0 right-0 p-4">
                 <button
                   ref="closeButton"
                   @click="close"
                   type="button"
-                  class="text-gray-600 focus:outline-none focus:text-gray-900"
+                  class="text-default focus:outline-none focus:text-focus"
                   aria-label="Close"
                 >
                   <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -103,38 +100,16 @@
 
               <div class="px-4 pt-4 pb-6">
                 <img class="py-4" src="/images/logo.svg" alt />
-                <a
-                  href="#"
-                  class="mt-8 block text-xs font-semibold text-gray-600 uppercase tracking-wider"
-                >Products</a>
-                <a
-                  href="#"
-                  class="mt-4 block font-medium text-gray-900 hover:text-gray-700"
-                >Checkout</a>
-                <a
-                  href="#"
-                  class="mt-4 block font-medium text-gray-900 hover:text-gray-700"
-                >Payments</a>
-                <a href="#" class="mt-4 block font-medium text-gray-900 hover:text-gray-700">Billing</a>
-                <a
-                  href="#"
-                  class="mt-4 block font-medium text-gray-900 hover:text-gray-700"
-                >Insights</a>
-              </div>
 
-              <div class="border-t-2 border-gray-200 px-4 pt-6">
-                <a href="#" class="block font-medium text-gray-900 hover:text-gray-700">Marketplace</a>
-                <a
-                  href="#"
-                  class="mt-4 block font-medium text-gray-900 hover:text-gray-700"
-                >Partners</a>
-                <a href="#" class="mt-4 block font-medium text-gray-900 hover:text-gray-700">About</a>
+                <a href="#" class="mt-4 block font-medium text-default hover:text-hover">Home</a>
+                <a href="#" class="mt-4 block font-medium text-default hover:text-hover">Skills</a>
+                <a href="#" class="mt-4 block font-medium text-default hover:text-hover">Contact</a>
               </div>
             </div>
 
-            <div class="relative bg-white">
+            <div class="relative bg-header">
               <div class="px-4 pt-4 pb-6">
-                <a href="#" class="block font-medium text-gray-900 hover:text-gray-700">Log in</a>
+                <a href="#" class="block font-medium text-default hover:text-hover">Log in</a>
               </div>
 
               <div class="p-4">
@@ -147,6 +122,8 @@
           </div>
         </transition>
       </div>
+
+      <slot></slot>
     </div>
   </div>
 </template>

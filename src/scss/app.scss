@@ -2,6 +2,7 @@
 
 @tailwind components;
 
-@import "transition";
+@import 'transition';
+@import 'themes/dark';
 
 @tailwind utilities;
