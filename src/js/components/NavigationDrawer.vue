@@ -34,14 +34,14 @@
           >
             <div class="lg:absolute inset-0 flex items-center justify-center">
               <a href="#" class="text-lg font-medium text-default hover:text-hover">Home</a>
-              <a
+              <scroll-link
                 href="#skills"
                 class="ml-10 text-lg font-medium text-default hover:text-hover"
-              >Skills</a>
-              <a
+              >Skills</scroll-link>
+              <scroll-link
                 href="#contact"
                 class="ml-10 text-lg font-medium text-default hover:text-hover"
-              >Contact</a>
+              >Contact</scroll-link>
             </div>
 
             <div class="ml-10 relative flex items-baseline">
@@ -135,7 +135,12 @@
 </template>
 
 <script>
+import ScrollLink from "./ScrollLink";
+
 export default {
+  components: {
+    ScrollLink
+  },
   data() {
     return {
       isOpen: false
