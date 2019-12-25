@@ -745,11 +745,14 @@ video {
 
 .theme-light {
   --page-background-color: #f5f6f9;
-  --card-background-color: #e9eef1;
+  --card-background-color: white;
   --button-background-color: #47cdff;
   --header-background-color: white;
   --skill-background-color: #f2f4f7;
   --contact-background-color: #F5F7FB;
+  --web-card-background-color: #F5f6f9;
+  --mobile-card-background-color: #f5f6fa;
+  --other-card-background-color: #f5f6fc;
   --text-default-color: #222;
   --text-accent-color: #47cdff;
   --text-accent-light-color: #8ae2fe;
@@ -757,9 +760,138 @@ video {
   --text-muted-light-color: rgba(255, 255, 255, 0.1);
   --text-muted-light-color: #e1e6e8;
   --text-error-color: red;
-  --text-hover-color: #3182CE;
+  --text-hover-color: rgb(27, 110, 187);
   --text-skill-color: #576488;
   --text-link-color: #3865a8;
+}
+
+.skill-card {
+  border-radius: 0.25rem;
+  padding: 2rem;
+  cursor: pointer;
+  height: calc(100vh - 20em);
+}
+
+.skill-card:hover {
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+}
+
+.skill-card:hover .skill-card__header {
+  height: 40px;
+}
+
+.skill-card:hover .skill-card__header .skill-card__icon {
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(3);
+          transform: translateX(-50%) translateY(-50%) scale(3);
+}
+
+.skill-card:hover .skill-card__body {
+  height: 100%;
+}
+
+.skill-card:hover .skill-card__body .skill-card__knowledge > li {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition-timing-function: cubic-bezier(0, 1.5, 1, 1);
+          transition-timing-function: cubic-bezier(0, 1.5, 1, 1);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.skill-card:hover .skill-card__body .skill-card__knowledge > li:nth-child(1) {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.skill-card:hover .skill-card__body .skill-card__knowledge > li:nth-child(2) {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.skill-card:hover .skill-card__body .skill-card__knowledge > li:nth-child(3) {
+  -webkit-transition-delay: 0.75s;
+          transition-delay: 0.75s;
+}
+
+.skill-card:hover .skill-card__body .skill-card__knowledge > li:nth-child(4) {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.skill-card:hover .skill-card__body .skill-card__knowledge > li:nth-child(5) {
+  -webkit-transition-delay: 1.25s;
+          transition-delay: 1.25s;
+}
+
+.skill-card:hover .skill-card__body .skill-card__knowledge > li:nth-child(6) {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+
+.skill-card:hover .skill-card__body .skill-card__knowledge > li:nth-child(7) {
+  -webkit-transition-delay: 1.75s;
+          transition-delay: 1.75s;
+}
+
+.skill-card:hover .skill-card__body .skill-card__knowledge > li:nth-child(8) {
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
+.skill-card:hover .skill-card__body .skill-card__knowledge > li:nth-child(9) {
+  -webkit-transition-delay: 2.25s;
+          transition-delay: 2.25s;
+}
+
+.skill-card:hover .skill-card__body .skill-card__knowledge > li:nth-child(10) {
+  -webkit-transition-delay: 2.5s;
+          transition-delay: 2.5s;
+}
+
+.skill-card .skill-card__header {
+  position: relative;
+  height: 100%;
+  margin: -20px -20px 20px -20px;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+  overflow: hidden;
+}
+
+.skill-card .skill-card__header .skill-card__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  display: block;
+  width: 128px;
+  height: 128px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.skill-card .skill-card__body {
+  height: 6rem;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+  overflow: hidden;
+}
+
+.skill-card .skill-card__body .skill-card__knowledge {
+  margin-top: 10px;
+  color: #424242;
+}
+
+.skill-card .skill-card__body .skill-card__knowledge > li {
+  margin-top: 5px;
+  -webkit-transition-duration: 0;
+          transition-duration: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 main {
@@ -780,6 +912,8 @@ section {
 li {
   color: var(--text-skill-color);
   font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
 }
 
 [v-cloak] {
@@ -1282,6 +1416,18 @@ li {
   background-color: var(--contact-background-color);
 }
 
+.bg-webcard {
+  background-color: var(--web-card-background-color);
+}
+
+.bg-mobilecard {
+  background-color: var(--mobile-card-background-color);
+}
+
+.bg-othercard {
+  background-color: var(--other-card-background-color);
+}
+
 .hover\:bg-transparent:hover {
   background-color: transparent;
 }
@@ -1714,6 +1860,18 @@ li {
   background-color: var(--contact-background-color);
 }
 
+.hover\:bg-webcard:hover {
+  background-color: var(--web-card-background-color);
+}
+
+.hover\:bg-mobilecard:hover {
+  background-color: var(--mobile-card-background-color);
+}
+
+.hover\:bg-othercard:hover {
+  background-color: var(--other-card-background-color);
+}
+
 .focus\:bg-transparent:focus {
   background-color: transparent;
 }
@@ -2144,6 +2302,18 @@ li {
 
 .focus\:bg-contact:focus {
   background-color: var(--contact-background-color);
+}
+
+.focus\:bg-webcard:focus {
+  background-color: var(--web-card-background-color);
+}
+
+.focus\:bg-mobilecard:focus {
+  background-color: var(--mobile-card-background-color);
+}
+
+.focus\:bg-othercard:focus {
+  background-color: var(--other-card-background-color);
 }
 
 .bg-bottom {
@@ -12865,6 +13035,18 @@ li {
     background-color: var(--contact-background-color);
   }
 
+  .sm\:bg-webcard {
+    background-color: var(--web-card-background-color);
+  }
+
+  .sm\:bg-mobilecard {
+    background-color: var(--mobile-card-background-color);
+  }
+
+  .sm\:bg-othercard {
+    background-color: var(--other-card-background-color);
+  }
+
   .sm\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -13297,6 +13479,18 @@ li {
     background-color: var(--contact-background-color);
   }
 
+  .sm\:hover\:bg-webcard:hover {
+    background-color: var(--web-card-background-color);
+  }
+
+  .sm\:hover\:bg-mobilecard:hover {
+    background-color: var(--mobile-card-background-color);
+  }
+
+  .sm\:hover\:bg-othercard:hover {
+    background-color: var(--other-card-background-color);
+  }
+
   .sm\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -13727,6 +13921,18 @@ li {
 
   .sm\:focus\:bg-contact:focus {
     background-color: var(--contact-background-color);
+  }
+
+  .sm\:focus\:bg-webcard:focus {
+    background-color: var(--web-card-background-color);
+  }
+
+  .sm\:focus\:bg-mobilecard:focus {
+    background-color: var(--mobile-card-background-color);
+  }
+
+  .sm\:focus\:bg-othercard:focus {
+    background-color: var(--other-card-background-color);
   }
 
   .sm\:bg-bottom {
@@ -24449,6 +24655,18 @@ li {
     background-color: var(--contact-background-color);
   }
 
+  .md\:bg-webcard {
+    background-color: var(--web-card-background-color);
+  }
+
+  .md\:bg-mobilecard {
+    background-color: var(--mobile-card-background-color);
+  }
+
+  .md\:bg-othercard {
+    background-color: var(--other-card-background-color);
+  }
+
   .md\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -24881,6 +25099,18 @@ li {
     background-color: var(--contact-background-color);
   }
 
+  .md\:hover\:bg-webcard:hover {
+    background-color: var(--web-card-background-color);
+  }
+
+  .md\:hover\:bg-mobilecard:hover {
+    background-color: var(--mobile-card-background-color);
+  }
+
+  .md\:hover\:bg-othercard:hover {
+    background-color: var(--other-card-background-color);
+  }
+
   .md\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -25311,6 +25541,18 @@ li {
 
   .md\:focus\:bg-contact:focus {
     background-color: var(--contact-background-color);
+  }
+
+  .md\:focus\:bg-webcard:focus {
+    background-color: var(--web-card-background-color);
+  }
+
+  .md\:focus\:bg-mobilecard:focus {
+    background-color: var(--mobile-card-background-color);
+  }
+
+  .md\:focus\:bg-othercard:focus {
+    background-color: var(--other-card-background-color);
   }
 
   .md\:bg-bottom {
@@ -36033,6 +36275,18 @@ li {
     background-color: var(--contact-background-color);
   }
 
+  .lg\:bg-webcard {
+    background-color: var(--web-card-background-color);
+  }
+
+  .lg\:bg-mobilecard {
+    background-color: var(--mobile-card-background-color);
+  }
+
+  .lg\:bg-othercard {
+    background-color: var(--other-card-background-color);
+  }
+
   .lg\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -36465,6 +36719,18 @@ li {
     background-color: var(--contact-background-color);
   }
 
+  .lg\:hover\:bg-webcard:hover {
+    background-color: var(--web-card-background-color);
+  }
+
+  .lg\:hover\:bg-mobilecard:hover {
+    background-color: var(--mobile-card-background-color);
+  }
+
+  .lg\:hover\:bg-othercard:hover {
+    background-color: var(--other-card-background-color);
+  }
+
   .lg\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -36895,6 +37161,18 @@ li {
 
   .lg\:focus\:bg-contact:focus {
     background-color: var(--contact-background-color);
+  }
+
+  .lg\:focus\:bg-webcard:focus {
+    background-color: var(--web-card-background-color);
+  }
+
+  .lg\:focus\:bg-mobilecard:focus {
+    background-color: var(--mobile-card-background-color);
+  }
+
+  .lg\:focus\:bg-othercard:focus {
+    background-color: var(--other-card-background-color);
   }
 
   .lg\:bg-bottom {
@@ -47617,6 +47895,18 @@ li {
     background-color: var(--contact-background-color);
   }
 
+  .xl\:bg-webcard {
+    background-color: var(--web-card-background-color);
+  }
+
+  .xl\:bg-mobilecard {
+    background-color: var(--mobile-card-background-color);
+  }
+
+  .xl\:bg-othercard {
+    background-color: var(--other-card-background-color);
+  }
+
   .xl\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -48049,6 +48339,18 @@ li {
     background-color: var(--contact-background-color);
   }
 
+  .xl\:hover\:bg-webcard:hover {
+    background-color: var(--web-card-background-color);
+  }
+
+  .xl\:hover\:bg-mobilecard:hover {
+    background-color: var(--mobile-card-background-color);
+  }
+
+  .xl\:hover\:bg-othercard:hover {
+    background-color: var(--other-card-background-color);
+  }
+
   .xl\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -48479,6 +48781,18 @@ li {
 
   .xl\:focus\:bg-contact:focus {
     background-color: var(--contact-background-color);
+  }
+
+  .xl\:focus\:bg-webcard:focus {
+    background-color: var(--web-card-background-color);
+  }
+
+  .xl\:focus\:bg-mobilecard:focus {
+    background-color: var(--mobile-card-background-color);
+  }
+
+  .xl\:focus\:bg-othercard:focus {
+    background-color: var(--other-card-background-color);
   }
 
   .xl\:bg-bottom {

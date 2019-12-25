@@ -5,6 +5,8 @@
 @import 'transition';
 @import 'themes/dark';
 @import 'themes/light';
+@import 'components/skill-card';
+
 
 
 main {
@@ -12,7 +14,7 @@ main {
 }
 
 
-
+ 
 section{
     scroll-snap-align: start;
 }
@@ -27,7 +29,7 @@ section{
 }
 
 li {
-    @apply text-skill text-lg
+    @apply text-skill text-lg font-bold tracking-wide
 }
 
 [v-cloak] {

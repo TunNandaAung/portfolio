@@ -21,6 +21,9 @@ module.exports = {
         header: 'var(--header-background-color)',
         skill: 'var(--skill-background-color)',
         contact: 'var(--contact-background-color)',
+        webcard: 'var(--web-card-background-color)',
+        mobilecard: 'var(--mobile-card-background-color)',
+        othercard: 'var(--other-card-background-color)'
       }
     }
   },

@@ -1,10 +1,13 @@
 .theme-light {
     --page-background-color: #f5f6f9;
-    --card-background-color: #e9eef1;
+    --card-background-color: white;
     --button-background-color: #47cdff;
     --header-background-color: white;
     --skill-background-color: #f2f4f7;
     --contact-background-color: #F5F7FB;
+    --web-card-background-color: #F5f6f9;
+    --mobile-card-background-color: #f5f6fa;
+    --other-card-background-color: #f5f6fc;
 
     --text-default-color: #222;
     --text-accent-color: #47cdff;
@@ -13,7 +16,7 @@
     --text-muted-light-color: rgba(255, 255, 255, 0.1);
     --text-muted-light-color: #e1e6e8;
     --text-error-color: red;
-    --text-hover-color: #3182CE;
+    --text-hover-color: rgb(27, 110, 187);
     --text-skill-color: #576488;
     --text-link-color: #3865a8;
     
