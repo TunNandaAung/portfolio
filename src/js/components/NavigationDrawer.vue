@@ -1,10 +1,10 @@
 <template>
   <div v-cloak>
     <div id="nav" class="bg-header">
-      <div class="md:px-8">
+      <div class>
         <nav class="relative flex flex-wrap items-center justify-between md:py-4">
-          <div class="relative z-10 flex-shrink-0 pl-4 py-4 md:p-0">
-            <img class="py-2" src="/images/logo.svg" alt />
+          <div class="relative z-10 py-4 -pl-12 md:p-0">
+            <img class="h-16 lg:h-24" src="/img/isolated-logo.svg" alt="Logo" />
           </div>
 
           <div class="flex-shrink-0 md:hidden">
@@ -99,7 +99,7 @@
               </div>
 
               <div class="px-4 pt-4 pb-6">
-                <img class="py-4" src="/images/logo.svg" alt />
+                <img class="-px-8 h-16 lg:h-24" src="/img/isolated-logo.svg" alt="Logo" />
 
                 <a href="#" class="mt-4 block font-medium text-default hover:text-hover">Home</a>
                 <a href="#" class="mt-4 block font-medium text-default hover:text-hover">Skills</a>

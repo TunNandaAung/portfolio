@@ -826,7 +826,7 @@ var render = function() {
       "div",
       { staticClass: "bg-header", attrs: { id: "nav" } },
       [
-        _c("div", { staticClass: "md:px-8" }, [
+        _c("div", {}, [
           _c(
             "nav",
             {
@@ -1053,8 +1053,8 @@ var render = function() {
                       _vm._v(" "),
                       _c("div", { staticClass: "px-4 pt-4 pb-6" }, [
                         _c("img", {
-                          staticClass: "py-4",
-                          attrs: { src: "/images/logo.svg", alt: "" }
+                          staticClass: "-px-8 h-16 lg:h-24",
+                          attrs: { src: "/img/isolated-logo.svg", alt: "Logo" }
                         }),
                         _vm._v(" "),
                         _c(
@@ -1114,16 +1114,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "relative z-10 flex-shrink-0 pl-4 py-4 md:p-0" },
-      [
-        _c("img", {
-          staticClass: "py-2",
-          attrs: { src: "/images/logo.svg", alt: "" }
-        })
-      ]
-    )
+    return _c("div", { staticClass: "relative z-10 py-4 -pl-12 md:p-0" }, [
+      _c("img", {
+        staticClass: "h-16 lg:h-24",
+        attrs: { src: "/img/isolated-logo.svg", alt: "Logo" }
+      })
+    ])
   }
 ]
 render._withStripped = true
@@ -1186,11 +1182,11 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "flex items-center mr-8" },
+    { staticClass: "flex items-center" },
     _vm._l(_vm.themes, function(color, theme) {
       return _c("button", {
         staticClass:
-          "rounded-full w-8 h-8 bg-default border-4 mr-2 focus:outline-none",
+          "rounded-full w-8 h-8 bg-default border-4 focus:outline-none mr-2",
         class: { "border-accent": _vm.selectedTheme == theme },
         style: { backgroundColor: color },
         on: {

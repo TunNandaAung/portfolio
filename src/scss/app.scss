@@ -7,7 +7,9 @@
 @import 'themes/light';
 @import 'components/skill-card';
 
-
+html{
+  font-family: 'Open Sans', sans-serif;
+}
 
 main {
     scroll-snap-type: y mandatory;
@@ -31,6 +33,15 @@ section{
 li {
     @apply text-skill text-lg font-bold tracking-wide
 }
+
+.landing-img{
+  position: fixed;
+  bottom: 50%;
+  top: 50%;
+  right: 10%;
+  opacity: 0.6;  
+}
+
 
 [v-cloak] {
     display: none;

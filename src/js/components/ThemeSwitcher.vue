@@ -1,8 +1,8 @@
 <template>
-  <div class="flex items-center mr-8">
+  <div class="flex items-center">
     <button
       v-for="(color, theme) in themes"
-      class="rounded-full w-8 h-8 bg-default border-4 mr-2 focus:outline-none"
+      class="rounded-full w-8 h-8 bg-default border-4 focus:outline-none mr-2"
       :class="{ 'border-accent': selectedTheme == theme }"
       :style="{ backgroundColor: color }"
       @click="selectedTheme = theme"
