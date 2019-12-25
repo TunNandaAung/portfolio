@@ -12,9 +12,7 @@ require('laravel-mix-purgecss');
  |
  */
 
-mix.js('src/js/app.js', 'public/js').sass('src/scss/app.scss', 'public/css').tailwind('./tailwind.config.js').purgeCss({
-    folders: ['src'],
-});
+mix.js('src/js/app.js', 'js').sass('src/scss/app.scss', 'css').tailwind('./tailwind.config.js');
 
 // Full API
 // mix.js(src, output);
