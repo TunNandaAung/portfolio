@@ -102,8 +102,14 @@
                 <img class="-px-8 h-16 lg:h-24" src="/img/isolated-logo.svg" alt="Logo" />
 
                 <a href="#" class="mt-4 block font-medium text-default hover:text-hover">Home</a>
-                <a href="#" class="mt-4 block font-medium text-default hover:text-hover">Skills</a>
-                <a href="#" class="mt-4 block font-medium text-default hover:text-hover">Contact</a>
+                <scroll-link
+                  href="#skills"
+                  class="mt-4 block font-medium text-default hover:text-hover"
+                >Skills</scroll-link>
+                <scroll-link
+                  href="#contact"
+                  class="mt-4 block font-medium text-default hover:text-hover"
+                >Contact</scroll-link>
               </div>
             </div>
 

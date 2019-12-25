@@ -218,6 +218,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1051,42 +1057,50 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _c("div", { staticClass: "px-4 pt-4 pb-6" }, [
-                        _c("img", {
-                          staticClass: "-px-8 h-16 lg:h-24",
-                          attrs: { src: "/img/isolated-logo.svg", alt: "Logo" }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass:
-                              "mt-4 block font-medium text-default hover:text-hover",
-                            attrs: { href: "#" }
-                          },
-                          [_vm._v("Home")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass:
-                              "mt-4 block font-medium text-default hover:text-hover",
-                            attrs: { href: "#" }
-                          },
-                          [_vm._v("Skills")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass:
-                              "mt-4 block font-medium text-default hover:text-hover",
-                            attrs: { href: "#" }
-                          },
-                          [_vm._v("Contact")]
-                        )
-                      ])
+                      _c(
+                        "div",
+                        { staticClass: "px-4 pt-4 pb-6" },
+                        [
+                          _c("img", {
+                            staticClass: "-px-8 h-16 lg:h-24",
+                            attrs: {
+                              src: "/img/isolated-logo.svg",
+                              alt: "Logo"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "mt-4 block font-medium text-default hover:text-hover",
+                              attrs: { href: "#" }
+                            },
+                            [_vm._v("Home")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "scroll-link",
+                            {
+                              staticClass:
+                                "mt-4 block font-medium text-default hover:text-hover",
+                              attrs: { href: "#skills" }
+                            },
+                            [_vm._v("Skills")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "scroll-link",
+                            {
+                              staticClass:
+                                "mt-4 block font-medium text-default hover:text-hover",
+                              attrs: { href: "#contact" }
+                            },
+                            [_vm._v("Contact")]
+                          )
+                        ],
+                        1
+                      )
                     ]),
                     _vm._v(" "),
                     _c(
