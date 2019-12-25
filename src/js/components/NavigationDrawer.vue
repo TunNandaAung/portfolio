@@ -7,7 +7,7 @@
             <img class="py-2" src="/images/logo.svg" alt />
           </div>
 
-          <div class="flex-shrink-0 pr-4 md:hidden">
+          <div class="flex-shrink-0 md:hidden">
             <button
               ref="openButton"
               @click="open"
@@ -45,13 +45,7 @@
             </div>
 
             <div class="ml-10 relative flex items-baseline">
-              <a href="#" class="text-lg font-medium text-default hover:text-hover">Contact</a>
-              <!--  <a href="#" class="ml-8 px-3 py-2 font-medium text-center text-sm rounded-lg bg-gray-300 text-gray-900 hover:bg-gray-400 focus:outline-none focus:bg-gray-400">Create Account</a>
-              -->
-              <a
-                href="#"
-                class="ml-6 font-medium text-center text-xs border border-grey px-3 py-2 rounded-full text-default font-bold hover:bg-white hover:text-black focus:outline-none focus:bg-blue-102"
-              >Create Account</a>
+              <theme-switcher></theme-switcher>
             </div>
           </div>
         </nav>
@@ -113,17 +107,8 @@
               </div>
             </div>
 
-            <div class="relative bg-header">
-              <div class="px-4 pt-4 pb-6">
-                <a href="#" class="block font-medium text-default hover:text-hover">Log in</a>
-              </div>
-
-              <div class="p-4">
-                <a
-                  href="#"
-                  class="block font-medium text-center border border-grey px-6 py-2 rounded-full text-black font-bold hover:bg-blue-102 hover:text-white focus:outline-none focus:bg-blue-102"
-                >Create Account</a>
-              </div>
+            <div class="relative bg-header px-4">
+              <theme-switcher></theme-switcher>
             </div>
           </div>
         </transition>
@@ -136,10 +121,12 @@
 
 <script>
 import ScrollLink from "./ScrollLink";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 export default {
   components: {
-    ScrollLink
+    ScrollLink,
+    ThemeSwitcher
   },
   data() {
     return {

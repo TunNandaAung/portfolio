@@ -731,6 +731,10 @@ video {
   --header-background-color: #1f224e;
   --skill-background-color: #2e315a;
   --contact-background-color: #292c57;
+  --web-card-background-color: #38385a;
+  --mobile-card-background-color: #38385c;
+  --other-card-background-color: #38385e;
+  --icon-background-color: #ffffff;
   --text-default-color: #fff;
   --text-muted-color: rgba(255, 255, 255, 0.5);
   --text-muted-light-color: rgba(255, 255, 255, 0.3);
@@ -753,6 +757,7 @@ video {
   --web-card-background-color: #F5f6f9;
   --mobile-card-background-color: #f5f6fa;
   --other-card-background-color: #f5f6fc;
+  --icon-background-color: #fff;
   --text-default-color: #222;
   --text-accent-color: #47cdff;
   --text-accent-light-color: #8ae2fe;
@@ -1428,6 +1433,10 @@ li {
   background-color: var(--other-card-background-color);
 }
 
+.bg-icon {
+  background-color: var(--icon-background-color);
+}
+
 .hover\:bg-transparent:hover {
   background-color: transparent;
 }
@@ -1872,6 +1881,10 @@ li {
   background-color: var(--other-card-background-color);
 }
 
+.hover\:bg-icon:hover {
+  background-color: var(--icon-background-color);
+}
+
 .focus\:bg-transparent:focus {
   background-color: transparent;
 }
@@ -2314,6 +2327,10 @@ li {
 
 .focus\:bg-othercard:focus {
   background-color: var(--other-card-background-color);
+}
+
+.focus\:bg-icon:focus {
+  background-color: var(--icon-background-color);
 }
 
 .bg-bottom {
@@ -13047,6 +13064,10 @@ li {
     background-color: var(--other-card-background-color);
   }
 
+  .sm\:bg-icon {
+    background-color: var(--icon-background-color);
+  }
+
   .sm\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -13491,6 +13512,10 @@ li {
     background-color: var(--other-card-background-color);
   }
 
+  .sm\:hover\:bg-icon:hover {
+    background-color: var(--icon-background-color);
+  }
+
   .sm\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -13933,6 +13958,10 @@ li {
 
   .sm\:focus\:bg-othercard:focus {
     background-color: var(--other-card-background-color);
+  }
+
+  .sm\:focus\:bg-icon:focus {
+    background-color: var(--icon-background-color);
   }
 
   .sm\:bg-bottom {
@@ -24667,6 +24696,10 @@ li {
     background-color: var(--other-card-background-color);
   }
 
+  .md\:bg-icon {
+    background-color: var(--icon-background-color);
+  }
+
   .md\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -25111,6 +25144,10 @@ li {
     background-color: var(--other-card-background-color);
   }
 
+  .md\:hover\:bg-icon:hover {
+    background-color: var(--icon-background-color);
+  }
+
   .md\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -25553,6 +25590,10 @@ li {
 
   .md\:focus\:bg-othercard:focus {
     background-color: var(--other-card-background-color);
+  }
+
+  .md\:focus\:bg-icon:focus {
+    background-color: var(--icon-background-color);
   }
 
   .md\:bg-bottom {
@@ -36287,6 +36328,10 @@ li {
     background-color: var(--other-card-background-color);
   }
 
+  .lg\:bg-icon {
+    background-color: var(--icon-background-color);
+  }
+
   .lg\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -36731,6 +36776,10 @@ li {
     background-color: var(--other-card-background-color);
   }
 
+  .lg\:hover\:bg-icon:hover {
+    background-color: var(--icon-background-color);
+  }
+
   .lg\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -37173,6 +37222,10 @@ li {
 
   .lg\:focus\:bg-othercard:focus {
     background-color: var(--other-card-background-color);
+  }
+
+  .lg\:focus\:bg-icon:focus {
+    background-color: var(--icon-background-color);
   }
 
   .lg\:bg-bottom {
@@ -47907,6 +47960,10 @@ li {
     background-color: var(--other-card-background-color);
   }
 
+  .xl\:bg-icon {
+    background-color: var(--icon-background-color);
+  }
+
   .xl\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -48351,6 +48408,10 @@ li {
     background-color: var(--other-card-background-color);
   }
 
+  .xl\:hover\:bg-icon:hover {
+    background-color: var(--icon-background-color);
+  }
+
   .xl\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -48793,6 +48854,10 @@ li {
 
   .xl\:focus\:bg-othercard:focus {
     background-color: var(--other-card-background-color);
+  }
+
+  .xl\:focus\:bg-icon:focus {
+    background-color: var(--icon-background-color);
   }
 
   .xl\:bg-bottom {
