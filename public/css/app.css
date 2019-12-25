@@ -914,7 +914,6 @@ section {
 
 .card {
   border-radius: 0.25rem;
-  padding: 2rem;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
 }
 
@@ -931,6 +930,91 @@ li {
   top: 50%;
   right: 10%;
   opacity: 0.6;
+}
+
+.skill-card-mobile__knowledge > li {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.profile-info {
+  position: relative;
+  -webkit-animation: profile-info;
+          animation: profile-info;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes profile-info {
+  0% {
+    left: -1000px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes profile-info {
+  0% {
+    left: -1000px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.profile-image {
+  position: relative;
+  -webkit-animation: profile-image;
+          animation: profile-image;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes profile-image {
+  0% {
+    top: -1000px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes profile-image {
+  0% {
+    top: -1000px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@-webkit-keyframes content {
+  0% {
+    left: -1000px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes content {
+  0% {
+    left: -1000px;
+  }
+
+  100% {
+    left: 0;
+  }
 }
 
 [v-cloak] {
