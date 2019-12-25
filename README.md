@@ -1,4 +1,4 @@
-<p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://github.com/TunNandaAung/portfolio/tree/master/public/img/profilr.png" alt="Logo"></a></p>
+<p align="center"><img width="100" src="https://github.com/TunNandaAung/portfolio/blob/master/public/img/profile.png" alt="Logo"></p>
 
 # Personal Websit
 
@@ -11,5 +11,3 @@
 - Assets compiled with [`JeffreyWay/laravel-mix`](https://github.com/JeffreyWay/laravel-mix/)
 - Unused CSS is purged using [`spatie/laravel-mix-purgecss`](https://github.com/spatie/laravel-mix-purgecss/)
 - The live site is hosted on [Netlify](https://www.netlify.com/)
-
-[Laracasts - Assets Website](https://github.com/laracasts/assets-website)
