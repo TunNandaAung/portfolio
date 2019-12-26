@@ -328,11 +328,11 @@ __webpack_require__.r(__webpack_exports__);
         "theme-light": "#f5f6f9",
         "theme-dark": "#222"
       },
-      selectedTheme: "theme-light"
+      selectedTheme: "theme-dark"
     };
   },
   created: function created() {
-    this.selectedTheme = localStorage.getItem("theme") || "theme-light";
+    this.selectedTheme = localStorage.getItem("theme") || "theme-dark";
   },
   watch: {
     selectedTheme: function selectedTheme() {
@@ -1029,7 +1029,7 @@ var render = function() {
                             {
                               ref: "closeButton",
                               staticClass:
-                                "text-default focus:outline-none focus:text-focus",
+                                "text-default focus:outline-none focus:text-focus pt-4",
                               attrs: { type: "button", "aria-label": "Close" },
                               on: { click: _vm.close }
                             },

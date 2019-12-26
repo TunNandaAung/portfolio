@@ -18,12 +18,12 @@ export default {
         "theme-light": "#f5f6f9",
         "theme-dark": "#222"
       },
-      selectedTheme: "theme-light"
+      selectedTheme: "theme-dark"
     };
   },
 
   created() {
-    this.selectedTheme = localStorage.getItem("theme") || "theme-light";
+    this.selectedTheme = localStorage.getItem("theme") || "theme-dark";
   },
 
   watch: {

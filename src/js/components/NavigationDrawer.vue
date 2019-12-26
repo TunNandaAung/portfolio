@@ -87,7 +87,7 @@
                   ref="closeButton"
                   @click="close"
                   type="button"
-                  class="text-default focus:outline-none focus:text-focus"
+                  class="text-default focus:outline-none focus:text-focus pt-4"
                   aria-label="Close"
                 >
                   <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
