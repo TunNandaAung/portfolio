@@ -1,4 +1,4 @@
-<p align="center"><img width="100" src="https://github.com/TunNandaAung/portfolio/blob/master/public/img/profile.png" alt="Logo"></p>
+<p align="center"><img width="100" src="https://github.com/TunNandaAung/portfolio/blob/master/img/profile.png" alt="Logo"></p>
 
 # Personal Websit
 
