@@ -56,6 +56,15 @@ li {
   }
 }
 
+.social-icon{
+  transition: transform .2s;
+}
+
+.social-icon:hover{
+  transform: translateY(-30%);
+}
+
+
 .profile-info{
   position: relative;
   animation: profile-info;

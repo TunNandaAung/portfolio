@@ -936,6 +936,18 @@ li {
   line-height: 1.5;
 }
 
+.social-icon {
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.social-icon:hover {
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+}
+
 .profile-info {
   position: relative;
   -webkit-animation: profile-info;
