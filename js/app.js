@@ -224,6 +224,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -904,7 +908,7 @@ var render = function() {
                         "a",
                         {
                           staticClass:
-                            "text-lg font-medium text-default hover:text-hover",
+                            "text-xl font-bold text-default hover:text-hover",
                           attrs: { href: "#" }
                         },
                         [_vm._v("Home")]
@@ -914,7 +918,7 @@ var render = function() {
                         "scroll-link",
                         {
                           staticClass:
-                            "ml-10 text-lg font-medium text-default hover:text-hover",
+                            "ml-10 text-xl font-bold text-default hover:text-hover",
                           attrs: { href: "#skills" }
                         },
                         [_vm._v("Skills")]
@@ -924,7 +928,7 @@ var render = function() {
                         "scroll-link",
                         {
                           staticClass:
-                            "ml-10 text-lg font-medium text-default hover:text-hover",
+                            "ml-10 text-xl font-bold text-default hover:text-hover",
                           attrs: { href: "#contact" }
                         },
                         [_vm._v("Contact")]
@@ -1061,13 +1065,15 @@ var render = function() {
                         "div",
                         { staticClass: "px-4 pt-4 pb-6" },
                         [
-                          _c("img", {
-                            staticClass: "-px-8 h-16 lg:h-24",
-                            attrs: {
-                              src: "/img/isolated-logo.svg",
-                              alt: "Logo"
-                            }
-                          }),
+                          _c("a", { attrs: { href: "#" } }, [
+                            _c("img", {
+                              staticClass: "-px-8 h-16 lg:h-24",
+                              attrs: {
+                                src: "/img/isolated-logo.svg",
+                                alt: "Logo"
+                              }
+                            })
+                          ]),
                           _vm._v(" "),
                           _c(
                             "a",
@@ -1129,10 +1135,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "relative z-10 py-4 -pl-12 md:p-0" }, [
-      _c("img", {
-        staticClass: "h-16 lg:h-24",
-        attrs: { src: "/img/isolated-logo.svg", alt: "Logo" }
-      })
+      _c("a", { attrs: { href: "#" } }, [
+        _c("img", {
+          staticClass: "h-16 lg:h-24",
+          attrs: { src: "/img/isolated-logo.svg", alt: "Logo" }
+        })
+      ])
     ])
   }
 ]

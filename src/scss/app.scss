@@ -36,12 +36,18 @@ li {
 
 
 
-.landing-img{
-  position: fixed;
-  bottom: 50%;
-  top: 50%;
-  right: 10%;
-  opacity: 0.6;  
+// .landing{
+//   background: url('/img/landing-bg.svg');
+//   background-repeat: no-repeat;
+//   background-position: 90% 50%;
+//   background-size: 50%;
+// }
+
+.contact{
+  background: url('/img/contact-bg.svg');
+  background-repeat: no-repeat;
+  background-position: 90% 0%;
+  background-size: auto;
 }
 
 .skill-card-mobile__knowledge{
