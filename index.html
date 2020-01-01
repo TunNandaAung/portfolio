@@ -22,7 +22,8 @@
     <div id="app">
         <main>
             <nav-drawer class="bg-header px-8 lg:px-24">
-                <div class="flex content-center flex-wrap min-h-screen -mt-16 bg-header w-full landing">
+                <div
+                    class="flex content-center flex-wrap xl:mt-16 -mt-16 min-h-screen xl:min-h-0 bg-header w-full landing">
                     <div class="flex w-full flex-col-reverse xl:flex-row flex-wrap justify-between items-center">
                         <div class="flex flex-col items-center lg:block profile-info">
                             <h1
@@ -41,7 +42,6 @@
                         <!-- <div class="py-12 lg:py-0 mr-4 profile-image">
                             <img class="lg:h-80 lg:w-80 w-64 h-64 rounded-full object-cover bg-white"
                                 src="img/darth-vader-avatar.png" alt="Tun Nanda Aung Avatar" />
-
                         </div> -->
                         <div class="py-12 lg:py-0 mr-4 profile-image">
                             <img class="lg:h-100 lg:w-100 w-64 h-64" src="img/landing-bg.svg"
@@ -51,7 +51,14 @@
                     </div>
                 </div>
 
+                <div class="wave-container -mt-24 hidden xl:block">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="fill-current text-wave">
+                        <path
+                            d="M0 256l14.1-16C28.2 224 56 192 85 170.7c27.9-21.7 56-31.7 84-53.4C197.6 96 226 64 254 64c28.4 0 57 32 85 53.3 28.1 21.7 56 31.7 85 42.7 27.8 11 56 21 84 26.7 28.5 5.3 57 5.3 85-21.4C621.2 139 649 85 678 58.7c27.9-26.7 56-26.7 84 0C790.6 85 819 139 847 144c28.3 5 57-37 85-37.3 28 .3 56 42.3 84 85.3 28.7 43 57 85 85 74.7 28.4-10.7 57-74.7 85-90.7 28.1-16 56 16 85 21.3 27.8 5.7 56-16.3 84-26.6 28.5-10.7 57-10.7 71-10.7h14v160H0z" />
+                    </svg>
+                </div>
             </nav-drawer>
+
 
             <section id="skills">
                 <div class="px-8 lg:px-24 bg-skill lg:py-0 lg:pb-12 sm:py-0">

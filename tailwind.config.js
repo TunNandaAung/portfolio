@@ -13,6 +13,7 @@ module.exports = {
         'focus': 'var(--text-focus-color)',
         'skill': 'var(--text-skill-color)',
         'link': 'var(--text-link-color)',
+        'wave': 'var(--text-wave-color)',
       },
       backgroundColor: {
         page: 'var(--page-background-color)',
