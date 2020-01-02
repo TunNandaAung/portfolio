@@ -25,7 +25,8 @@ module.exports = {
         webcard: 'var(--web-card-background-color)',
         mobilecard: 'var(--mobile-card-background-color)',
         othercard: 'var(--other-card-background-color)',
-        icon: 'var(--icon-background-color)'
+        icon: 'var(--icon-background-color)',
+        icon: 'var(--wave-background-color)',
       },
       spacing: {
         '80': '20rem',
