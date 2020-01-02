@@ -3,7 +3,7 @@
     border-radius: 0.5rem;
     padding: 2rem;
     cursor: pointer;
-    height: calc(100vh - 20em);
+    height: calc(100vh - 20rem);
     
     &:hover
        {
@@ -55,7 +55,7 @@
         }
     }         
     .skill-card__body{
-        height: 6rem;
+        height: 7rem;
         transition: height .5s;
         overflow: hidden;
         

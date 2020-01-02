@@ -14,6 +14,7 @@ module.exports = {
         'skill': 'var(--text-skill-color)',
         'link': 'var(--text-link-color)',
         'wave': 'var(--text-wave-color)',
+        'mail': 'var(--text-mail-color)',
       },
       backgroundColor: {
         page: 'var(--page-background-color)',
@@ -26,7 +27,7 @@ module.exports = {
         mobilecard: 'var(--mobile-card-background-color)',
         othercard: 'var(--other-card-background-color)',
         icon: 'var(--icon-background-color)',
-        icon: 'var(--wave-background-color)',
+        line: 'var(--contact-line-color)'
       },
       spacing: {
         '80': '20rem',
