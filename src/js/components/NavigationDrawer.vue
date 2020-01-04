@@ -35,14 +35,14 @@
             class="hidden md:block md:ml-10 md:flex md:items-baseline md:justify-between md:bg-transparent"
           >
             <div class="lg:absolute inset-0 flex items-center justify-center">
-              <a href="#" class="text-xl font-bold text-default hover:text-hover">Home</a>
+              <a href="#" class="text-xl font-bold text-default hover:text-link p-2 nav-link">Home</a>
               <scroll-link
                 href="#skills"
-                class="ml-10 text-xl font-bold text-default hover:text-hover"
+                class="ml-10 text-xl font-bold text-default hover:text-link p-2 nav-link"
               >Skills</scroll-link>
               <scroll-link
                 href="#contact"
-                class="ml-10 text-xl font-bold text-default hover:text-hover"
+                class="ml-10 text-xl font-bold text-default hover:text-link p-2 nav-link"
               >Contact</scroll-link>
             </div>
 
