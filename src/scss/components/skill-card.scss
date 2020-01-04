@@ -3,12 +3,12 @@
     border-radius: 0.5rem;
     padding: 2rem;
     cursor: pointer;
-    height: calc(100vh - 20rem);
+    height: 30rem;
     
     &:hover
        {
-        -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
-        box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),0 5px 15px 0 rgba(0, 0, 0, 0.08);
+        -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.31), 0 5px 15px 0 rgba(0, 0, 0, 0.28);
+        box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.31),0 5px 15px 0 rgba(0, 0, 0, 0.28);
         
         .skill-card__header{
             height: 40px;        
