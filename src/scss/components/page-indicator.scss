@@ -1,7 +1,23 @@
-.indicator-position{
+// .indicator-position{
+//     top: 50%;
+//     right: 0%;
+// }
+
+.is-floating{
     top: 50%;
     right: 0%;
+    position: sticky;
+    animation: slide-indicator-right .3s ease;
+    animation-fill-mode: forwards;
+    transform: translateX(100%);
 }
+
+@keyframes slide-indicator-right{
+    100%{
+        transform: translateX(0);
+    }
+}
+
 
 .indicator:hover .indicator-link__wrapper{
     max-height: inherit;
