@@ -3,7 +3,7 @@
     <button
       v-for="(color, theme) in themes"
       :key="theme"
-      class="rounded-full md:w-6 md:h-6 lg:w-8 lg:h-8 bg-default border-4 focus:outline-none mr-2"
+      class="rounded-full w-6 h-6 lg:w-8 lg:h-8 bg-default border-4 focus:outline-none mr-2"
       :class="{ 'border-accent': selectedTheme == theme }"
       :style="{ backgroundColor: color }"
       @click="selectedTheme = theme"

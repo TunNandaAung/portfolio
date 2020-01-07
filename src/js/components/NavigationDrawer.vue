@@ -17,7 +17,7 @@
               class="block text-default focus:outline-none focus:text-focus"
               aria-label="Menu"
             >
-              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="h-8 w-8 text-default" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M3 6C3 5.44772 3.44772 5 4 5H20C20.5523 5 21 5.44772 21 6C21 6.55228 20.5523 7 20 7H4C3.44772 7 3 6.55228 3 6Z"
                 />
@@ -92,7 +92,7 @@
                   class="text-default focus:outline-none focus:text-focus pt-4"
                   aria-label="Close"
                 >
-                  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-6 w-6 text-default" fill="currentColor" viewBox="0 0 24 24">
                     <path
                       d="M18.2929 19.7071C18.6834 20.0976 19.3166 20.0976 19.7071 19.7071C20.0976 19.3166 20.0976 18.6834 19.7071 18.2929L13.4142 12L19.7071 5.70711C20.0976 5.31658 20.0976 4.68342 19.7071 4.29289C19.3166 3.90237 18.6834 3.90237 18.2929 4.29289L12 10.5858L5.70711 4.29289C5.31658 3.90237 4.68342 3.90237 4.29289 4.29289C3.90237 4.68342 3.90237 5.31658 4.29289 5.70711L10.5858 12L4.29289 18.2929C3.90237 18.6834 3.90237 19.3166 4.29289 19.7071C4.68342 20.0976 5.31658 20.0976 5.70711 19.7071L12 13.4142L18.2929 19.7071Z"
                     />
@@ -105,14 +105,17 @@
                   <img class="-px-8 h-16 lg:h-24" src="/img/isolated-logo.svg" alt="Logo" />
                 </a>
 
-                <a href="#" class="mt-4 block font-medium text-default hover:text-hover">Home</a>
+                <a
+                  href="#"
+                  class="mt-4 block font-medium text-default hover:text-hover text-xl"
+                >Home</a>
                 <scroll-link
                   href="#skills"
-                  class="mt-4 block font-medium text-default hover:text-hover"
+                  class="mt-4 block font-medium text-default hover:text-hover text-xl"
                 >Skills</scroll-link>
                 <scroll-link
                   href="#contact"
-                  class="mt-4 block font-medium text-default hover:text-hover"
+                  class="mt-4 block font-medium text-default hover:text-hover text-xl"
                 >Contact</scroll-link>
               </div>
             </div>
