@@ -15,6 +15,7 @@ module.exports = {
         'link': 'var(--text-link-color)',
         'wave': 'var(--text-wave-color)',
         'mail': 'var(--text-mail-color)',
+        'menu': 'var(--text-menu-color)'
       },
       backgroundColor: {
         page: 'var(--page-background-color)',

@@ -10,7 +10,7 @@
           </div>
 
           <div class="flex-shrink-0 md:hidden">
-            <button
+            <!-- <button
               ref="openButton"
               @click="open"
               type="button"
@@ -28,7 +28,80 @@
                   d="M4 17C3.44772 17 3 17.4477 3 18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18C21 17.4477 20.5523 17 20 17H4Z"
                 />
               </svg>
-            </button>
+            </button>-->
+            <div class="navigation">
+              <input
+                type="checkbox"
+                class="navigation__checkbox"
+                ref="navCheckBox"
+                v-model="checked"
+                hidden
+              />
+              <button
+                ref="openButton"
+                @click="toggle"
+                type="button"
+                class="block text-default focus:outline-none focus:text-focus navigation__button"
+                aria-label="Menu"
+              >
+                <span class="navigation__icon">&nbsp;</span>
+              </button>
+
+              <transition
+                enter-class="scale-0"
+                enter-active-class="ease-in-out-quint transition-slowest"
+                enter-to-class="w-full"
+                leave-class="w-full"
+                leave-active-class="ease-in-out-quint transition-slowest"
+                leave-to-class="scale-0"
+                appear
+              >
+                <div
+                  class="navigation__background scale-80 transition-transform"
+                  v-show="isOpen"
+                >&nbsp;</div>
+              </transition>
+              <!-- <transition
+                enter-class="opacity-0"
+                enter-active-class="ease-out transition-medium"
+                enter-to-class="opacity-100"
+                leave-class="opacity-100"
+                leave-active-class="ease-out transition-medium"
+                leave-to-class="opacity-0"
+                appear
+              >
+                <div v-show="isOpen" class="z-10 fixed inset-0 transition-opacity">
+                  <div @click="close" class="absolute inset-0 bg-black opacity-50" tabindex="-1"></div>
+                </div>
+              </transition>-->
+
+              <transition
+                enter-class="opacity-0 translate-x-full"
+                enter-active-class="ease-in-out-bounce transition-slowest"
+                enter-to-class="opacity-100 translate-x-0"
+                leave-class="opacity-100 translate-x-0"
+                leave-active-class="ease-in-out-bounce translate-x-full transition-slowest"
+                leave-to-class="opacity-0"
+                appear
+              >
+                <nav class="navigation__nav transition-all" v-show="isOpen">
+                  <ul class="navigation__list">
+                    <li class="navigation__item" @click="close">
+                      <scroll-link href="#home" class="navigation__link">Home</scroll-link>
+                    </li>
+                    <li class="navigation__item" @click="close">
+                      <scroll-link href="#skills" class="navigation__link">Skills</scroll-link>
+                    </li>
+                    <li class="navigation__item" @click="close">
+                      <scroll-link href="#contact" class="navigation__link">Contact</scroll-link>
+                    </li>
+                    <li class="navigation__item pt-2">
+                      <theme-switcher></theme-switcher>
+                    </li>
+                  </ul>
+                </nav>
+              </transition>
+            </div>
           </div>
 
           <div
@@ -53,8 +126,7 @@
         </nav>
       </div>
 
-      <div class="md:hidden">
-        <!-- Off-canvas menu background overlay -->
+      <!-- <div class="md:hidden">
         <transition
           enter-class="opacity-0"
           enter-active-class="ease-out transition-medium"
@@ -69,7 +141,6 @@
           </div>
         </transition>
 
-        <!-- Off-canvas menu -->
         <transition
           enter-class="translate-x-full"
           enter-active-class="ease-out transition-slow"
@@ -125,7 +196,7 @@
             </div>
           </div>
         </transition>
-      </div>
+      </div>-->
 
       <slot></slot>
     </div>
@@ -143,21 +214,29 @@ export default {
   },
   data() {
     return {
-      isOpen: false
+      isOpen: false,
+      checked: false
     };
   },
+
   methods: {
+    toggle() {
+      this.isOpen ? this.close() : this.open();
+    },
     open() {
       this.isOpen = true;
-      this.$nextTick(() => {
-        this.$refs.closeButton.focus();
-      });
+      this.checked = true;
+      // this.$nextTick(() => {
+      //   this.$refs.closeButton.focus();
+      // });
     },
     close() {
       this.isOpen = false;
-      this.$nextTick(() => {
-        this.$refs.openButton.focus();
-      });
+      this.checked = false;
+      this.$refs.navCheckBox.checked = false;
+      // this.$nextTick(() => {
+      //   this.$refs.openButton.focus();
+      // });
     }
   },
   watch: {

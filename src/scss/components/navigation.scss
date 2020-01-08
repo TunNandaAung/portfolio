@@ -1,0 +1,83 @@
+.navigation{
+    &__button{
+        @apply h-12 w-12 rounded-full z-50 fixed shadow content-center text-center bg-icon; 
+        top:1.5rem;
+        right: 1.5rem;
+    }
+
+    &__background{
+
+        @apply h-10 w-10 rounded-full z-10 fixed bg-line;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    &__nav{
+        @apply min-h-screen w-full fixed top-0 right-0 z-40 flex justify-center;
+    }
+
+    &__list{
+        @apply flex flex-col justify-center;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+    }
+
+    &__item{
+        @apply py-4
+    }
+
+    &__link{    
+        @apply text-white text-4xl font-bold uppercase cursor-pointer;
+        
+        &:hover{
+            @apply underline
+        }
+    
+    }
+
+    &__icon{
+        position: relative;
+        align-items: center;
+        
+        &,
+        &::before,
+        &::after{
+            @apply bg-line inline-block rounded-full;
+            width: 1.5rem;
+            height: 2.5px;
+        }
+
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before{
+            top: -0.5rem;
+        }
+
+        &::after{
+            top: 0.5rem;
+        }
+
+    }
+
+    
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }   
+
+    &__checkbox:checked + &__button &__icon::before {
+        @apply rotate-135 top-0;
+
+    }   
+
+    &__checkbox:checked + &__button &__icon::after {
+        @apply -rotate-135 top-0;
+    }   
+}
