@@ -13,6 +13,27 @@ html {
   font-family: "Open Sans", sans-serif;
 }
 
+body{
+  width: 100vw;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+
+  &::-webkit-scrollbar-track {
+    background: var(--header-background-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #3e474b;
+    border-radius: 10px;
+  }
+}
+
+
 main {
   scroll-snap-type: y mandatory;
 }
@@ -163,5 +184,7 @@ li {
 [v-cloak] {
   display: none;
 }
+
+
 
 @tailwind utilities;
