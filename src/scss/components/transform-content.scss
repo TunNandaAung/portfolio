@@ -1,0 +1,11 @@
+.transform{
+    animation: come-in 1s ease;
+    animation-fill-mode: forwards;
+    transform: translateY(100%);
+}
+
+@keyframes come-in{
+    100%{
+        transform: translateY(0);
+    }
+}
