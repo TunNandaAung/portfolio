@@ -1,5 +1,6 @@
 .transform{
     animation: come-in 1s ease;
+    animation-delay: 0.2s;
     animation-fill-mode: forwards;
     transform: translateY(100%);
 }
