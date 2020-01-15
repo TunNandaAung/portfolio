@@ -47,7 +47,7 @@
                 <span class="navigation__icon">&nbsp;</span>
               </button>
 
-              <transition
+              <!-- <transition
                 enter-class="scale-0"
                 enter-active-class="ease-in-out-quint transition-slowest"
                 enter-to-class="w-full"
@@ -60,20 +60,8 @@
                   class="navigation__background scale-80 transition-transform"
                   v-show="isOpen"
                 >&nbsp;</div>
-              </transition>
-              <!-- <transition
-                enter-class="opacity-0"
-                enter-active-class="ease-out transition-medium"
-                enter-to-class="opacity-100"
-                leave-class="opacity-100"
-                leave-active-class="ease-out transition-medium"
-                leave-to-class="opacity-0"
-                appear
-              >
-                <div v-show="isOpen" class="z-10 fixed inset-0 transition-opacity">
-                  <div @click="close" class="absolute inset-0 bg-black opacity-50" tabindex="-1"></div>
-                </div>
               </transition>-->
+              <div class="navigation__background transition-transform">&nbsp;</div>
 
               <transition
                 enter-class="opacity-0 translate-x-full"

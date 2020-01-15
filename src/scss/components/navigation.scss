@@ -10,6 +10,7 @@
         @apply h-10 w-10 rounded-full z-10 fixed bg-line;
         top: 2rem;
         right: 2rem;
+        transition: transform .8s;
     }
 
     &__nav{
@@ -67,6 +68,11 @@
 
     }
 
+    
+    
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
     
     &__checkbox:checked + &__button &__icon {
         background-color: transparent;
