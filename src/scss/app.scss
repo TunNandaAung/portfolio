@@ -9,6 +9,7 @@
 @import "components/page-indicator";
 @import "components/navigation";
 @import "components/transform-content.scss";
+@import "components/toggle-button.scss";
 
 html {
   font-family: "Open Sans", sans-serif;
@@ -34,6 +35,15 @@ body{
   }
 }
 
+.transition{
+  animation: slide-background .3s ease;
+}
+
+@keyframes slide-indicator-right{
+  100%{
+      background-color: red;
+  }
+}
 
 main {
   scroll-snap-type: y mandatory;

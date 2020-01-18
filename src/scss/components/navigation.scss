@@ -7,7 +7,7 @@
 
     &__background{
 
-        @apply h-10 w-10 rounded-full z-10 fixed bg-line;
+        @apply h-8 w-8 rounded-full z-10 fixed bg-line;
         top: 2rem;
         right: 2rem;
         transition: transform .8s;
