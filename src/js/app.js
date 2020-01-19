@@ -3,6 +3,7 @@ import NavDrawer from './components/NavigationDrawer.vue'
 import ScrollLink from './components/ScrollLink.vue'
 import inViewport from 'in-viewport'
 import TransformContent from './components/TransformContent'
+import ThemeSwitcher from './components/ThemeSwitcher'
 
 window.Vue = Vue;
 
@@ -13,7 +14,8 @@ const app = new Vue({
     components: {
         NavDrawer,
         ScrollLink,
-        TransformContent
+        TransformContent,
+        ThemeSwitcher
     },
     mounted() {
         let indicator = document.querySelector('#indicator')

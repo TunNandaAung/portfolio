@@ -1,6 +1,8 @@
 .transform{
-    animation: come-in 1s ease;
+    animation: come-in 1s;
     animation-delay: 0.2s;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.52, 0.01, 0.16, 1) 0s;
     animation-fill-mode: forwards;
     transform: translateY(100%);
 }

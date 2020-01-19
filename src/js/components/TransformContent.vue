@@ -25,7 +25,7 @@ export default {
         }
       },
       {
-        threshold: 0.25
+        threshold: 0.75
       }
     );
     observer.observe(document.querySelector(`#${this.observe}`));
