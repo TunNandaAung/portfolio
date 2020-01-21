@@ -32,6 +32,7 @@
     &__link{    
         @apply text-white text-4xl font-bold uppercase cursor-pointer;
         
+
         &:hover{
             @apply underline
         }

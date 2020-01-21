@@ -31,6 +31,7 @@ module.exports = {
         line: 'var(--contact-line-color)'
       },
       spacing: {
+        '30': '7.5rem',
         '80': '20rem',
         '100': '25rem',
         '128': '32rem'

@@ -3,7 +3,7 @@
     <div>
       <div id="nav" class="bg-header">
         <nav class="relative flex flex-wrap items-center justify-between md:py-4">
-          <div class="relative z-10 py-4 -pl-12 md:p-0">
+          <div class="relative z-10 py-4 -pl-12 md:p-0 logo">
             <a href="#">
               <img class="h-16 lg:h-24" src="/img/isolated-logo.svg" alt="Logo" />
             </a>
@@ -12,7 +12,7 @@
           <div
             class="hidden md:block md:ml-10 md:flex md:items-baseline md:justify-between md:bg-transparent"
           >
-            <div class="lg:absolute inset-0 flex items-center justify-center">
+            <div class="lg:absolute inset-0 flex items-center justify-center nav-lg">
               <a href="#" class="text-xl font-bold text-default hover:text-link p-2 nav-link">Home</a>
               <scroll-link
                 href="#skills"
