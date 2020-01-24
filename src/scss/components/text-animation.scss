@@ -1,29 +1,32 @@
-.AnimatedText {
+@media screen and (max-width: 2000px) and (min-width: 640px){
+    .AnimatedText {
     
-      overflow: hidden;
-      height: 70px;
-  
-  
-      &__list {
-        animation-name: change;
-        animation-duration: 3s;
-        animation-delay: 2.5s;
-        animation-fill-mode: forwards;
-  
-        
-      }
-      &__item {
-          line-height:70px;
-          margin:0;
+        overflow: hidden;
+        height: 70px;
+    
+    
+        &__list {
+          animation-name: change;
+          animation-duration: 3s;
+          animation-delay: 2.5s;
+          animation-fill-mode: forwards;
+    
+          
         }
+        &__item {
+            line-height:70px;
+            margin:0;
+          }
+      
+    }
     
-  }
-  
-  
-  @keyframes change {
-    0%, 48%, 100% {transform:translate3d(0,0,0);}
-    16.66%, 29.32% {transform:translate3d(0,-50%,0);}
-  }
+    
+    @keyframes change {
+      0%, 48%, 100% {transform:translate3d(0,0,0);}
+      16.66%, 29.32% {transform:translate3d(0,-50%,0);}
+    }
+}
+
   
 //   @keyframes change {
 //     0%, 12.66%, 100% {transform:translate3d(0,0,0);}
