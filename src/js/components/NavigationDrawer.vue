@@ -112,12 +112,28 @@
                 </scroll-link>
               </li>
               <li class="navigation__item" @click="close">
-                <scroll-link href="#skills" class="navigation__link">Skills</scroll-link>
+                <scroll-link href="#skills" class="navigation__link">
+                  Skills
+                  <span class="mask">
+                    <span>Skills</span>
+                  </span>
+                  <span class="mask">
+                    <span>Skills</span>
+                  </span>
+                </scroll-link>
               </li>
               <li class="navigation__item" @click="close">
-                <scroll-link href="#contact" class="navigation__link">Contact</scroll-link>
+                <scroll-link href="#contact" class="navigation__link">
+                  Contact
+                  <span class="mask">
+                    <span>Contact</span>
+                  </span>
+                  <span class="mask">
+                    <span>Contact</span>
+                  </span>
+                </scroll-link>
               </li>
-              <li class="pt-2">
+              <li class="pt-4">
                 <theme-switcher v-if="isOpen"></theme-switcher>
               </li>
             </ul>

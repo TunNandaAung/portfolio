@@ -105,7 +105,9 @@ $font-size:       4.25rem;
     }
 
     &__list{
-        @apply flex flex-col justify-center uppercase;
+        @apply flex flex-col justify-center text-center items-center uppercase;
+        line-height: 1.2;
+
         // position: absolute;
         // top: 50%;
         // left: 50%;
@@ -113,7 +115,7 @@ $font-size:       4.25rem;
     }
 
     &__item{
-        @apply py-4;
+        @apply my-4;
         position: relative;
         color: transparent;
         cursor: pointer;
@@ -133,15 +135,17 @@ $font-size:       4.25rem;
             transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
             z-index: 1;
           }  
+           &:hover,
+          .navigation__link:active {
+            .mask { color: var(--text-split-color); transform: skewX(12deg) translateX(5px); }
+            .mask + .mask { transform: skewX(12deg) translateX(-5px); }
+            &::before { transform: scale(1); }
+        }
     }
 
     &__link{    
-        @apply text-white text-4xl font-bold uppercase cursor-pointer;
+        @apply py-4 text-5xl font-bold cursor-pointer;
         
-
-        &:hover{
-            @apply underline
-        }
     
     }
 
