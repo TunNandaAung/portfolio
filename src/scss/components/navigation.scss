@@ -1,3 +1,90 @@
+$split-position:  49%;
+$split-thickness: 4px;
+$split-color:     var(--text-link-color);
+$font-size:       4.25rem;
+
+.nav-lg-list{
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+}
+  // === Menu item =====
+  .nav-lg-item {
+    position: relative;
+    color: transparent;
+    cursor: pointer;
+    
+    // === Split Line =====
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: $split-position;
+      left: -10%;
+      right: -10%;
+      height: $split-thickness;
+      border-radius: $split-thickness;
+      margin-top: -($split-thickness / 2);
+      background: $split-color;
+      transform: scale(0);
+      transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
+      z-index: 1;
+    }
+  }
+  
+  // === Top/bottom mask =====
+  .mask {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    color: $split-color;
+    top: 0;
+    height: $split-position;
+    transition: all .8s cubic-bezier(.16,1.08,.38,.98);
+    
+    span { display: block; }
+  }
+  
+  // === Bottom mask specific =====
+  .mask + .mask {
+    top: $split-position - 0.1;
+    height: 100 - $split-position + 0.1;
+    
+    span { transform: translateY(-$split-position); }
+  }
+  
+  // === Where the fun stuff happens =====
+  .nav-lg-item:hover,
+  .nav-lg-item:active {
+    .mask { color: var(--text-default-color); transform: skewX(12deg) translateX(5px); }
+    .mask + .mask { transform: skewX(12deg) translateX(-5px); }
+    &::before { transform: scale(1); }
+}
+
+
+.nav-link {
+    position: relative;
+
+  &:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #3865a8;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+
+  &:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+}
+
 .navigation{
     &__button{
         @apply h-12 w-12 rounded-full z-50 fixed shadow content-center text-center bg-icon; 
@@ -18,7 +105,7 @@
     }
 
     &__list{
-        @apply flex flex-col justify-center;
+        @apply flex flex-col justify-center uppercase;
         // position: absolute;
         // top: 50%;
         // left: 50%;
@@ -26,7 +113,26 @@
     }
 
     &__item{
-        @apply py-4
+        @apply py-4;
+        position: relative;
+        color: transparent;
+        cursor: pointer;
+        
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: $split-position;
+            left: -10%;
+            right: -10%;
+            height: $split-thickness;
+            border-radius: $split-thickness;
+            margin-top: -($split-thickness / 2);
+            background: $split-color;
+            transform: scale(0);
+            transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
+            z-index: 1;
+          }  
     }
 
     &__link{    

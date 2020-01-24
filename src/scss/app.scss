@@ -76,26 +76,7 @@ li {
     height: calc(100vh - 10rem);
   }
 }
-.nav-link {
-  position: relative;
-}
 
-.nav-link:after {    
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  background: #3865a8;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-}
-.nav-link:hover:after { 
-  width: 100%; 
-  left: 0; 
-}
 
 // .landing{
 //   background: url('/img/wave.svg');
@@ -175,7 +156,7 @@ li {
   
 }
 
-.nav-lg * {
+.nav-lg > scroll-link {
   animation: slide-in;
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -204,6 +185,7 @@ li {
   animation: profile-info;
   animation-duration: 2.5s;
   animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @keyframes profile-info {

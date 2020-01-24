@@ -13,15 +13,36 @@
             class="hidden md:block md:ml-10 md:flex md:items-baseline md:justify-between md:bg-transparent"
           >
             <div class="lg:absolute inset-0 flex items-center justify-center nav-lg">
-              <a href="#" class="text-xl font-bold text-default hover:text-link p-2 nav-link">Home</a>
-              <scroll-link
-                href="#skills"
-                class="ml-10 text-xl font-bold text-default hover:text-link p-2 nav-link"
-              >Skills</scroll-link>
-              <scroll-link
-                href="#contact"
-                class="ml-10 text-xl font-bold text-default hover:text-link p-2 nav-link"
-              >Contact</scroll-link>
+              <div class="nav-lg-list">
+                <scroll-link href="#" class="font-bold text-3xl nav-lg-item">
+                  Home
+                  <span class="mask">
+                    <span>Home</span>
+                  </span>
+                  <span class="mask">
+                    <span>Home</span>
+                  </span>
+                </scroll-link>
+
+                <scroll-link href="#skills" class="ml-10 text-xl font-bold text-3xl nav-lg-item">
+                  Skills
+                  <span class="mask">
+                    <span>Skills</span>
+                  </span>
+                  <span class="mask">
+                    <span>Skills</span>
+                  </span>
+                </scroll-link>
+                <scroll-link href="#contact" class="ml-10 text-xl font-bold text-3xl nav-lg-item">
+                  Contact
+                  <span class="mask">
+                    <span>Contact</span>
+                  </span>
+                  <span class="mask">
+                    <span>Contact</span>
+                  </span>
+                </scroll-link>
+              </div>
             </div>
 
             <div class="ml-10 relative flex items-baseline">
@@ -80,7 +101,15 @@
           <nav class="navigation__nav transition-all" v-show="isOpen">
             <ul class="navigation__list">
               <li class="navigation__item" @click="close">
-                <scroll-link href="#home" class="navigation__link">Home</scroll-link>
+                <scroll-link href="#home" class="navigation__link">
+                  Home
+                  <span class="mask">
+                    <span>Home</span>
+                  </span>
+                  <span class="mask">
+                    <span>Home</span>
+                  </span>
+                </scroll-link>
               </li>
               <li class="navigation__item" @click="close">
                 <scroll-link href="#skills" class="navigation__link">Skills</scroll-link>
