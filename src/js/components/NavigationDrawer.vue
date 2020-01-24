@@ -14,7 +14,7 @@
           >
             <div class="lg:absolute inset-0 flex items-center justify-center nav-lg">
               <div class="nav-lg-list">
-                <scroll-link href="#" class="font-bold text-3xl nav-lg-item">
+                <scroll-link href="#" class="font-bold text-2xl nav-lg-item">
                   Home
                   <span class="mask">
                     <span>Home</span>
@@ -24,7 +24,7 @@
                   </span>
                 </scroll-link>
 
-                <scroll-link href="#skills" class="ml-10 text-xl font-bold text-3xl nav-lg-item">
+                <scroll-link href="#skills" class="ml-10 text-2xl font-bold nav-lg-item">
                   Skills
                   <span class="mask">
                     <span>Skills</span>
@@ -33,7 +33,7 @@
                     <span>Skills</span>
                   </span>
                 </scroll-link>
-                <scroll-link href="#contact" class="ml-10 text-xl font-bold text-3xl nav-lg-item">
+                <scroll-link href="#contact" class="ml-10 text-2xl font-bold nav-lg-item">
                   Contact
                   <span class="mask">
                     <span>Contact</span>
