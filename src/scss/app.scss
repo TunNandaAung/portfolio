@@ -133,8 +133,15 @@ li {
   transform: translateY(-30%);
 }
 
+.logo-icon{
+  transition: transform .5s;
+
+  &:hover{
+    transform: rotateZ(360deg);
+  }
+}
+
 .logo{
-  transform: scale();
   animation: pop;
   animation-duration: 2s;
   animation-fill-mode: forwards;

@@ -1,6 +1,6 @@
 $split-position:  49%;
 $split-thickness: 4px;
-$split-color:     var(--text-link-color);
+$split-color: var(--text-default-color);
 
 .nav-lg-list{
   line-height: 1.2;
@@ -56,7 +56,7 @@ $split-color:     var(--text-link-color);
   // === Where the fun stuff happens =====
   .nav-lg-item:hover,
   .nav-lg-item:active {
-    .mask { color: var(--text-default-color); transform: skewX(12deg) translateX(5px); }
+    .mask { color: var(--text-link-color); transform: skewX(12deg) translateX(5px); }
     .mask + .mask { transform: skewX(12deg) translateX(-5px); }
     &::before { transform: scale(1); }
 }
@@ -114,7 +114,7 @@ $split-color:     var(--text-link-color);
     }
 
     &__item{
-        @apply my-4;
+        @apply my-4 outline-none;
         position: relative;
         color: transparent;
         cursor: pointer;
@@ -129,23 +129,22 @@ $split-color:     var(--text-link-color);
             height: $split-thickness;
             border-radius: $split-thickness;
             margin-top: -($split-thickness / 2);
-            background: $split-color;
+            background: var(--text-split-color);
             transform: scale(0);
             transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
             z-index: 1;
           }  
            &:hover,
           .navigation__link:active {
-            .mask { color: var(--text-split-color); transform: skewX(12deg) translateX(5px); }
+            .mask { color: var(--text-link-color); transform: skewX(12deg) translateX(5px); }
             .mask + .mask { transform: skewX(12deg) translateX(-5px); }
             &::before { transform: scale(1); }
         }
     }
 
     &__link{    
-        @apply py-4 text-5xl font-bold cursor-pointer;
+        @apply py-4 text-5xl font-bold cursor-pointer outline-none;
         
-    
     }
 
     &__icon{
