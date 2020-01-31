@@ -13,6 +13,12 @@
 }
 
 
+@keyframes slide-indicator-right{
+    100%{
+        transform: translateX(0);
+    }
+  }
+
 .indicator:hover .indicator-link__wrapper{
     max-height: inherit;
     transform: translateX(-10%);
