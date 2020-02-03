@@ -133,7 +133,7 @@
                   </span>
                 </scroll-link>
               </li>
-              <li class="pt-4">
+              <li class="navigation__item pt-4">
                 <theme-switcher v-if="isOpen"></theme-switcher>
               </li>
             </ul>
