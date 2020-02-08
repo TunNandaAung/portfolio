@@ -4,8 +4,12 @@ import ScrollLink from './components/ScrollLink.vue'
 import inViewport from 'in-viewport'
 import TransformContent from './components/TransformContent'
 import ThemeSwitcher from './components/ThemeSwitcher'
+import VueScrollReveal from 'vue-scroll-reveal'
 
-window.Vue = Vue;
+
+window.Vue = Vue
+
+Vue.use(VueScrollReveal)
 
 
 const app = new Vue({
