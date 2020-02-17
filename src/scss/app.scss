@@ -168,11 +168,16 @@ li {
   }
 }
 
-
-
 .logo{
   animation: pop;
   animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+#blob{
+  animation: pop;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
@@ -236,9 +241,9 @@ li {
 
 .profile-image {
   position: relative;
-  animation: profile-image;
-  animation-duration: 2.5s;
-  animation-fill-mode: forwards;
+  // animation: profile-image;
+  // animation-duration: 2.5s;
+  // animation-fill-mode: forwards;
 }
 
 @keyframes profile-image {

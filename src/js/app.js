@@ -35,5 +35,14 @@ const app = new Vue({
             // ) ? console.log('transform') : contactTitle.classList.remove('transform');
 
         }, { passive: true });
+        this.loadSVG("img/landing-bg.svg");
+    },
+
+    methods: {
+        loadSVG(img) {
+            let url = `${img}?r=` + Math.random()
+            document.querySelector('#landing-bg').setAttribute("src", url);
+        }
     }
+
 })
