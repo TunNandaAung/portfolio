@@ -28,7 +28,11 @@ const app = new Vue({
         window.addEventListener('scroll', () => {
             !inViewport(
                 document.querySelector('#home')
-            ) ? indicator.classList.add('is-floating') : indicator.classList.remove('is-floating');
+            ) ? (indicator.classList.contains('is-hiding')
+                ? indicator.classList.replace('is-hiding', 'is-floating')
+                : indicator.classList.add('is-floating')
+                )
+                : indicator.classList.replace('is-floating', 'is-hiding');
 
             // inViewport(
             //     document.querySelector('#contact')

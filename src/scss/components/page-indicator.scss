@@ -12,6 +12,22 @@
     transform: translateX(100%);
 }
 
+.is-hiding{
+    top: 50%;
+    right: 0%;
+    position: sticky;
+    animation: slide-indicator-left .3s ease;
+    animation-fill-mode: forwards;
+    transform: translateX(0%);
+}
+
+
+@keyframes slide-indicator-left{
+    100%{
+        transform: translateX(100%);
+    }
+  }
+
 
 @keyframes slide-indicator-right{
     100%{
