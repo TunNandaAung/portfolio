@@ -40,12 +40,22 @@ const app = new Vue({
 
         }, { passive: true });
         this.loadSVG("img/landing-bg.svg");
+        this.registerWorker();
     },
 
     methods: {
         loadSVG(img) {
             let url = `${img}?r=` + Math.random()
             document.querySelector('#landing-bg').setAttribute("src", url);
+        },
+        registerWorker() {
+            if (navigator.serviceWorker) {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('ServiceWorker registration successful with scope:', registration.scope);
+                }).catch(error => {
+                    console.log('ServiceWorker registration failed:', error);
+                });
+            }
         }
     }
 
