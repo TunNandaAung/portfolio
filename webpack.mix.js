@@ -1,6 +1,5 @@
-let mix = require('laravel-mix');
-require('mix-tailwindcss');
-require('laravel-mix-purgecss');
+let mix = require("laravel-mix");
+const tailwindcss = require("tailwindcss");
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -12,8 +11,13 @@ require('laravel-mix-purgecss');
  |
  */
 
-mix.js('src/js/app.js', 'js').sass('src/scss/app.scss', 'css').tailwind('./tailwind.config.js');
-
+mix
+  .js("src/js/app.js", "js")
+  .sass("src/scss/app.scss", "css")
+  .options({
+    processCssUrls: false,
+    postCss: [tailwindcss("tailwind.config.js")],
+  });
 // Full API
 // mix.js(src, output);
 // mix.react(src, output); <-- Identical to mix.js(), but registers React Babel compilation.
