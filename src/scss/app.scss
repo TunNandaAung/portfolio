@@ -144,6 +144,14 @@ li {
   }
 }
 
+.profile-info-link {
+  @apply underline p-1 rounded-lg cursor-pointer;
+}
+
+.profile-info-link:hover {
+  @apply no-underline;
+}
+
 .contact-mail {
   position: relative;
 
