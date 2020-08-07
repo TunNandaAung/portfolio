@@ -1,5 +1,7 @@
 <p align="center"><img width="100" src="https://github.com/TunNandaAung/portfolio/blob/master/img/profile.png" alt="Logo"></p>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/46393e0b-b282-4726-8423-c019790dd6f2/deploy-status)](https://app.netlify.com/sites/determined-wright-250cc0/deploys)
+
 # Personal Website
 
 [https://tunnandaaung.tech](https://tunnandaaung.tech)
