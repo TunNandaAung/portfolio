@@ -2,10 +2,16 @@
   <div v-cloak>
     <div>
       <div id="nav" class="bg-header">
-        <nav class="relative flex flex-wrap items-center justify-between md:py-4">
+        <nav
+          class="relative flex flex-wrap items-center justify-between md:py-4"
+        >
           <div class="relative z-10 py-4 -pl-12 md:p-0 logo">
             <a href="#">
-              <img class="h-16 lg:h-24 logo-icon" src="/img/isolated-logo.svg" alt="Logo" />
+              <img
+                class="h-16 lg:h-24 logo-icon"
+                src="/img/isolated-logo.svg"
+                alt="Logo"
+              />
             </a>
           </div>
 
@@ -24,7 +30,10 @@
                   </span>
                 </scroll-link>
 
-                <scroll-link href="#skills" class="ml-10 text-2xl font-bold nav-lg-item">
+                <scroll-link
+                  href="#skills"
+                  class="ml-10 text-2xl font-bold nav-lg-item"
+                >
                   Skills
                   <span class="mask">
                     <span>Skills</span>
@@ -33,7 +42,10 @@
                     <span>Skills</span>
                   </span>
                 </scroll-link>
-                <scroll-link href="#contact" class="ml-10 text-2xl font-bold nav-lg-item">
+                <scroll-link
+                  href="#contact"
+                  class="ml-10 text-2xl font-bold nav-lg-item"
+                >
                   Contact
                   <span class="mask">
                     <span>Contact</span>
@@ -90,13 +102,12 @@
         <div class="navigation__background transition-transform">&nbsp;</div>
 
         <transition
-          enter-class="opacity-0 translate-x-full"
-          enter-active-class="ease-in-out-bounce transition-slowest"
+          enter-from-class="opacity-0 translate-x-full"
+          enter-active-class="ease-in-out-bounce transition-all duration-700"
           enter-to-class="opacity-100 translate-x-0"
-          leave-class="opacity-100 translate-x-0"
-          leave-active-class="ease-in-out-bounce translate-x-full transition-slowest"
-          leave-to-class="opacity-0"
-          appear
+          leave-from-class="opacity-100 translate-x-0"
+          leave-active-class="ease-in-out-bounce transition-all duration-700"
+          leave-to-class="opacity-0 translate-x-full"
         >
           <nav class="navigation__nav transition-all" v-show="isOpen">
             <ul class="navigation__list">
@@ -133,7 +144,7 @@
                   </span>
                 </scroll-link>
               </li>
-              <li class="navigation__item pt-4">
+              <li class="pt-4">
                 <theme-switcher v-if="isOpen"></theme-switcher>
               </li>
             </ul>
@@ -145,52 +156,50 @@
 </template>
 
 <script>
+import { watch, ref } from "vue";
+
 import ScrollLink from "./ScrollLink";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 export default {
   components: {
     ScrollLink,
-    ThemeSwitcher
+    ThemeSwitcher,
   },
-  data() {
+  setup(props) {
+    const isOpen = ref(false);
+    const checked = ref(false);
+
+    watch(
+      () => isOpen.value,
+      () => {
+        isOpen.value
+          ? document.body.style.setProperty("overflow", "hidden")
+          : document.body.style.removeProperty("overflow");
+      }
+    );
+
+    function toggle() {
+      isOpen.value ? close() : open();
+    }
+
+    function open() {
+      isOpen.value = true;
+      checked.value = true;
+    }
+
+    function close() {
+      isOpen.value = false;
+      checked.value = false;
+    }
+
     return {
-      isOpen: false,
-      checked: false
+      isOpen,
+      checked,
+      toggle,
+      open,
+      close,
     };
   },
-
-  methods: {
-    toggle() {
-      this.isOpen ? this.close() : this.open();
-    },
-    open() {
-      this.isOpen = true;
-      this.checked = true;
-      // this.$nextTick(() => {
-      //   this.$refs.closeButton.focus();
-      // });
-    },
-    close() {
-      this.isOpen = false;
-      this.checked = false;
-      this.$refs.navCheckBox.checked = false;
-      // this.$nextTick(() => {
-      //   this.$refs.openButton.focus();
-      // });
-    }
-  },
-  watch: {
-    isOpen: {
-      immediate: true,
-      handler(isOpen) {
-        if (isOpen) {
-          document.body.style.setProperty("overflow", "hidden");
-        } else {
-          document.body.style.removeProperty("overflow");
-        }
-      }
-    }
-  }
 };
 </script>
