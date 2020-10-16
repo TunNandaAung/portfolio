@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import NavDrawer from './components/NavigationDrawer.vue'
 import ScrollLink from './components/ScrollLink.vue'
 import inViewport from 'in-viewport'
@@ -7,14 +7,9 @@ import ThemeSwitcher from './components/ThemeSwitcher'
 import VueScrollReveal from 'vue-scroll-reveal'
 
 
-window.Vue = Vue
+const el = document.getElementById("app");
 
-Vue.use(VueScrollReveal)
-
-
-const app = new Vue({
-    el: '#app',
-
+const app = createApp({
     components: {
         NavDrawer,
         ScrollLink,
@@ -59,4 +54,8 @@ const app = new Vue({
         }
     }
 
-})
+});
+
+app.mount('#app');
+
+// app.use(VueScrollReveal);

@@ -95,8 +95,7 @@
                             <img class="lg:h-80 lg:w-80 w-64 h-64 rounded-full object-cover bg-white"
                                 src="img/darth-vader-avatar.png" alt="Tun Nanda Aung Avatar" />
                         </div> -->
-                        <div class="py-12 lg:py-0 mr-4 profile-image awesome-effect awseome-effect.active "
-                            v-scroll-reveal.reset="{distance:'100px',origin:'right', easing: 'cubic-bezier(0.23, 1, 0.32, 1)',duration:'2000'}">
+                        <div class="py-12 lg:py-0 mr-4 profile-image awesome-effect awseome-effect.active ">
                             <svg class="hidden lg:block relative h-100 w-100 fill-current text-wave" id="blob"
                                 viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -123,7 +122,7 @@
 
                     <div class="relative">
 
-                        <div class="wave-outline-container hidden lg:block -z-10">
+                        <div class="wave-outline-container hidden lg:block -z-20">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
                                 class="fill-current text-wave">
                                 <path
@@ -131,16 +130,16 @@
                             </svg>
                         </div>
 
-                        <h2 class="text-default text-3xl lg:text-5xl py-6 sm:py-12 tracking-widest font-semibold lg:absolute lg:inset-0 z-40"
-                            v-scroll-reveal.reset="{distance:'50px',duration:'1000'}">
+                        <h2
+                            class="text-default text-3xl lg:text-5xl py-6 sm:py-12 tracking-widest font-semibold lg:absolute lg:inset-0 z-20">
                             <span class="bg-indigo-600 px-1">S</span>kills
                         </h2>
                     </div>
+
                     <div
                         class="xl:flex md:mb-0 xl:py-6 md:justify-between xl:flex-wrap hidden xl:inline xl:-mt-48 xl:w-full">
 
-                        <div class="skill-card bg-card flex flex-col lg:w-1/3 sm:w-full"
-                            v-scroll-reveal.reset="{distance:'60px', easing: 'cubic-bezier(0.23, 1, 0.32, 1)',duration:'2000'}">
+                        <div class="skill-card bg-card flex flex-col lg:w-1/3 sm:w-full">
 
                             <header class="skill-card__header bg-webcard rounded-lg">
                                 <img src="/img/web-development.svg" alt="Web Development"
@@ -170,8 +169,7 @@
                         </div>
 
 
-                        <div class="skill-card bg-card flex flex-col lg:w-1/3 sm:w-full"
-                            v-scroll-reveal.reset="{distance:'60px',origin:'top', easing: 'cubic-bezier(0.23, 1, 0.32, 1)',duration:'2000',delay:250 }">
+                        <div class="skill-card bg-card flex flex-col lg:w-1/3 sm:w-full">
 
                             <header class="skill-card__header bg-mobilecard rounded-lg">
                                 <img src="/img/mobile-development.svg" alt="Mobile Development"
@@ -194,10 +192,7 @@
                         </div>
 
 
-
-
-                        <div class="skill-card bg-card flex flex-col lg:w-1/3 sm:w-full"
-                            v-scroll-reveal.reset="{ distance:'60px',easing: 'cubic-bezier(0.23, 1, 0.32, 1)',duration:'2000',delay:500 }">
+                        <div class="skill-card bg-card flex flex-col lg:w-1/3 sm:w-full z-20">
 
                             <header class="skill-card__header bg-othercard rounded-lg">
                                 <img src="/img/others.svg" alt="Other Skills" class="skill-card__icon"></img>
@@ -222,10 +217,9 @@
                         </div>
                     </div>
 
-                    <div class="xl:hidden pb-8 lg:py-6 lg:-mt-32 z-40 flex flex-col flex-wrap">
+                    <div class="xl:hidden pb-8 lg:py-6 lg:-mt-32 z-20 flex flex-col flex-wrap">
 
-                        <div class="card flex rounded-lg"
-                            v-scroll-reveal.reset="{ distance:'60px',origin:'left',easing: 'cubic-bezier(0.23, 1, 0.32, 1)',duration:'2000' }">
+                        <div class="card flex rounded-lg">
 
                             <div class=" flex flex-wrap text-center content-center justify-center bg-webcard rounded-lg
                             shadow px-4">
@@ -255,8 +249,7 @@
 
                         </div>
 
-                        <div class="card flex rounded-lg mt-8"
-                            v-scroll-reveal.reset="{ distance:'60px',origin:'right',easing: 'cubic-bezier(0.23, 1, 0.32, 1)',duration:'2000',delay:'250' }">
+                        <div class="card flex rounded-lg mt-8">
 
                             <div
                                 class="flex flex-wrap text-center content-center justify-center bg-mobilecard rounded-lg shadow px-4">
@@ -278,8 +271,7 @@
 
                         </div>
 
-                        <div class="card flex rounded-lg mt-8"
-                            v-scroll-reveal.reset="{ distance:'60px',origin:'left',easing: 'cubic-bezier(0.23, 1, 0.32, 1)',duration:'2000' ,delay:'500'}">
+                        <div class="card flex rounded-lg mt-8">
 
                             <div
                                 class="flex flex-wrap text-center content-center justify-center bg-othercard rounded-lg shadow px-4">
@@ -314,7 +306,7 @@
             <section id="contact">
                 <div class="px-8 lg:px-24 bg-contact py-8 xl:min-h-screen">
                     <h2 class="text-default text-3xl lg:text-5xl tracking-widest font-semibold relative"
-                        id="contact-title" v-scroll-reveal.reset="{distance:'50px',duration:'1000'}">
+                        id="contact-title">
                         <span class="bg-blue-700 px-1">C</span>ontacts</h2>
 
                     <div class="lg:flex lg:flex-col lg:justify-center contact-height">
@@ -389,8 +381,7 @@
 
 
                         <!-- <transform-content id="contactBg" class="relative -mt-10 lg:z-20" observe="contactMail"> -->
-                        <div class="relative -mt-10 lg:z-20"
-                            v-scroll-reveal.reset="{distance:'60px',origin:'bottom', duration:'2000',easing: 'cubic-bezier(0.52, 0.01, 0.16, 1)'}">
+                        <div class="relative -mt-10 lg:z-20">
                             <div class="absolute inset-0 contact-line hidden lg:block">
                                 <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
                                     class="fill-current text-wave z-0">

@@ -11,15 +11,11 @@
 
 <script>
 export default {
-  model: {
-    prop: "toggled",
-    event: "toggle"
-  },
   props: ["toggled"],
   methods: {
     toggle() {
-      this.$emit("toggle", !this.toggled);
-    }
-  }
+      this.$emit("update:toggled", !this.toggled);
+    },
+  },
 };
 </script>
