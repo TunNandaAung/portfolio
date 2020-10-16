@@ -8,8 +8,8 @@
 
 ## Tech stack
 
-- [Vuejs](https://vuejs.org/) 2.6
-- [Tailwindcss](https://tailwindcss.com/docs/what-is-tailwind/) 1.6
+- [Vuejs](https://vuejs.org/) 3.0.0
+- [Tailwindcss](https://tailwindcss.com/docs/what-is-tailwind/) 1.6.2
 - Assets compiled with [`JeffreyWay/laravel-mix`](https://github.com/JeffreyWay/laravel-mix/)
 - Unused CSS is purged using [`spatie/laravel-mix-purgecss`](https://github.com/spatie/laravel-mix-purgecss/)
 - Illustrations from [unDraw](https://undraw.co/)
