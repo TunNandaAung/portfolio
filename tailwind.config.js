@@ -39,6 +39,10 @@ module.exports = {
       zIndex: { 
         '-10': '-10',
         '-20': '-20',
+      },
+      borderRadius:{
+        xl: "1.50rem",
+        xxl:"6.0rem",
       }
     },
   },

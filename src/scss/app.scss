@@ -229,10 +229,10 @@ li {
 
 .profile-info {
   position: relative;
-  animation: profile-info;
-  animation-duration: 2.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  // animation: profile-info;
+  // animation-duration: 2.5s;
+  // animation-fill-mode: forwards;
+  // animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @keyframes profile-info {
@@ -273,4 +273,26 @@ li {
   display: none;
 }
 
+.tile.animated {
+  animation-name: fadeInDown;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      animation-delay: ($i - 1) * 0.3s;
+    }
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
 @tailwind utilities;
