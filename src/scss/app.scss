@@ -78,14 +78,46 @@ li {
   bottom: 0%;
 }
 
-// .landing{
-//   background: url('/img/wave.svg');
-//   background-repeat: no-repeat;
-//   background-position: 0% 100%;
-//   background-size: 100% ;
-//   margin: 0;
-//   padding: 0;
-// }
+.landing {
+  background: var(--header-background-color) url("/img/handz-rock.png");
+  background-repeat: no-repeat;
+  background-position: -80% 0%;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 1500px) {
+  .landing {
+    background-position: -10% 0%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .landing {
+    background-position: 10% 0%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .landing {
+    background-position: 30% 0%;
+    background-size: 200%;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing {
+    background-position: bottom center;
+    background-size: 210%;
+  }
+}
+
+@media (max-width: 640px) {
+  .landing {
+    background-position: 50% 100%;
+    background-size: 250%;
+  }
+}
 
 // .landing [background]{
 //   transform-origin: bottom;

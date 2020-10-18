@@ -34,7 +34,7 @@ const app = createApp({
             // ) ? console.log('transform') : contactTitle.classList.remove('transform');
 
         }, { passive: true });
-        this.loadSVG("img/landing-bg.svg");
+        // this.loadSVG("img/landing-bg.svg");
         this.registerWorker();
     },
 

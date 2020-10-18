@@ -1,7 +1,7 @@
 <template>
   <div v-cloak>
     <div>
-      <div id="nav" class="bg-header">
+      <div id="nav">
         <nav
           class="relative flex flex-wrap items-center justify-between md:py-4"
         >
@@ -63,8 +63,6 @@
           </div>
         </nav>
       </div>
-
-      <slot></slot>
     </div>
     <div class="flex-shrink-0 md:hidden">
       <div class="navigation">
