@@ -46,8 +46,47 @@
     <div id="app" v-cloak>
         <main>
 
-            <section class="landing min-h-screen">
+            <section class="landing min-h-screen relative">
                 <nav-drawer class="px-8 lg:px-24" id="home"></nav-drawer>
+
+                <div
+                    class="hidden w-14 h-14 md:inline-flex items-center justify-center rounded-xl mb-4 bg-pink-100 
+                    absolute xl:inset-y-2/3 xl:inset-x-3/4 lg:inset-y-3/4 lg:inset-x-2/3 md:inset-y-3/4 md:inset-x-1/3 blob">
+                    <svg class="h-6 w-6 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                </div>
+
+                <div class="hidden w-14 h-14 md:inline-flex items-center justify-center rounded-xl mb-4 bg-blue-100 
+                    absolute xl:inset-y-48 xl:inset-x-2/3 md:inset-y-1/4 md:inset-x-1/2 blob">
+                    <svg class=" h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                </div>
+
+                <div class="hidden w-14 h-14 md:inline-flex items-center justify-center rounded-xl mb-4 bg-teal-100 
+                    absolute lg:inset-y-1/3 lg:inset-x-9/10 md:inset-y-1/3 md:inset-x-9/10 blob">
+                    <svg class="h-6 w-6 text-teal-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+
+
+                <div class="hidden w-14 h-14 md:inline-flex items-center justify-center rounded-xl mb-4 bg-indigo-100 
+                    absolute lg:inset-y-3/4 lg:inset-x-9/10 md:inset-y-3/4 md:inset-x-4/5 blob">
+
+                    <svg class="h-6 w-6 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
 
                 <div class="px-12 md:px-24 min-h-screen flex flex-col justify-center items-start h-full">
 
@@ -80,6 +119,9 @@
                                 Web / Mobile
                                 Developer
                             </h3>
+
+
+
 
                             <p
                                 class="mt-8 text-default text-xl xl:text-2xl mb-4 text-center md:text-left font-semibold tile animated">
