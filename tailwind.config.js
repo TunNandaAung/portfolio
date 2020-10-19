@@ -16,6 +16,8 @@ module.exports = {
         wave: "var(--text-wave-color)",
         mail: "var(--text-mail-color)",
         menu: "var(--text-menu-color)",
+        header: "var(--header-background-color)",
+        headerAccent:"var(--skill-background-color)"
       },
       backgroundColor: {
         page: "var(--page-background-color)",
@@ -70,7 +72,7 @@ module.exports = {
         "4/5":"80%",
         "17/20":"85%",
         "9/10":"90%",
-      },
+      },    
     },
   },
   variants: {},

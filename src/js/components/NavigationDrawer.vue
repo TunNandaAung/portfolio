@@ -16,7 +16,7 @@
           </div>
 
           <div
-            class="hidden md:block md:ml-10 md:flex md:items-baseline md:justify-between md:bg-transparent"
+            class="hidden md:ml-10 md:flex md:items-baseline md:justify-between md:bg-transparent"
           >
             <div class="lg:absolute inset-0 flex items-center justify-center">
               <div class="nav-lg-list nav-lg">
