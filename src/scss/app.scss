@@ -86,6 +86,13 @@ li {
   padding: 0;
 }
 
+@media (min-width: 1700px) {
+  .landing {
+    background-position: 100% 50%;
+    background-size: 100%;
+  }
+}
+
 @media (max-width: 1500px) {
   .landing {
     background-position: -70% 0%;
@@ -346,4 +353,15 @@ li {
     transform: translate(0px);
   }
 }
+
+.banner-icon {
+  @apply hidden w-14 h-14 items-center justify-center rounded-xl mb-4;
+}
+
+@screen md {
+  .banner-icon {
+    @apply inline-flex;
+  }
+}
+
 @tailwind utilities;
