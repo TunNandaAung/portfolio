@@ -5,7 +5,7 @@
         <nav
           class="relative flex flex-wrap items-center justify-between md:py-4"
         >
-          <div class="relative z-10 py-4 -pl-12 md:p-0 logo">
+          <div class="relative z-20 py-4 -pl-12 md:p-0 logo">
             <a href="#">
               <img
                 class="h-16 lg:h-24 logo-icon"
@@ -64,7 +64,7 @@
         </nav>
       </div>
     </div>
-    <div class="flex-shrink-0 md:hidden">
+    <div class="flex-shrink-0 md:hidden z-20">
       <div class="navigation">
         <input
           type="checkbox"
