@@ -47,18 +47,20 @@ const app = createApp({
       let contactTitle = document.querySelector("#contact-title");
 
       !inViewport(document.querySelector("#home"))
-        ? indicator.classList.contains("is-hiding")
-          ? indicator.classList.replace("is-hiding", "is-floating")
-          : indicator.classList.add("is-floating")
+        ? this.showIndicator(indicator)
         : indicator.classList.replace("is-floating", "is-hiding");
 
-      // inViewport(
-      //     document.querySelector('#contact')
-      // ) ? console.log('transform') : contactTitle.classList.remove('transform');
+      document.body.style.setProperty(
+        "--scroll",
+        window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+      );
+    },
+    showIndicator(indicator) {
+      indicator.classList.contains("is-hiding")
+        ? indicator.classList.replace("is-hiding", "is-floating")
+        : indicator.classList.add("is-floating");
     },
   },
 });
 
 app.mount("#app");
-
-// app.use(VueScrollReveal);

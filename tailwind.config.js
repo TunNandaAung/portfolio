@@ -32,6 +32,9 @@ module.exports = {
         icon: "var(--icon-background-color)",
         line: "var(--contact-line-color)",
       },
+      opacity: {
+        card: "var(--card-opacity)",
+      },
       rotate: {
         "-180": "-180deg",
         "-90": "-90deg",

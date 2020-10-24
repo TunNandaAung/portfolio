@@ -39,16 +39,6 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-155229069-1');
-    window.addEventListener(
-        "scroll",
-        () => {
-            document.body.style.setProperty(
-                "--scroll",
-                window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
-            );
-        },
-        false
-    );
 </script>
 
 </head>
@@ -165,11 +155,11 @@
                         <span class="bg-indigo-600 px-1 rounded-xl">S</span>kills
                     </h2>
 
-                    <div class="bg-header p-12 rounded-xl bg-opacity-50 relative md:static overflow-hidden">
+                    <div class="bg-indigo-300 bg-opacity-card p-12 rounded-xl relative md:static overflow-hidden">
 
                         <div class="flex justify-between items-center md:mt-12">
                             <div class="flex flex-col items-start z-6">
-                                <div class="w-12 h-12 flex items-center justify-center rounded-full mb-4 bg-indigo-100">
+                                <div class="w-12 h-12 flex items-center justify-center rounded-full mb-4 bg-indigo-200">
                                     <svg class="h-8 w-8 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -207,7 +197,7 @@
                     </div>
 
                     <div
-                        class="bg-header px-12 py-24 rounded-xl bg-opacity-50 mt-12 relative md:static overflow-hidden">
+                        class="bg-blue-300 bg-opacity-card px-12 py-24 rounded-xl mt-12 relative md:static overflow-hidden">
                         <div class="flex justify-between items-center">
                             <div class="py-12 lg:py-0 mr-4 md:relative">
                                 <svg class="hidden static md:block lg:h-100 lg:w-100 md:w-80 md:h-80 fill-current text-blue-200"
@@ -338,8 +328,7 @@
                                 </svg> -->
                             </div>
 
-                            <div class="text-center flex flex-wrap content-center justify-center" data-aos="fade-up"
-                                data-aos-duration="1200" data-aos-easing="ease-in-out-quad" data-aos-delay="600">
+                            <div class="text-center flex flex-wrap content-center justify-center">
 
                                 <img class="w-128 h-16 lg:h-32 lg:z-20" src="/img/isolated-logo.svg" alt="Logo" />
                             </div>
