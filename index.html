@@ -38,6 +38,16 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-155229069-1');
+    window.addEventListener(
+        "scroll",
+        () => {
+            document.body.style.setProperty(
+                "--scroll",
+                window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+            );
+        },
+        false
+    );
 </script>
 
 </head>
@@ -185,7 +195,7 @@
                                 </svg>
 
                                 <img src="/img/macbook-pro-open.png"
-                                    class="-rotate-45 md:rotate-45 absolute inset-y-64 inset-x-2 lg:inset-0 md:inset-y-12 md:inset-x-8 z-0 lg:h-100 lg:w-100 md:w-80 md:h-80" />
+                                    class="device-rotate opacity-75 md:opacity-100 absolute inset-y-64 inset-x-2 lg:inset-0 md:inset-y-12 md:inset-x-8 z-0 lg:h-100 lg:w-100 md:w-80 md:h-80" />
 
                             </div>
 
@@ -203,7 +213,7 @@
                                 </svg>
 
                                 <img src="/img/iphone-upgright.png"
-                                    class="rotate-45 md:-rotate-45 absolute inset-y-1/3 -inset-x-2 lg:inset-0 md:inset-y-12 md:inset-x-8 z-0 lg:h-100 lg:w-100 md:w-80 md:h-80" />
+                                    class="device-rotate opacity-75 md:opacity-100 absolute inset-y-1/3 -inset-x-2 lg:inset-0 md:inset-y-12 md:inset-x-8 z-0 lg:h-100 lg:w-100 md:w-80 md:h-80" />
                             </div>
 
                             <div class="text-right flex flex-col items-end z-6">
@@ -234,7 +244,7 @@
             </section>
 
             <section id="contact">
-                <div class="px-8 lg:px-24 bg-contact py-8 xl:min-h-screen relative">
+                <div class="px-8 lg:px-24 bg-gradient-to-b from-headerAccent to-header  py-8 xl:min-h-screen relative">
                     <h2 class="text-default text-3xl lg:text-5xl tracking-widest font-semibold relative"
                         id="contact-title">
                         <span class="bg-blue-700 px-1">C</span>ontacts</h2>
