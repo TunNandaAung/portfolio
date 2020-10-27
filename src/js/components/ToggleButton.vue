@@ -3,6 +3,7 @@
     class="toggle"
     role="checkbox"
     tabindex="0"
+    aria-label="Switcher"
     @click="toggle"
     @keydown.space.prevent="toggle"
     :aria-checked="toggled.toString()"
