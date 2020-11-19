@@ -21,6 +21,8 @@ module.exports = {
         header: "var(--header-background-color)",
         headerAccent: "var(--skill-background-color)",
         teal: colors.teal,
+        cyan: colors.cyan,
+        fuchsia: colors.fuchsia,
       },
       backgroundColor: {
         page: "var(--page-background-color)",
