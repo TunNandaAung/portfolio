@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   purge: ["./src/**/*.html", "./src/**/*.vue", "./src/**/*.js", "./*.html"],
   theme: {
@@ -18,6 +20,7 @@ module.exports = {
         menu: "var(--text-menu-color)",
         header: "var(--header-background-color)",
         headerAccent: "var(--skill-background-color)",
+        teal: colors.teal,
       },
       backgroundColor: {
         page: "var(--page-background-color)",
