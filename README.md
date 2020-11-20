@@ -9,7 +9,7 @@
 ## Tech stack
 
 - [Vuejs](https://vuejs.org/) 3.0.0
-- [Tailwindcss](https://tailwindcss.com/docs/what-is-tailwind/) 1.6.2
+- [Tailwindcss](https://tailwindcss.com/docs/what-is-tailwind/) 2.0.1
 - Assets compiled with [`JeffreyWay/laravel-mix`](https://github.com/JeffreyWay/laravel-mix/)
 - Illustrations from [HANDZ](https://handz.design/) and [Shapefest](https://shapefest.com/)
 - The live site is hosted on [Netlify](https://www.netlify.com/)
