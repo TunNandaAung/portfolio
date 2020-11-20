@@ -361,12 +361,12 @@ li {
 }
 
 .banner-icon {
-  @apply hidden w-14 h-14 items-center justify-center rounded-xl mb-4;
+  @apply inline-flex w-10 h-10 items-center justify-center rounded-lg mb-4;
 }
 
-@screen md {
+@screen sm {
   .banner-icon {
-    @apply inline-flex;
+    @apply w-14 h-14 rounded-xl;
   }
 }
 
