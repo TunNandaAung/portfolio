@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { onMounted, watch, ref } from "vue";
+import { onMounted, watch, ref, computed } from "vue";
 import ToggleButton from "./ToggleButton";
 
 export default {
@@ -22,9 +22,15 @@ export default {
     const enablesDarkTheme = ref(true);
 
     onMounted(() => {
-      selectedTheme.value = localStorage.getItem("theme") || "theme-dark";
+      selectedTheme.value = localStorage.getItem("theme") || systemTheme.value;
       enablesDarkTheme.value = selectedTheme.value === "theme-dark";
     });
+
+    const systemTheme = computed(() =>
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "theme-dark"
+        : "theme-light"
+    );
 
     watch(
       () => enablesDarkTheme.value,
