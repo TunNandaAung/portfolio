@@ -195,7 +195,8 @@
                     </h2>
 
                     <div
-                        class="bg-gradient-to-r from-indigo-400 to-blue-400 p-8 md:p-12 rounded-xl relative md:static overflow-hidden skill-card">
+                        class="bg-gradient-to-r from-indigo-400 to-blue-400 p-8 md:p-12 rounded-xl relative md:static overflow-hidden">
+
                         <div class="flex justify-between items-center md:mt-12">
                             <div class="flex flex-col items-start z-6">
                                 <div
@@ -236,7 +237,7 @@
                     </div>
 
                     <div
-                        class="bg-gradient-to-r from-blue-400 to-teal-400 bg-opacity-card px-8 md:px-12 py-24 rounded-xl mt-12 relative md:static overflow-hidden skill-card">
+                        class="bg-gradient-to-r from-blue-400 to-teal-400 bg-opacity-card px-8 md:px-12 py-24 rounded-xl mt-12 relative md:static overflow-hidden">
                         <div class="flex justify-between items-center">
                             <div class="py-12 lg:py-0 mr-4 md:relative">
                                 <svg class="hidden static md:block lg:h-100 lg:w-100 md:w-80 md:h-80 fill-current text-blue-200"
@@ -278,18 +279,32 @@
 
             </section>
 
-            <section id="contact">
+            <section id="contact" class="relative">
                 <div class="px-8 lg:px-24 bg-gradient-to-b from-headerAccent to-header  py-8 xl:min-h-screen relative">
                     <h2 class="text-default text-3xl lg:text-5xl tracking-widest font-semibold relative"
                         id="contact-title" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <span class="bg-gradient-to-b from-blue-600 to-cyan-400 px-1 rounded-xl">C</span>ontacts</h2>
 
-                    <div class="lg:flex lg:flex-col lg:justify-center contact-height">
+                    <div class="md:flex md:flex-col md:justify-center contact-height">
                         <div class="py-6 md:flex-wrap xl:py-0">
 
-                            <div class="md:flex md:justify-between py-16 xl:items-center" id="contactMail">
+                            <div class="relative hidden md:flex">
+                                <div
+                                    class="bg-gradient-to-r from-teal-300 to-blue-200 flex w-24 h-24 rounded-full shadow-xl absolute transition transform translate-x-2/3 -translate-y-2/3">
+                                </div>
 
+                                <div
+                                    class="bg-gradient-to-r from-fuchsia-300 to-cyan-200 flex w-24 h-24 md:w-32 md:h-32 rounded-full shadow-xl absolute transition transform -translate-x-2/3">
+                                </div>
+
+                                <div
+                                    class="glass absolute top-0 rounded-3xl h-48 w-32 md:h-64 md:w-56 transition transform -ml-12 -mt-12 rotate-45">
+                                </div>
+                            </div>
+
+                            <div class="md:flex md:justify-between py-16 xl:items-center" id="contactMail">
                                 <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+
                                     <div class="flex">
                                         <!-- <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
                                             width="30px" height="30px"
@@ -298,14 +313,16 @@
                                                 d="M 25 3 C 24.088 3 22.337438 3.1897813 20.898438 4.4257812 C 20.892339 4.4303829 20.852211 4.4657189 20.845703 4.4707031 C 20.395926 4.8125543 19.401587 5.6870478 17.986328 6.9140625 L 17.886719 7 L 11 7 C 10.447 7 10 7.447 10 8 L 10 13.962891 C 6.561 17.002891 3.6413281 19.603516 3.3613281 19.853516 L 12 26.583984 L 12 9 L 17.988281 9 A 1.0001 1.0001 0 0 0 18.462891 9 L 31.513672 9 A 1.0001 1.0001 0 0 0 31.859375 9 L 38 9 L 38 26.583984 L 46.638672 19.853516 C 46.357672 19.603516 43.439 17.002891 40 13.962891 L 40 8 C 40 7.447 39.553 7 39 7 L 32.056641 7 C 31.889251 6.8497223 31.735461 6.7174156 31.566406 6.5664062 C 30.429946 5.5480509 29.550023 4.7702444 29.150391 4.4667969 C 29.147127 4.4639983 29.143891 4.4617725 29.140625 4.4589844 C 29.107784 4.43096 29.074078 4.4097946 29.041016 4.3828125 C 28.887361 4.257439 28.731649 4.1372055 28.574219 4.0332031 C 28.384468 3.9075287 28.193105 3.7968349 28.001953 3.6992188 C 28.001953 3.6992188 28 3.6972656 28 3.6972656 C 28 3.6972656 27.998047 3.6972656 27.998047 3.6972656 C 27.61294 3.5016788 27.229847 3.356974 26.863281 3.2539062 C 26.493442 3.1497511 26.142519 3.0864962 25.824219 3.0488281 C 25.508563 3.0110781 25.228 3 25 3 z M 16 14 A 1.0001 1.0001 0 1 0 16 16 L 34 16 A 1.0001 1.0001 0 1 0 34 14 L 16 14 z M 16 19 A 1.0001 1.0001 0 1 0 16 21 L 27 21 A 1.0001 1.0001 0 1 0 27 19 L 16 19 z M 3 22.134766 L 3 41.136719 C 3.08 41.075719 3.153375 41.016125 3.234375 40.953125 C 6.708375 38.251125 11.477266 34.542297 15.197266 31.654297 L 3 22.134766 z M 47 22.134766 L 34.740234 31.703125 C 38.388234 34.582125 43.15 38.336187 47 41.367188 L 47 22.134766 z M 25 27.822266 C 24.749 27.822266 23.432797 27.872516 22.091797 28.853516 C 21.172797 29.532516 10.302891 37.990203 4.4628906 42.533203 C 3.9108906 42.962203 3.43 43.337922 3 43.669922 L 3 46 C 3 46.553 3.447 47 4 47 L 46 47 C 46.553 47 47 46.553 47 46 L 47 43.912109 C 39.971 38.380109 28.657 29.456125 27.875 28.828125 C 26.781 27.954125 25.604 27.822266 25 27.822266 z">
                                             </path>
                                         </svg> -->
-                                        <h3 class="text-xl lg:text-2xl xl:text-3xl text-default">
+                                        <h3 class="text-xl lg:text-2xl xl:text-3xl text-default z-10">
                                             Email me at :</h3>
 
                                     </div>
-                                    <a class="text-mail text-2xl lg:text-5xl font-bold contact-mail"
+                                    <a class="text-mail text-2xl md:text-4xl lg:text-5xl font-bold contact-mail"
                                         href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#117;&#110;&#110;&#97;&#110;&#100;&#97;&#97;&#117;&#110;&#103;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;">&#116;&#117;&#110;&#110;&#97;&#110;&#100;&#97;&#97;&#117;&#110;&#103;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;</a>
                                     </a>
                                 </div>
+
+
                                 <div class="flex mt-12 md:mt-0">
                                     <div class="mr-3">
                                         <a href="https://github.com/tunnandaaung" target="_blank" rel="noreferrer"
@@ -382,9 +399,25 @@
 
                 </div>
 
-            </section>
+                <div class="absolute right-0 bottom-64 over">
+                    <div class="relative hidden md:flex justify-end">
+                        <div
+                            class="bg-gradient-to-r from-indigo-300 to-blue-400 flex w-24 h-24 rounded-full shadow-xl absolute transition transform translate-x-1/2 translate-y-2/3">
+                        </div>
 
+                        <div
+                            class="bg-gradient-to-r from-red-300 to-pink-400 flex w-24 h-24 md:w-32 md:h-32 rounded-full shadow-xl absolute transition transform -translate-x-full">
+                        </div>
+
+                        <div
+                            class="glass absolute top-0 rounded-3xl h-48 w-32 md:h-56 md:w-48 transition transform -ml-12 -mt-12 -rotate-45">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
         </main>
+
         <section class="z-40 indicator-position fixed mb-4 hidden md:block" id="indicator">
 
             <button class="indicator text-default">
