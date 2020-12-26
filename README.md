@@ -4,7 +4,7 @@
 
 # Personal Website
 
-[https://tunnandaaung.tech](https://tunnandaaung.tech)
+[https://tunnandaaung.me](https://tunnandaaung.me)
 
 ## Tech stack
 
