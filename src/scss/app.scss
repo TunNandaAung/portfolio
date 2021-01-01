@@ -84,7 +84,8 @@ li {
 }
 
 .landing {
-  background: var(--header-background-color) url("/img/handz-rock.png");
+  background: var(--header-background-color)
+    url("https://tunnandaaung-portfolio.s3-ap-southeast-1.amazonaws.com/images/handz-rock.png");
   background-repeat: no-repeat;
   background-position: -80% 0%;
   margin: 0;
