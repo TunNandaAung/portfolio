@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --circle-one-color: #4f46e53a;
+  --circle-two-color: #2563eb46;
+  --circle-three-color: #0284c73a;
+  --bg-color: #f7f2f2;
+}
+/*
+@media(prefers-color-scheme:dark) {
+  :root {
+      --circle-one-color: #4f46e55f;
+      --circle-two-color: #2563eb4d;
+      --circle-three-color: #0284c73f;
+      --bg-color: #1E293B;
+  }
+} */
+
+body {
+  background-color: var(--bg-color);
+}
+
+.blurry-gradient {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  /* z-index: 10; */
+  background: radial-gradient(
+      circle at 10% 50%,
+      var(--circle-one-color),
+      rgba(255, 255, 255, 0) 25%
+    ),
+    radial-gradient(
+      circle at 85% 30%,
+      var(--circle-two-color),
+      rgba(255, 255, 255, 0) 25%
+    ),
+    radial-gradient(
+      circle at 60% 90%,
+      var(--circle-three-color),
+      rgba(255, 255, 255, 0) 25%
+    );
+  /* background: radial-gradient(circle at 15% 50%, #09846685, rgba(255, 255, 255, 0) 25%), radial-gradient(circle at 85% 30%, #003543, rgba(255, 255, 255, 0) 25%); */
+  /* @apply block h-screen overflow-hidden fixed top-0 left-0 w-full z-10 bg-gradient-to-r from-blue-500 to-indigo-500; */
+}
+
+.title {
+  font-size: 10vw;
+}
