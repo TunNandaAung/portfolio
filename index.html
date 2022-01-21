@@ -8,14 +8,14 @@
   <title>Portolio Playground</title>
 </head>
 
-<body x-data="{ contentOneInView: false,contentTwoInView: false }">
+<body x-data="{ contentOneInView: false,contentTwoInView: false }" data-scroll-container>
   <div class="blurry-gradient rounded-xl">
   </div>
 
 
 
-  <header class="flex justify-center items-center min-h-screen relative">
-    <nav class="w-[500px] flex justify-between items-center my-4 absolute top-0">
+  <header class="flex justify-center items-center min-h-screen relative" data-scroll-section id="landing">
+    <nav class="w-[500px] flex justify-between items-center my-4 absolute top-0" data-scroll data-scroll-sticky>
       <h3 class="font-bold text-xl">Home</h3>
       <h3 class="font-bold text-xl">About</h3>
       <h3 class="font-bold text-xl">Contact</h3>
@@ -36,51 +36,68 @@
           fill="url(#gradient)"></path>
       </svg>
     </div>
-    <h1 class="text-9xl font-bold text-transparent bg-gradient-to-b from-gray-600 to-black bg-clip-text text-center">
-      Hello, World <br>
-      <p class="text-2xl max-w-xl text-left mt-8">
+
+    <section data-scroll data-scroll-speed="-2" data-scroll-position="left" data-scroll-target="#landing"
+      data-scroll-repeat>
+      <h1 class="text-9xl font-bold  text-center title" ref="title" id="title">
+        <span class="title-line">
+          Hello, World
+        </span>
+      </h1>
+
+      <p class="text-2xl max-w-xl text-left mt-4" data-scroll data-scroll-speed="-1" data-scroll-position="top"
+        data-scroll-target="#landing" data-scroll-repeat>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia tempore unde nobis sequi facilis a dolor
         cum
         quae dolorem reprehenderit.
       </p>
-    </h1>
+    </section>
   </header>
-  <div class="relative flex items-center justify-center my-2 overflow-hidden"
+
+  <div class="relative flex items-center justify-center my-2 overflow-hidden" data-scroll-section id="section-1"
     x-intersect:enter="contentOneInView = true" x-intersect:leave="contentOneInView = false">
     <div
-      class="bg-gradient-to-r from-blue-300/30 to-sky-300/30 shadow-sm flex flex-col h-screen transition-all duration-1000 p-12"
+      class="bg-gradient-to-r from-blue-100/30 to-sky-100/30 shadow-sm flex flex-col h-screen transition-all duration-1000 p-24"
       :class="contentOneInView ? 'rounded-3xl w-10/12 scale-100' : 'w-full rounded-none scale-100'" ref="content">
 
-
-      <h1 :class="contentOneInView ? 'text-9xl' : 'text-8xl'"
+      <h1 data-scroll :class="contentOneInView ? 'text-9xl' : 'text-8xl'"
         class="bg-gradient-to-r from-sky-900 to-cyan-900 block text-transparent bg-clip-text font-bold transition-all duration-1000">
         Content</h1>
-      <p class="font-semibold text-xl mt-12">
+      <p class="font-semibold text-3xl mt-12 leading-loose" data-scroll data-scroll-speed="3"
+        data-scroll-direction="vertical" data-scroll-delay="0.2" data-scroll-target="#section-1">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam cumque illum minima veritatis
         fugiat, unde repellendus porro cupiditate eligendi sequi, cum nisi impedit esse dolorum distinctio, consequuntur
         recusandae modi.
       </p>
     </div>
-    <div class="absolute top-1/2 left-1/2 -z-10 rounded-3xl bg-blue-600/30">
-      <img src="/assets/rocket.png" />
+    <div class="absolute bottom-0 right-12 rounded-3xl bg-sky-300/50 -z-10 9" data-scroll data-scroll-speed="3"
+      data-scroll-direction="vertical" data-scroll-delay="0.3" data-scroll-target="#section-1">
+      <img src="/assets/platonic.png" class="animate-floating h-[500px] w-[500px]" />
     </div>
   </div>
 
 
-  <div class="relative flex items-center justify-center my-2">
+  <div class="relative flex items-center justify-center my-2 overflow-hidden"
+    x-intersect:enter="contentTwoInView = true" x-intersect:leave="contentTwoInView = false" data-scroll-section
+    id="section-2">
     <div
-      class="bg-gradient-to-r from-fuchsia-300/30 to-pink-300/30 shadow-sm flex flex-col h-96 transition-all duration-1000 p-12"
+      class="bg-gradient-to-r from-fuchsia-100/30 to-pink-100/30 shadow-sm flex flex-col h-screen transition-all duration-1000 p-24"
       :class="contentTwoInView ? 'rounded-3xl w-10/12 scale-100' : 'w-full rounded-none scale-100'" ref="contentTwo">
 
 
-      <h1 :class="contentTwoInView ? 'text-7xl' : 'text-6xl'"
-        class="bg-gradient-to-r from-blue-900 to-sky-900 block text-transparent bg-clip-text font-bold transition-all duration-1000">
+      <h1 :class="contentTwoInView ? 'text-9xl' : 'text-8xl'"
+        class="bg-gradient-to-r from-fuchsia-900 to-pink-900 block text-transparent bg-clip-text font-bold transition-all duration-1000">
         Content</h1>
-      <p class="font-semibold text-xl mt-12">
+      <p class="font-semibold text-3xl mt-12 leading-loose" data-scroll data-scroll-speed="3"
+        data-scroll-direction="vertical" data-scroll-delay="0.2" data-scroll-target="#section-2">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam cumque illum minima veritatis
         fugiat, unde repellendus porro cupiditate eligendi sequi, cum nisi impedit esse dolorum distinctio, consequuntur
         recusandae modi.
       </p>
+    </div>
+    <div class="absolute bottom-0 left-12 rounded-3xl bg-pink-300/50 -z-10" data-scroll data-scroll-speed="3"
+      data-scroll-direction="vertical" data-scroll-delay="0.3" data-scroll-target="#section-2">
+      <img src="/assets/platonic-alt.png" class="animate-floating h-[500px] w-[500px]" />
     </div>
   </div>
 
@@ -88,6 +105,9 @@
 
   </div>
 
+  <div>
+
+  </div>
   <script type="module" src="/main.js"></script>
 
 </body>
