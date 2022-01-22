@@ -174,7 +174,8 @@ body {
   transition-delay: 0.7s;
 }
 
-.header-box {
+.header-box,
+.contact-mail {
   background: rgba(0, 0, 0, 0)
     linear-gradient(
       90deg,
