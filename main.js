@@ -3,9 +3,7 @@ import "./style.css";
 import intersect from "@alpinejs/intersect";
 import LocomotiveScroll from "locomotive-scroll";
 
-window.onload = function () {
-  document.getElementById("title").classList.add("is-inview");
-};
+window.Alpine = Alpine;
 
 const scroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
@@ -42,6 +40,10 @@ Alpine.data("themeSwitcher", () => ({
   },
 }));
 
-window.Alpine = Alpine;
 Alpine.plugin(intersect);
 Alpine.start();
+
+window.onload = () => {
+  document.getElementById("title").classList.add("is-inview");
+  updateTheme();
+};
