@@ -33,10 +33,16 @@
     </div>
   </button>
 
+  <button class="absolute top-5 left-5 md:top-10 md:left-10">
+    <h5 class="font-semibold text-xl">
+      Tun Nanda Aung</h5>
+
+  </button>
+
   <nav class="h-full">
     <div class="fixed inset-0 flex z-20" role="dialog" aria-modal="true" x-show="isMenuOpen">
 
-      <div class="relative flex-1 flex flex-col space-y-12 w-full items-center justify-center bg-[#f7f2f2]"
+      <div class="relative flex-1 flex flex-col space-y-8 w-full items-center justify-center bg-[#f7f2f2]"
         aria-hidden="true" x-show="isMenuOpen" x-transition:enter="transition transform duration-300"
         x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
         x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100"
@@ -44,17 +50,23 @@
 
 
         <a class="relative text-7xl md:text-9xl lg:text-10xl font-bold group flex" href="#">
-          <h1>Home</h1>
+          <h1
+            class="bg-gradient-to-r from-gray-900 to-gray-900 group-hover:from-blue-500 group-hover:to-indigo-500 bg-clip-text text-transparent">
+            Home</h1>
           <img src="/assets/rocket.png"
             class="w-32 h-32 md:w-48 md:h-48 absolute top-0 left-1/2 object-cover transition duration-500 -translate-x-48 ease-in-out opacity-0 group-hover:opacity-100 group-hover:-translate-x-3 group-hover:scale-110" />
         </a>
         <a class="relative text-7xl md:text-9xl lg:text-10xl font-bold group flex" href="#">
-          <h1>About</h1>
+          <h1
+            class="bg-gradient-to-r from-gray-900 to-gray-900 group-hover:from-fuchsia-500 group-hover:to-pink-500 bg-clip-text text-transparent">
+            About</h1>
           <img src="/assets/rocket.png"
             class="w-32 h-32 md:w-48 md:h-48 absolute top-0 left-1/2 object-cover transition duration-500 -translate-x-48 ease-in-out opacity-0 group-hover:opacity-100 group-hover:-translate-x-3 group-hover:scale-110" />
         </a>
         <a class="relative text-7xl md:text-9xl lg:text-10xl font-bold group flex" href="#">
-          <h1>Contact</h1>
+          <h1
+            class="bg-gradient-to-r from-gray-900 to-gray-900 group-hover:from-sky-500 group-hover:to-cyan-500 bg-clip-text text-transparent">
+            Contact</h1>
           <img src="/assets/rocket.png"
             class="w-32 h-32 md:w-48 md:h-48 absolute top-0 left-1/2 object-cover transition duration-500 -translate-x-48 ease-in-out opacity-0 group-hover:opacity-100 group-hover:-translate-x-3 group-hover:scale-110" />
         </a>
@@ -70,13 +82,14 @@
   <main class="px-8 flex justify-center items-center min-h-screen relative" data-scroll-section id="landing"
     x-ref="landing">
 
-    <div class="absolute top-1/2 left:1/3 xl:left-1/2 -translate-y-1/2">
-      <div class="w-48 h-[390px] sm:w-64 sm:[h-420px] xl:w-80 md:h-[500px]  header-box rounded-2xl" x-ref="headerBox">
-      </div>
-    </div>
+
 
     <section data-scroll data-scroll-speed="-2" data-scroll-position="left" data-scroll-target="#landing"
-      data-scroll-repeat>
+      data-scroll-repeat class="relative">
+      <div class="absolute top-1/2 left:1/3 xl:left-1/2 -translate-y-1/2 z-[1] opacity-75">
+        <div class="w-48 h-[390px] sm:w-64 sm:[h-420px] xl:w-80 md:h-[500px]  header-box rounded-2xl" x-ref="headerBox">
+        </div>
+      </div>
       <h1 class="text-8xl md:text-9xl xl:text-10xl font-extrabold text-center title" ref="title" id="title">
         <span class="title-line bg-gradient-to-r from-gray-700 to-neutral-700 bg-clip-text text-transparent">
           Hello, World
@@ -95,7 +108,7 @@
     </section>
   </main>
 
-  <section class="relative flex items-center justify-center overflow-hidden" data-scroll-section id="section-1"
+  <section class="relative flex items-center justify-center overflow-hidden mt-16" data-scroll-section id="section-1"
     x-intersect:enter="contentOneInView = true" x-intersect:leave="contentOneInView = false">
     <div
       class="bg-gradient-to-r from-blue-100/30 to-sky-100/30 shadow-sm flex flex-col h-screen transition-all duration-1000 p-8 sm:p-12 md:p-16 xl:p-24"
