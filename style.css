@@ -213,3 +213,20 @@ body {
     background-position: 0% 50%;
   }
 }
+
+.social-link {
+  position: relative;
+}
+
+.social-link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 2;
+  content: "";
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  @apply absolute left-1/2 block bg-gray-800 dark:bg-gray-200 rounded-full h-1 sm:h-1.5 md:h-2 w-0;
+}
+
+.social-link:hover:after {
+  width: 100%;
+  left: 0;
+}
