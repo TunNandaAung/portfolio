@@ -13,7 +13,35 @@ const scroll = new LocomotiveScroll({
   multiplier: 1.5,
 });
 
-window.Alpine = Alpine;
+const updateTheme = () => {
+  if (
+    localStorage.getItem("theme") === "dark" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    document.documentElement.classList.add("dark");
+    document.documentElement.classList.remove("light");
+  } else {
+    document.documentElement.classList.remove("dark");
+    document.documentElement.classList.add("light");
+  }
+};
 
+Alpine.data("themeSwitcher", () => ({
+  currentTheme: localStorage.getItem("theme") ?? "dark",
+  updateTheme,
+
+  get isDarkTheme() {
+    return this.currentTheme == "dark";
+  },
+
+  switchTheme(theme) {
+    localStorage.setItem("theme", theme);
+    this.currentTheme = theme;
+    this.updateTheme();
+  },
+}));
+
+window.Alpine = Alpine;
 Alpine.plugin(intersect);
 Alpine.start();
