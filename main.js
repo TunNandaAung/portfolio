@@ -47,3 +47,5 @@ window.onload = () => {
   document.getElementById("title").classList.add("is-inview");
   updateTheme();
 };
+
+console.log("Hey there, stranger 👋");

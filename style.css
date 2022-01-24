@@ -222,11 +222,28 @@ body {
   background: none repeat scroll 0 0 transparent;
   bottom: 2;
   content: "";
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.5s ease 0s, left 0.5s ease 0s;
   @apply absolute left-1/2 block bg-gray-800 dark:bg-gray-200 rounded-full h-1 sm:h-1.5 md:h-2 w-0;
 }
 
 .social-link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.mail-link {
+  position: relative;
+}
+
+.mail-link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 2;
+  content: "";
+  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+  @apply absolute left-0 block bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-400 animate-gradient-xy rounded-full h-1.5 sm:h-2 md:h-2.5 w-0;
+}
+
+.mail-link:hover:after {
   width: 100%;
   left: 0;
 }
