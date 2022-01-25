@@ -1,0 +1,29 @@
+:root {
+  --circle-one-color: #4f46e53a;
+  --circle-two-color: #2563eb46;
+  --circle-three-color: #0284c73a;
+  --bg-color: #f7f2f2;
+  --emerald: theme("colors.emerald.200");
+  --cyan: theme("colors.cyan.200");
+  --blue: theme("colors.blue.200");
+  --indigo: theme("colors.indigo.200");
+  --purple: theme("colors.purple.200");
+  --fuchsia: theme("colors.fuchsia.200");
+  --pink: theme("colors.pink.200");
+  --rose: theme("colors.rose.200");
+}
+
+.dark {
+  --circle-one-color: #4f46e55f;
+  --circle-two-color: #2563eb4d;
+  --circle-three-color: #0284c73f;
+  --bg-color: #1e293b;
+  --emerald: theme("colors.emerald.300");
+  --cyan: theme("colors.cyan.300");
+  --blue: theme("colors.blue.300");
+  --indigo: theme("colors.indigo.300");
+  --purple: theme("colors.purple.300");
+  --fuchsia: theme("colors.fuchsia.300");
+  --pink: theme("colors.pink.300");
+  --rose: theme("colors.rose.300");
+}

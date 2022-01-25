@@ -1,5 +1,5 @@
 import Alpine from "alpinejs";
-import "./style.css";
+import "./styles/style.css";
 import intersect from "@alpinejs/intersect";
 import LocomotiveScroll from "locomotive-scroll";
 
@@ -29,6 +29,7 @@ Alpine.data("portfolio", () => ({
   isMenuOpen: false,
   webDevInView: false,
   mobileDevInView: false,
+  currentSection: "",
   init() {
     console.log("called");
     this.$refs.landing.addEventListener("mousemove", (e) => {
@@ -36,6 +37,15 @@ Alpine.data("portfolio", () => ({
         -e.clientY * 0.1
       }px)`;
     });
+  },
+
+  goToSection(section) {
+    if (section !== this.currentSection) {
+      this.currentSection = section;
+      window.history.replaceState(null, null, `#${section}`);
+      scroll.scrollTo(`#${section}`);
+    }
+    this.isMenuOpen = false;
   },
 }));
 
