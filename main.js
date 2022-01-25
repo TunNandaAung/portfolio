@@ -25,6 +25,20 @@ const updateTheme = () => {
   }
 };
 
+Alpine.data("portfolio", () => ({
+  isMenuOpen: false,
+  webDevInView: false,
+  mobileDevInView: false,
+  init() {
+    console.log("called");
+    this.$refs.landing.addEventListener("mousemove", (e) => {
+      this.$refs.headerBox.style.transform = `translate(${-e.clientX * 0.1}px,${
+        -e.clientY * 0.1
+      }px)`;
+    });
+  },
+}));
+
 Alpine.data("themeSwitcher", () => ({
   currentTheme: localStorage.getItem("theme") ?? "dark",
   updateTheme,

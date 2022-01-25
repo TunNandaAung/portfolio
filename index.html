@@ -1,243 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portolio Playground</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&display=swap"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portolio Playground</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&display=swap">
-</head>
+  <body x-data="portfolio" data-scroll-container class="font-sans">
+    <div class="blurry-gradient rounded-xl"></div>
 
-<body x-data=" { isMenuOpen: false, contentOneInView: false, contentTwoInView: false, init() {
-    $refs.landing.addEventListener('mousemove', (e)=> {
-  $refs.headerBox.style.transform = `translate(${-e.clientX * .1}px,${-e.clientY * .1}px)`;
-  })
-  }
-  }" data-scroll-container class="font-sans">
-  <div class="blurry-gradient rounded-xl">
-  </div>
-
-  <button class="fixed top-2.5 right-5 md:top-5 md:right-10 p-2 sm:p-4 rounded-full z-30"
-    :class="isMenuOpen ? 'bg-transparent' : 'bg-gradient-to-r from-fuchsia-50 to-pink-50 dark:from-blue-900 dark:to-sky-900'"
-    @click=" isMenuOpen=!isMenuOpen">
-    <div class="relative w-8 h-8 flex flex-col items-center justify-center z-20">
-      <div class="top-3.5 h-1 w-6 sm:w-8 rounded-full bg-black dark:bg-white transition-all duration-300 ease-in-out"
-        :class="{'transform rotate-45 absolute' : isMenuOpen}"></div>
-      <!-- <div class="top-3.5 h-1 w-6 sm:w-8 rounded-full bg-black dark:bg-white transition-all duration-300 ease-in-out"
+    <button
+      @click=" isMenuOpen=!isMenuOpen"
+      class="fixed top-2.5 right-5 z-30 rounded-full p-2 sm:p-4 md:top-5 md:right-10"
+      :class="isMenuOpen ? 'bg-transparent' : 'bg-gradient-to-r from-fuchsia-50 to-pink-50 dark:from-blue-900 dark:to-sky-900'"
+    >
+      <div
+        class="relative z-20 flex h-8 w-8 flex-col items-center justify-center"
+      >
+        <div
+          class="top-3.5 h-1 w-6 rounded-full bg-black transition-all duration-300 ease-in-out dark:bg-white sm:w-8"
+          :class="{'transform rotate-45 absolute' : isMenuOpen}"
+        ></div>
+        <!-- <div class="top-3.5 h-1 w-6 sm:w-8 rounded-full bg-black dark:bg-white transition-all duration-300 ease-in-out"
         :class="isMenuOpen ? 'translate-x-1/2 opacity-0 absolute' : 'translate-x-0 opacity-1 mt-1 sm:mt-2'"></div> -->
-      <div class="top-3.5 h-1 w-6 sm:w-8 rounded-full bg-black dark:bg-white transition-all duration-300 ease-in-out"
-        :class="isMenuOpen ? 'transform -rotate-45 absolute' : 'mt-2'"></div>
-    </div>
-  </button>
-
-  <div class="fixed top-5 left-5 md:top-10 md:left-10 z-30">
-    <button type="button"
-      class="bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-      x-data="themeSwitcher" role="switch" aria-checked="false" :aria-checked="isDarkTheme.toString()"
-      @click.prevent="switchTheme(isDarkTheme ? 'light' : 'dark')" x-state:on="Enabled" x-state:off="Not
-    Enabled" :class="{ 'bg-sky-900': isDarkTheme, 'bg-gray-200': !(isDarkTheme) }">
-      <span class="sr-only">Theme Switcher</span>
-      <span
-        class="translate-x-0 pointer-events-none relative inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-500"
-        x-state:on="Enabled" x-state:off="Not Enabled"
-        :class="{ 'translate-x-5': isDarkTheme, 'translate-x-0': !(isDarkTheme) }">
-        <span
-          class="opacity-100 scale-100 rotate-0 ease-in duration-500 absolute inset-0 h-full w-full flex items-center justify-center transition-opacity"
-          aria-hidden="true" x-state:on="Enabled" x-state:off="Not Enabled"
-          :class="{ 'opacity-0 ease-out duration-400 scale-50 -rotate-90': isDarkTheme, 'opacity-100 scale-100 rotate-0 ease-in duration-500': !(isDarkTheme) }">
-          <svg class="h-3 w-3 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd"
-              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-              clip-rule="evenodd" />
-
-          </svg>
-        </span>
-        <span
-          class="opacity-0 scale-50 -rotate-90 ease-out duration-400 absolute inset-0 h-full w-full flex items-center justify-center transition-opacity"
-          aria-hidden="true" x-state:on="Enabled" x-state:off="Not Enabled"
-          :class="{ 'opacity-100 scale-100 rotate-0 ease-in duration-500': isDarkTheme, 'opacity-0 scale-50 -rotate-90 ease-out duration-400': !(isDarkTheme) }">
-          <svg class="h-3 w-3 text-sky-900" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-
-          </svg>
-        </span>
-      </span>
-    </button>
-  </div>
-
-  <nav class="h-full">
-    <div class="fixed inset-0 flex z-20" role="dialog" aria-modal="true" x-show="isMenuOpen">
-
-      <div
-        class="relative flex-1 flex flex-col space-y-8 w-full items-center justify-center bg-[#f7f2f2] dark:bg-[#1e293b]"
-        aria-hidden="true" x-show="isMenuOpen" x-transition:enter="transition-all transform duration-500 ease-in-out"
-        x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-        x-transition:leave="transition-all transform duration-500 ease-in-out" x-transition:leave-start="opacity-100"
-        x-transition:leave-end="opacity-0">
-
-        <a class="relative text-7xl md:text-9xl lg:text-10xl font-bold group flex" href="#">
-          <h1
-            class="bg-gradient-to-r from-gray-900 to-gray-900 dark:from-gray-100 dark:to-gray-100 group-hover:from-fuchsia-500 group-hover:to-pink-500 bg-clip-text text-transparent">
-            Home</h1>
-          <img src="/assets/rocket.png"
-            class="w-32 h-32 md:w-48 md:h-48 absolute top-0 left-1/2 object-cover transition duration-500 -translate-x-48 ease-in-out opacity-0 group-hover:opacity-100 group-hover:-translate-x-3 group-hover:scale-110" />
-        </a>
-        <a class="relative text-7xl md:text-9xl lg:text-10xl font-bold group flex" href="#">
-          <h1
-            class="bg-gradient-to-r from-gray-900 to-gray-900 dark:from-gray-100 dark:to-gray-100 group-hover:from-blue-500 group-hover:to-indigo-500 bg-clip-text text-transparent">
-            About</h1>
-          <img src="/assets/notebook.png"
-            class="w-32 h-32 md:w-48 md:h-48 absolute top-0 left-1/2 object-cover transition duration-500 -translate-x-48 ease-in-out opacity-0 group-hover:opacity-100 group-hover:-translate-x-3 group-hover:scale-110" />
-        </a>
-        <a class="relative text-7xl md:text-9xl lg:text-10xl font-bold group flex" href="#">
-          <h1
-            class="bg-gradient-to-r from-gray-900 to-gray-900 dark:from-gray-100 dark:to-gray-100 group-hover:from-sky-500 group-hover:to-cyan-500 bg-clip-text text-transparent">
-            Contact</h1>
-          <img src="/assets/at.png"
-            class="w-32 h-32 md:w-48 md:h-48 absolute top-0 left-1/2 object-cover transition duration-500 -translate-x-48 ease-in-out opacity-0 group-hover:opacity-100 group-hover:-translate-x-3 group-hover:scale-110" />
-        </a>
-
+        <div
+          class="top-3.5 h-1 w-6 rounded-full bg-black transition-all duration-300 ease-in-out dark:bg-white sm:w-8"
+          :class="isMenuOpen ? 'transform -rotate-45 absolute' : 'mt-2'"
+        ></div>
       </div>
+    </button>
 
+    <div class="fixed top-5 left-5 z-30 md:top-10 md:left-10">
+      <button
+        x-data="themeSwitcher"
+        @click.prevent="switchTheme(isDarkTheme ? 'light' : 'dark')"
+        type="button"
+        role="switch"
+        :aria-checked="isDarkTheme.toString()"
+        x-state:on="Dark Theme"
+        x-state:off="Light Theme"
+        class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 transition-colors duration-500 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        :class="{ 'bg-sky-900': isDarkTheme, 'bg-gray-200': !isDarkTheme }"
+      >
+        <span class="sr-only">Theme Switcher</span>
+        <span
+          x-state:on="Dark Theme"
+          x-state:off="Light Theme"
+          class="pointer-events-none relative inline-block h-5 w-5 translate-x-0 transform rounded-full bg-white shadow ring-0 transition duration-500 ease-in-out"
+          :class="{ 'translate-x-5': isDarkTheme, 'translate-x-0': !(isDarkTheme) }"
+        >
+          <span
+            aria-hidden="true"
+            x-state:on="Dark Theme"
+            x-state:off="Light Theme"
+            class="absolute inset-0 flex h-full w-full rotate-0 scale-100 items-center justify-center opacity-100 transition-opacity duration-500 ease-in"
+            :class="{ 'opacity-0 ease-out duration-400 scale-50 -rotate-90': isDarkTheme, 'opacity-100 scale-100 rotate-0 ease-in duration-500': !(isDarkTheme) }"
+          >
+            <svg
+              class="h-3 w-3 text-gray-600"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+          <span
+            aria-hidden="true"
+            x-state:on="Dark Theme"
+            x-state:off="Light Theme"
+            class="duration-400 absolute inset-0 flex h-full w-full -rotate-90 scale-50 items-center justify-center opacity-0 transition-opacity ease-out"
+            :class="{ 'opacity-100 scale-100 rotate-0 ease-in duration-500': isDarkTheme, 'opacity-0 scale-50 -rotate-90 ease-out duration-400': !(isDarkTheme) }"
+          >
+            <svg
+              class="h-3 w-3 text-sky-900"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              />
+            </svg>
+          </span>
+        </span>
+      </button>
     </div>
 
-  </nav>
-
-
-
-  <main class="px-8 flex justify-center items-center min-h-screen relative" data-scroll-section id="landing"
-    x-ref="landing">
-
-    <section data-scroll data-scroll-speed="-2" data-scroll-position="left" data-scroll-target="#landing"
-      data-scroll-repeat class="relative">
+    <nav class="h-full">
       <div
-        class="absolute top-1/2 left:1/3 xl:left-1/2 -translate-y-1/2 z-[1] transition-opacity duration-1000 ease-out opacity-90 hover:opacity-50">
-        <div class="w-48 h-[390px] sm:w-64 sm:[h-420px] xl:w-80 md:h-[500px]  header-box rounded-2xl" x-ref="headerBox">
+        class="fixed inset-0 z-20 flex"
+        role="dialog"
+        aria-modal="true"
+        x-show="isMenuOpen"
+      >
+        <div
+          aria-hidden="true"
+          x-show="isMenuOpen"
+          x-transition:enter="transition-all transform duration-500 ease-in-out"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave="transition-all transform duration-500 ease-in-out"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
+          class="relative flex w-full flex-1 flex-col items-center justify-center space-y-8 bg-[#f7f2f2] dark:bg-[#1e293b]"
+        >
+          <a
+            class="group lg:text-10xl relative flex text-7xl font-bold md:text-9xl"
+            href="#"
+          >
+            <h1
+              class="bg-gradient-to-r from-gray-900 to-gray-900 bg-clip-text text-transparent group-hover:from-fuchsia-500 group-hover:to-pink-500 dark:from-gray-100 dark:to-gray-100"
+            >
+              Home
+            </h1>
+            <img
+              src="/assets/rocket.png"
+              class="absolute top-0 left-1/2 h-32 w-32 -translate-x-48 object-cover opacity-0 transition duration-500 ease-in-out group-hover:-translate-x-3 group-hover:scale-110 group-hover:opacity-100 md:h-48 md:w-48"
+            />
+          </a>
+          <a
+            class="group lg:text-10xl relative flex text-7xl font-bold md:text-9xl"
+            href="#"
+          >
+            <h1
+              class="bg-gradient-to-r from-gray-900 to-gray-900 bg-clip-text text-transparent group-hover:from-blue-500 group-hover:to-indigo-500 dark:from-gray-100 dark:to-gray-100"
+            >
+              About
+            </h1>
+            <img
+              src="/assets/notebook.png"
+              class="absolute top-0 left-1/2 h-32 w-32 -translate-x-48 object-cover opacity-0 transition duration-500 ease-in-out group-hover:-translate-x-3 group-hover:scale-110 group-hover:opacity-100 md:h-48 md:w-48"
+            />
+          </a>
+          <a
+            class="group lg:text-10xl relative flex text-7xl font-bold md:text-9xl"
+            href="#"
+          >
+            <h1
+              class="bg-gradient-to-r from-gray-900 to-gray-900 bg-clip-text text-transparent group-hover:from-sky-500 group-hover:to-cyan-500 dark:from-gray-100 dark:to-gray-100"
+            >
+              Contact
+            </h1>
+            <img
+              src="/assets/at.png"
+              class="absolute top-0 left-1/2 h-32 w-32 -translate-x-48 object-cover opacity-0 transition duration-500 ease-in-out group-hover:-translate-x-3 group-hover:scale-110 group-hover:opacity-100 md:h-48 md:w-48"
+            />
+          </a>
         </div>
       </div>
-      <h1 class="text-8xl md:text-9xl xl:text-10xl font-extrabold text-center title" ref="title" id="title">
-        <span
-          class="title-line bg-gradient-to-r from-gray-700 to-neutral-700 dark:from-gray-100 dark:to-neutral-100 bg-clip-text text-transparent">
-          Hello, World
-        </span>
-        <!-- <span class="title-line bg-gradient-to-r from-gray-700 to-neutral-700 bg-clip-text text-transparent">
+    </nav>
+
+    <main
+      class="relative flex min-h-screen items-center justify-center px-8"
+      data-scroll-section
+      id="landing"
+      x-ref="landing"
+    >
+      <section
+        data-scroll
+        data-scroll-speed="-2"
+        data-scroll-position="left"
+        data-scroll-target="#landing"
+        data-scroll-repeat
+        class="relative"
+      >
+        <div
+          class="left:1/3 absolute top-1/2 z-[1] -translate-y-1/2 opacity-90 transition-opacity duration-1000 ease-out hover:opacity-50 xl:left-1/2"
+        >
+          <div
+            class="sm:[h-420px] header-box h-[390px] w-48 rounded-2xl sm:w-64 md:h-[500px] xl:w-80"
+            x-ref="headerBox"
+          ></div>
+        </div>
+        <h1
+          class="title xl:text-10xl text-center text-8xl font-extrabold md:text-9xl"
+          ref="title"
+          id="title"
+        >
+          <span
+            class="title-line bg-gradient-to-r from-gray-700 to-neutral-700 bg-clip-text text-transparent dark:from-gray-100 dark:to-neutral-100"
+          >
+            Hello, World
+          </span>
+          <!-- <span class="title-line bg-gradient-to-r from-gray-700 to-neutral-700 bg-clip-text text-transparent">
           I am <br> Tun Nanda Aung
         </span> -->
-      </h1>
+        </h1>
 
-      <p class="text-2xl md:text-3xl lg:text-4xl max-w-md sm:max-w-xl md:max-w-2xl mx-auto lg:max-w-3xl xl:max-w-5xl lg:mx-0 sm:text-left mt-4 leading-loose md:leading-loose lg:leading-loose font-semibold z-[2] relative dark:text-white"
-        data-scroll data-scroll-speed="-1" data-scroll-position="top" data-scroll-target="#landing" data-scroll-repeat>
-        I am a full stack developer who love building things and exploring new technologies. I am passionate about
-        building great user experiences and solving problems.
-      </p>
-    </section>
-  </main>
+        <p
+          data-scroll
+          data-scroll-speed="-1"
+          data-scroll-position="top"
+          data-scroll-target="#landing"
+          data-scroll-repeat
+          class="relative z-[2] mx-auto mt-4 max-w-xl text-xl font-semibold leading-loose dark:text-white sm:text-left sm:text-2xl sm:leading-loose md:max-w-2xl md:text-3xl md:leading-loose lg:mx-0 lg:max-w-3xl lg:text-4xl lg:leading-loose xl:max-w-5xl"
+        >
+          I am a full stack developer who love building things and exploring new
+          technologies. I am passionate about building great user experiences
+          and solving problems.
+        </p>
+      </section>
+    </main>
 
-  <section class="relative flex items-center justify-center overflow-hidden mt-16" data-scroll-section id="section-1"
-    x-intersect:enter="contentOneInView = true" x-intersect:leave="contentOneInView = false">
-    <div
-      class="bg-gradient-to-r from-blue-100/30 to-sky-100/30 dark:from-blue-900/30 dark:to-sky-900/30 shadow-sm flex flex-col h-screen transition-all duration-1000 p-8 sm:p-12 md:p-16 xl:p-24"
-      :class="contentOneInView ? 'rounded-3xl w-11/12 md:w-10/12 scale-100' : 'w-full rounded-none scale-100'"
-      ref="content">
-
-      <h1 data-scroll
-        :class="contentOneInView ? 'text-5xl sm:text-6xl md:text-8xl xl:text-9xl' : 'text-4xl sm:text-5xl md:text-6xl xl:text-8xl'"
-        class="bg-gradient-to-r from-sky-900 to-cyan-900 dark:from-sky-100 dark:to-cyan-100 block text-transparent bg-clip-text font-bold transition-all duration-1000">
-        Web Development</h1>
-      <p class="font-semibold text-2xl md:text-3xl lg:text-4xl mt-12 leading-loose md:leading-loose lg:leading-loose dark:text-gray-100"
-        data-scroll data-scroll-speed="3" data-scroll-direction="vertical" data-scroll-delay="0.2"
-        data-scroll-target="#section-1">
-        Building modern web applicatons with great UI and UX using Laravel, Tailwind, Vue.js, Alpine.js, Livewire
-        and Inertia. I also speak Nuxt.js, Next.js and React.js.
-      </p>
-    </div>
-    <div class="absolute bottom-0 right-12 rounded-3xl bg-sky-300/50 dark:bg-sky-700/50 -z-10 9" data-scroll
-      data-scroll-speed="3" data-scroll-direction="vertical" data-scroll-delay="0.3" data-scroll-target="#section-1">
-      <img src="/assets/platonic.png"
-        class="animate-floating object-cover h-[360px] w-[360px] md:h-[500px] md:w-[500px]" />
-    </div>
-  </section>
-
-
-  <section class="relative flex items-center justify-center mt-12 overflow-hidden"
-    x-intersect:enter="contentTwoInView = true" x-intersect:leave="contentTwoInView = false" data-scroll-section
-    id="section-2">
-    <div
-      class="bg-gradient-to-r from-fuchsia-100/30 to-pink-100/30 dark:from-fuchsia-900/30 dark:to-pink-900/30 shadow-sm flex flex-col h-screen transition-all duration-1000 p-8 sm:p-12 md:p-16 xl:p-24"
-      :class="contentTwoInView ? 'rounded-3xl w-10/12 scale-100' : 'w-full rounded-none scale-100'" ref="contentTwo">
-
-
-      <h1
-        :class="contentTwoInView ? 'text-5xl sm:text-6xl md:text-8xl xl:text-9xl' : 'text-4xl sm:text-5xl md:text-6xl xl:text-8xl'"
-        class="bg-gradient-to-r from-fuchsia-900 to-pink-900 dark:from-fuchsia-100 dark:to-pink-100 block text-transparent bg-clip-text font-bold transition-all duration-1000">
-        Mobile Development</h1>
-      <p class="font-semibold text-2xl md:text-3xl lg:text-4xl mt-12 leading-loose md:leading-loose lg:leading-loose dark:text-gray-100"
-        data-scroll data-scroll-speed="3" data-scroll-direction="vertical" data-scroll-delay="0.2"
-        data-scroll-target="#section-2">
-        Flutter is current favourite mobile development platform. Its cross platform ability just fits my needs
-        perfectly.
-      </p>
-    </div>
-    <div class="absolute bottom-0 left-12 rounded-3xl bg-pink-300/50 dark:bg-pink-600/25 dark: -z-10" data-scroll
-      data-scroll-speed="3" data-scroll-direction="vertical" data-scroll-delay="0.3" data-scroll-target="#section-2">
-      <img src="/assets/platonic-alt.png"
-        class="animate-floating object-cover  h-[360px] w-[360px] md:h-[500px] md:w-[500px]" />
-    </div>
-  </section>
-
-  <section data-scroll-section id="contact" class="mt-12">
-    <div class="min-h-screen relative flex items-center justify-center w-full">
-      <div class="w-full mx-auto py-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-        <div class="relative" data-scroll data-scroll-speed="8">
-          <h2 class="text-7xl font-extrabold tracking-tight text-zinc-700 dark:text-zinc-200 md:text-9xl">
-            <span class="block">GET IN TOUCH</span>
-            <a href="mailto:tunnanda@duck.com"
-              class="bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-400 animate-gradient-xy bg-clip-text text-transparent mail-link">
-              EMAIL ME
-            </a>
-          </h2>
-
-          <div class="flex lg:flex-shrink-0">
-            <div class="inline-flex absolute -top-32 right-0 sm:-top-40 md:-top-1/2 sm:right-24 animate-floating">
-              <img class="h-56 sm:h-64 md:h-72 object-cover"
-                src="https://res.cloudinary.com/team7/image/upload/v1633179937/demo-landing/dodeca_hdshwc.png"
-                alt="Dodeca" />
-            </div>
-
-            <div
-              class="mt-8 text-3xl font-extrabold  tracking-wide flex space-x-12 text-zinc-700 dark:text-zinc-200 md:text-7xl">
-              <a class="social-link" href="https://github.com/TunNandaAung" target="_blank"
-                rel="noreferrer noopener">GITHUB</a>
-              <a class="social-link" href="https://twitter.com/tunnandaaung" target="_blank"
-                rel="noreferrer noopener">TWITTER</a>
-
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="absolute bottom-0">
-        <p class="my-8 flex items-center justify-center text-base text-gray-600 dark:text-gray-200">
-          Built with
-          <svg xmlns="http://www.w3.org/2000/svg" class="mx-2 h-5 w-5 animate-heart-pulse text-pink-500"
-            viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd"
-              d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-              clip-rule="evenodd" />
-          </svg>
-          by Tun Nanda Aung.
+    <section
+      data-scroll-section
+      x-intersect:enter="webDevInView = true"
+      x-intersect:leave="webDevInView = false"
+      id="web-development"
+      class="relative mt-16 flex items-center justify-center overflow-hidden"
+    >
+      <div
+        class="flex h-screen flex-col bg-gradient-to-r from-blue-100/30 to-sky-100/30 p-8 shadow-sm transition-all duration-1000 dark:from-blue-900/30 dark:to-sky-900/30 sm:p-12 md:p-16 xl:p-24"
+        :class="webDevInView ? 'rounded-3xl w-11/12 md:w-10/12 scale-100' : 'w-full rounded-none scale-100'"
+      >
+        <h1
+          data-scroll
+          :class="webDevInView ? 'text-5xl sm:text-6xl md:text-7xl xl:text-9xl' : 'text-4xl sm:text-5xl md:text-6xl xl:text-8xl'"
+          class="block bg-gradient-to-r from-sky-900 to-cyan-900 bg-clip-text font-bold text-transparent transition-all duration-1000 dark:from-sky-100 dark:to-cyan-100"
+        >
+          Web <span class="hidden sm:block">Development</span>
+        </h1>
+        <p
+          class="mt-12 text-2xl font-semibold leading-loose dark:text-gray-100 md:text-3xl md:leading-loose lg:text-4xl lg:leading-loose"
+          data-scroll
+          data-scroll-speed="3"
+          data-scroll-direction="vertical"
+          data-scroll-delay="0.2"
+          data-scroll-target="#web-development"
+        >
+          Building modern web applicatons with great UI and UX using Laravel,
+          Tailwind, Vue.js, Alpine.js, Livewire and Inertia. I also speak
+          Nuxt.js, Next.js and React.js.
         </p>
       </div>
+      <div
+        class="absolute bottom-0 right-12 -z-10 rounded-3xl bg-sky-300/50 dark:bg-sky-700/50"
+        data-scroll
+        data-scroll-speed="3"
+        data-scroll-direction="vertical"
+        data-scroll-delay="0.3"
+        data-scroll-target="#web-development"
+      >
+        <img
+          src="/assets/platonic.png"
+          class="animate-floating h-[360px] w-[360px] object-cover md:h-[500px] md:w-[500px]"
+        />
+      </div>
+    </section>
 
-    </div>
+    <section
+      x-intersect:enter="mobileDevInView = true"
+      x-intersect:leave="mobileDevInView = false"
+      data-scroll-section
+      id="mobile-development"
+      class="relative mt-12 flex items-center justify-center overflow-hidden"
+    >
+      <div
+        class="flex h-screen flex-col bg-gradient-to-r from-fuchsia-100/30 to-pink-100/30 p-8 shadow-sm transition-all duration-1000 dark:from-fuchsia-900/30 dark:to-pink-900/30 sm:p-12 md:p-16 xl:p-24"
+        :class="mobileDevInView ? 'rounded-3xl w-11/12 md:w-10/12 scale-100' : 'w-full rounded-none scale-100'"
+      >
+        <h1
+          :class="mobileDevInView ? 'text-5xl sm:text-6xl md:text-7xl xl:text-9xl' : 'text-4xl sm:text-5xl md:text-6xl xl:text-8xl'"
+          class="block bg-gradient-to-r from-fuchsia-900 to-pink-900 bg-clip-text font-bold text-transparent transition-all duration-1000 dark:from-fuchsia-100 dark:to-pink-100"
+        >
+          Mobile <span class="hidden sm:block">Development</span>
+        </h1>
+        <p
+          class="mt-12 text-2xl font-semibold leading-loose dark:text-gray-100 md:text-3xl md:leading-loose lg:text-4xl lg:leading-loose"
+          data-scroll
+          data-scroll-speed="3"
+          data-scroll-direction="vertical"
+          data-scroll-delay="0.2"
+          data-scroll-target="#mobile-development"
+        >
+          Flutter is current favourite mobile development platform. Its cross
+          platform ability just fits my needs perfectly.
+        </p>
+      </div>
+      <div
+        class="dark: absolute bottom-0 left-12 -z-10 rounded-3xl bg-pink-300/50 dark:bg-pink-600/25"
+        data-scroll
+        data-scroll-speed="3"
+        data-scroll-direction="vertical"
+        data-scroll-delay="0.3"
+        data-scroll-target="#mobile-development"
+      >
+        <img
+          src="/assets/platonic-alt.png"
+          class="animate-floating h-[360px] w-[360px] object-cover md:h-[500px] md:w-[500px]"
+        />
+      </div>
+    </section>
 
-  </section>
+    <section data-scroll-section id="contact" class="mt-12">
+      <div
+        class="relative flex min-h-screen w-full items-center justify-center"
+      >
+        <div class="mx-auto w-full py-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+          <div class="relative" data-scroll data-scroll-speed="8">
+            <h2
+              class="text-7xl font-extrabold tracking-tight text-zinc-700 dark:text-zinc-200 sm:text-8xl md:text-9xl"
+            >
+              <span class="block">GET IN TOUCH</span>
+              <a
+                href="mailto:tunnanda@duck.com"
+                class="mail-link animate-gradient-xy mt-4 bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-400 bg-clip-text text-transparent"
+              >
+                EMAIL ME
+              </a>
+            </h2>
 
-  <script type="module" src="/main.js"></script>
+            <div class="flex lg:flex-shrink-0">
+              <div
+                class="animate-floating absolute -top-32 right-0 inline-flex sm:-top-40 sm:right-24 md:-top-1/2"
+              >
+                <img
+                  class="h-56 object-cover sm:h-64 md:h-72"
+                  src="https://res.cloudinary.com/team7/image/upload/v1633179937/demo-landing/dodeca_hdshwc.png"
+                  alt="Dodeca"
+                />
+              </div>
 
-</body>
+              <div
+                class="mt-4 flex space-x-12 text-3xl font-extrabold tracking-wide text-zinc-700 dark:text-zinc-200 sm:text-5xl md:text-7xl"
+              >
+                <a
+                  class="social-link"
+                  href="https://github.com/TunNandaAung"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >GITHUB</a
+                >
+                <a
+                  class="social-link"
+                  href="https://twitter.com/tunnandaaung"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >TWITTER</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="absolute bottom-0">
+          <p
+            class="my-8 flex items-center justify-center text-sm text-gray-600 dark:text-gray-200 md:text-base"
+          >
+            Built with
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="animate-heart-pulse mx-2 h-5 w-5 text-pink-500"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            by Tun Nanda Aung.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
