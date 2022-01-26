@@ -15,22 +15,29 @@
   <body x-data="portfolio" data-scroll-container class="font-sans">
     <div class="blurry-gradient rounded-xl"></div>
 
+    <!--Nav background placeholder-->
+    <div
+      class="fixed top-3 right-6 z-20 h-10 w-10 transform rounded-full bg-gradient-to-r from-fuchsia-50 to-pink-50 p-2 transition-all duration-500 ease-in-out dark:from-[#1e293b] dark:to-sky-900 sm:p-4 md:top-7 md:right-12"
+      :class="{ 'scale-[100]': isMenuOpen, 'scale-100 rounded-full': !(isMenuOpen) }"
+    ></div>
+    <!--End nav background placeholder-->
+
     <button
       @click="isMenuOpen=!isMenuOpen"
       class="fixed top-2.5 right-5 z-30 rounded-full p-2 sm:p-4 md:top-5 md:right-10"
-      :class="isMenuOpen ? 'bg-transparent' : 'bg-gradient-to-r from-fuchsia-50 to-pink-50 dark:from-blue-900 dark:to-sky-900'"
+      :class="isMenuOpen ? 'bg-transparent' : 'bg-gradient-to-r from-fuchsia-50 to-pink-50 dark:from-[#1e293b] dark:to-sky-900'"
     >
       <div
         class="relative z-20 flex h-8 w-8 flex-col items-center justify-center"
       >
         <div
-          class="top-3.5 h-1 w-6 rounded-full bg-black transition-all duration-300 ease-in-out dark:bg-white sm:w-8"
+          class="top-3.5 h-1 w-6 rounded-full bg-black transition-all duration-500 ease-in-out dark:bg-white sm:w-8"
           :class="{'transform rotate-45 absolute' : isMenuOpen}"
         ></div>
-        <!-- <div class="top-3.5 h-1 w-6 sm:w-8 rounded-full bg-black dark:bg-white transition-all duration-300 ease-in-out"
+        <!-- <div class="top-3.5 h-1 w-6 sm:w-8 rounded-full bg-black dark:bg-white transition-all duration-500 ease-in-out"
         :class="isMenuOpen ? 'translate-x-1/2 opacity-0 absolute' : 'translate-x-0 opacity-1 mt-1 sm:mt-2'"></div> -->
         <div
-          class="top-3.5 h-1 w-6 rounded-full bg-black transition-all duration-300 ease-in-out dark:bg-white sm:w-8"
+          class="top-3.5 h-1 w-6 rounded-full bg-black transition-all duration-500 ease-in-out dark:bg-white sm:w-8"
           :class="isMenuOpen ? 'transform -rotate-45 absolute' : 'mt-2'"
         ></div>
       </div>
@@ -46,7 +53,7 @@
         x-state:on="Dark Theme"
         x-state:off="Light Theme"
         class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 transition-colors duration-500 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-        :class="{ 'bg-sky-900': isDarkTheme, 'bg-gray-200': !isDarkTheme }"
+        :class="{ 'bg-sky-900': isDarkTheme, 'bg-gray-200': !isDarkTheme}"
       >
         <span class="sr-only">Theme Switcher</span>
         <span
@@ -82,7 +89,7 @@
             :class="{ 'opacity-100 scale-100 rotate-0 ease-in duration-500': isDarkTheme, 'opacity-0 scale-50 -rotate-90 ease-out duration-400': !(isDarkTheme) }"
           >
             <svg
-              class="h-3 w-3 text-sky-900"
+              class="h-3 w-3 text-blue-900"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -111,7 +118,7 @@
           x-transition:leave="transition-all transform duration-500 ease-in-out"
           x-transition:leave-start="opacity-100"
           x-transition:leave-end="opacity-0"
-          class="relative flex w-full flex-1 flex-col items-center justify-center space-y-8 bg-[#f7f2f2] dark:bg-[#1e293b]"
+          class="relative flex w-full flex-1 flex-col items-center justify-center space-y-8 bg-transparent"
         >
           <a
             class="group lg:text-10xl relative flex text-7xl font-bold md:text-9xl"
@@ -135,7 +142,7 @@
             @click.prevent="goToSection('about')"
           >
             <h1
-              class="nav-link-text group-hover:from-blue-500 group-hover:to-indigo-500"
+              class="nav-link-text group-hover:from-blue-500 group-hover:to-indigo-500 dark:group-hover:from-blue-600 dark:group-hover:to-indigo-600"
             >
               About
             </h1>
