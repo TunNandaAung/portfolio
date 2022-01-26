@@ -16,7 +16,7 @@
     <div class="blurry-gradient rounded-xl"></div>
 
     <button
-      @click=" isMenuOpen=!isMenuOpen"
+      @click="isMenuOpen=!isMenuOpen"
       class="fixed top-2.5 right-5 z-30 rounded-full p-2 sm:p-4 md:top-5 md:right-10"
       :class="isMenuOpen ? 'bg-transparent' : 'bg-gradient-to-r from-fuchsia-50 to-pink-50 dark:from-blue-900 dark:to-sky-900'"
     >
@@ -123,7 +123,11 @@
             >
               Home
             </h1>
-            <img src="/assets/rocket.png" class="nav-link-image" />
+            <img
+              src="https://res.cloudinary.com/team7/image/upload/v1643208538/portfolio/rocket_p8nbtt.png"
+              alt="Home"
+              class="nav-link-image"
+            />
           </a>
           <a
             class="group lg:text-10xl relative flex text-7xl font-bold md:text-9xl"
@@ -135,7 +139,11 @@
             >
               About
             </h1>
-            <img src="/assets/notebook.png" class="nav-link-image" />
+            <img
+              src="https://res.cloudinary.com/team7/image/upload/v1643208537/portfolio/notebook_mg8d5w.png"
+              alt="About"
+              class="nav-link-image"
+            />
           </a>
           <a
             class="group lg:text-10xl relative flex text-7xl font-bold md:text-9xl"
@@ -147,7 +155,11 @@
             >
               Contact
             </h1>
-            <img src="/assets/at.png" class="nav-link-image" />
+            <img
+              src="https://res.cloudinary.com/team7/image/upload/v1643208537/portfolio/at_cn0lig.png"
+              alt="contact"
+              class="nav-link-image"
+            />
           </a>
         </div>
       </div>
@@ -168,7 +180,7 @@
         class="relative"
       >
         <div
-          class="left:1/3 absolute top-1/2 z-[1] -translate-y-1/2 opacity-90 transition-opacity duration-1000 ease-out hover:opacity-50 xl:left-1/2"
+          class="left:1/3 absolute top-1/2 z-[1] -translate-y-1/2 opacity-50 transition-opacity duration-1000 ease-out hover:opacity-50 md:opacity-90 xl:left-1/2"
         >
           <div
             class="sm:[h-420px] header-box h-[390px] w-48 rounded-2xl sm:w-64 md:h-[500px] xl:w-80"
@@ -205,96 +217,97 @@
       </section>
     </main>
 
-    <section id="about">
-      <section
-        data-scroll-section
-        x-intersect:enter="webDevInView = true"
-        x-intersect:leave="webDevInView = false"
-        id="web-development"
-        class="relative mt-16 flex items-center justify-center overflow-hidden"
+    <section id="about" class="my-16 h-0.5 sm:h-0"></section>
+    <section
+      data-scroll-section
+      x-intersect:enter="webDevInView = true"
+      x-intersect:leave="webDevInView = false"
+      id="web-development"
+      class="relative mt-16 flex items-center justify-center overflow-hidden"
+    >
+      <div
+        class="flex h-screen flex-col bg-gradient-to-r from-blue-100/30 to-sky-100/30 p-8 shadow-sm transition-all duration-1000 dark:from-blue-900/30 dark:to-sky-900/30 sm:p-12 md:p-16 xl:p-24"
+        :class="webDevInView ? 'rounded-3xl w-11/12 md:w-10/12 scale-100' : 'w-full rounded-none scale-100'"
       >
-        <div
-          class="flex h-screen flex-col bg-gradient-to-r from-blue-100/30 to-sky-100/30 p-8 shadow-sm transition-all duration-1000 dark:from-blue-900/30 dark:to-sky-900/30 sm:p-12 md:p-16 xl:p-24"
-          :class="webDevInView ? 'rounded-3xl w-11/12 md:w-10/12 scale-100' : 'w-full rounded-none scale-100'"
+        <h1
+          data-scroll
+          :class="webDevInView ? 'text-5xl sm:text-6xl md:text-7xl xl:text-9xl' : 'text-4xl sm:text-5xl md:text-6xl xl:text-8xl'"
+          class="block bg-gradient-to-r from-sky-900 to-cyan-900 bg-clip-text font-bold text-transparent transition-all duration-1000 dark:from-sky-100 dark:to-cyan-100"
         >
-          <h1
-            data-scroll
-            :class="webDevInView ? 'text-5xl sm:text-6xl md:text-7xl xl:text-9xl' : 'text-4xl sm:text-5xl md:text-6xl xl:text-8xl'"
-            class="block bg-gradient-to-r from-sky-900 to-cyan-900 bg-clip-text font-bold text-transparent transition-all duration-1000 dark:from-sky-100 dark:to-cyan-100"
-          >
-            Web <span class="hidden sm:block">Development</span>
-          </h1>
-          <p
-            class="mt-12 text-2xl font-semibold leading-loose dark:text-gray-100 md:text-3xl md:leading-loose lg:text-4xl lg:leading-loose"
-            data-scroll
-            data-scroll-speed="3"
-            data-scroll-direction="vertical"
-            data-scroll-delay="0.2"
-            data-scroll-target="#web-development"
-          >
-            Building modern web applicatons with great UI and UX using Laravel,
-            Tailwind, Vue.js, Alpine.js, Livewire and Inertia. I also speak
-            Nuxt.js, Next.js and React.js.
-          </p>
-        </div>
-        <div
-          class="absolute bottom-0 right-12 -z-10 rounded-3xl bg-sky-300/50 dark:bg-sky-700/50"
+          Web <span class="hidden sm:block">Development</span>
+        </h1>
+        <p
+          class="mt-12 text-2xl font-semibold leading-loose dark:text-gray-100 md:text-3xl md:leading-loose lg:text-4xl lg:leading-loose"
           data-scroll
           data-scroll-speed="3"
           data-scroll-direction="vertical"
-          data-scroll-delay="0.3"
+          data-scroll-delay="0.2"
           data-scroll-target="#web-development"
         >
-          <img
-            src="/assets/platonic.png"
-            class="animate-floating h-[360px] w-[360px] object-cover md:h-[500px] md:w-[500px]"
-          />
-        </div>
-      </section>
-
-      <section
-        x-intersect:enter="mobileDevInView = true"
-        x-intersect:leave="mobileDevInView = false"
-        data-scroll-section
-        id="mobile-development"
-        class="relative mt-12 flex items-center justify-center overflow-hidden"
+          Building modern web applicatons with great UI and UX using Laravel,
+          Tailwind, Vue.js, Alpine.js, Livewire and Inertia. I also speak
+          Nuxt.js, Next.js and React.js.
+        </p>
+      </div>
+      <div
+        class="absolute bottom-0 right-12 -z-10 rounded-3xl bg-sky-300/50 dark:bg-sky-700/50"
+        data-scroll
+        data-scroll-speed="3"
+        data-scroll-direction="vertical"
+        data-scroll-delay="0.3"
+        data-scroll-target="#web-development"
       >
-        <div
-          class="flex h-screen flex-col bg-gradient-to-r from-fuchsia-100/30 to-pink-100/30 p-8 shadow-sm transition-all duration-1000 dark:from-fuchsia-900/30 dark:to-pink-900/30 sm:p-12 md:p-16 xl:p-24"
-          :class="mobileDevInView ? 'rounded-3xl w-11/12 md:w-10/12 scale-100' : 'w-full rounded-none scale-100'"
+        <img
+          src="https://res.cloudinary.com/team7/image/upload/v1643208538/portfolio/platonic_n3rgg7.png"
+          alt="Web Development Platonic"
+          class="animate-floating h-[360px] w-[360px] object-cover md:h-[500px] md:w-[500px]"
+        />
+      </div>
+    </section>
+
+    <section
+      x-intersect:enter="mobileDevInView = true"
+      x-intersect:leave="mobileDevInView = false"
+      data-scroll-section
+      id="mobile-development"
+      class="relative mt-12 flex items-center justify-center overflow-hidden"
+    >
+      <div
+        class="flex h-screen flex-col bg-gradient-to-r from-fuchsia-100/30 to-pink-100/30 p-8 shadow-sm transition-all duration-1000 dark:from-fuchsia-900/30 dark:to-pink-900/30 sm:p-12 md:p-16 xl:p-24"
+        :class="mobileDevInView ? 'rounded-3xl w-11/12 md:w-10/12 scale-100' : 'w-full rounded-none scale-100'"
+      >
+        <h1
+          :class="mobileDevInView ? 'text-5xl sm:text-6xl md:text-7xl xl:text-9xl' : 'text-4xl sm:text-5xl md:text-6xl xl:text-8xl'"
+          class="block bg-gradient-to-r from-fuchsia-900 to-pink-900 bg-clip-text font-bold text-transparent transition-all duration-1000 dark:from-fuchsia-100 dark:to-pink-100"
         >
-          <h1
-            :class="mobileDevInView ? 'text-5xl sm:text-6xl md:text-7xl xl:text-9xl' : 'text-4xl sm:text-5xl md:text-6xl xl:text-8xl'"
-            class="block bg-gradient-to-r from-fuchsia-900 to-pink-900 bg-clip-text font-bold text-transparent transition-all duration-1000 dark:from-fuchsia-100 dark:to-pink-100"
-          >
-            Mobile <span class="hidden sm:block">Development</span>
-          </h1>
-          <p
-            class="mt-12 text-2xl font-semibold leading-loose dark:text-gray-100 md:text-3xl md:leading-loose lg:text-4xl lg:leading-loose"
-            data-scroll
-            data-scroll-speed="3"
-            data-scroll-direction="vertical"
-            data-scroll-delay="0.2"
-            data-scroll-target="#mobile-development"
-          >
-            Flutter is current favourite mobile development platform. Its cross
-            platform ability just fits my needs perfectly.
-          </p>
-        </div>
-        <div
-          class="dark: absolute bottom-0 left-12 -z-10 rounded-3xl bg-pink-300/50 dark:bg-pink-600/25"
+          Mobile <span class="hidden sm:block">Development</span>
+        </h1>
+        <p
+          class="mt-12 text-2xl font-semibold leading-loose dark:text-gray-100 md:text-3xl md:leading-loose lg:text-4xl lg:leading-loose"
           data-scroll
           data-scroll-speed="3"
           data-scroll-direction="vertical"
-          data-scroll-delay="0.3"
+          data-scroll-delay="0.2"
           data-scroll-target="#mobile-development"
         >
-          <img
-            src="/assets/platonic-alt.png"
-            class="animate-floating h-[360px] w-[360px] object-cover md:h-[500px] md:w-[500px]"
-          />
-        </div>
-      </section>
+          Flutter is current favourite mobile development platform. Its cross
+          platform ability just fits my needs perfectly.
+        </p>
+      </div>
+      <div
+        class="dark: absolute bottom-0 left-12 -z-10 rounded-3xl bg-pink-300/50 dark:bg-pink-600/25"
+        data-scroll
+        data-scroll-speed="3"
+        data-scroll-direction="vertical"
+        data-scroll-delay="0.3"
+        data-scroll-target="#mobile-development"
+      >
+        <img
+          src="https://res.cloudinary.com/team7/image/upload/v1643208538/portfolio/platonic-alt_vz6ee9.png"
+          alt="Mobile Development Platonic"
+          class="animate-floating h-[360px] w-[360px] object-cover md:h-[500px] md:w-[500px]"
+        />
+      </div>
     </section>
 
     <section data-scroll-section id="contact" class="mt-12">
@@ -321,7 +334,7 @@
               >
                 <img
                   class="h-56 object-cover sm:h-64 md:h-72"
-                  src="https://res.cloudinary.com/team7/image/upload/v1633179937/demo-landing/dodeca_hdshwc.png"
+                  src="https://res.cloudinary.com/team7/image/upload/v1643209521/portfolio/dodeca_vr0ahk.png"
                   alt="Dodeca"
                 />
               </div>
