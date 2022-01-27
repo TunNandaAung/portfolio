@@ -9,6 +9,10 @@ body {
   background-color: var(--bg-color);
 }
 
+[x-cloak] {
+  display: none !important;
+}
+
 .blurry-gradient {
   display: block;
   height: 100%;

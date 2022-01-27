@@ -97,7 +97,7 @@
       </div>
     </button>
 
-    <div class="fixed top-5 left-5 z-30 md:top-10 md:left-10">
+    <div x-cloak class="fixed top-5 left-5 z-30 md:top-10 md:left-10">
       <button
         x-data="themeSwitcher"
         @click.prevent="switchTheme(isDarkTheme ? 'light' : 'dark')"
@@ -423,7 +423,7 @@
 
         <div class="absolute bottom-0">
           <a
-            class="my-8 flex items-center justify-center text-sm text-gray-600 transition-all duration-200 ease-in-out hover:scale-110 md:text-base"
+            class="my-8 flex items-center justify-center text-sm text-gray-600 transition-all duration-200 ease-in-out hover:scale-110 dark:text-gray-200 md:text-base"
             href="https://github.com/TunNandaAung/portfolio"
           >
             Built with
