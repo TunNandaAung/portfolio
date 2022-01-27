@@ -78,8 +78,8 @@
     <button
       @click="isMenuOpen=!isMenuOpen"
       aria-label="Hamburger menu"
-      class="fixed top-2.5 right-5 z-30 rounded-full p-2 sm:p-4 md:top-5 md:right-10"
-      :class="isMenuOpen ? 'bg-transparent' : 'bg-gradient-to-r from-fuchsia-50 to-pink-50 dark:from-[#1e293b] dark:to-sky-900'"
+      class="fixed top-2.5 right-5 z-30 rounded-full border border-gray-200 p-2 dark:border-gray-700 sm:p-4 md:top-5 md:right-10"
+      :class="isMenuOpen ? 'bg-transparent border-none' : 'bg-gradient-to-r from-fuchsia-50 to-pink-50 dark:from-[#1e293b] dark:to-sky-900'"
     >
       <div
         class="relative z-20 flex h-8 w-8 flex-col items-center justify-center"
@@ -106,7 +106,7 @@
         :aria-checked="isDarkTheme.toString()"
         x-state:on="Dark Theme"
         x-state:off="Light Theme"
-        class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 transition-colors duration-500 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 transition-colors duration-500 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:border-gray-700"
         :class="{ 'bg-sky-900': isDarkTheme, 'bg-gray-200': !isDarkTheme}"
       >
         <span class="sr-only">Theme Switcher</span>
@@ -283,7 +283,7 @@
       class="relative mt-16 flex items-center justify-center overflow-hidden"
     >
       <div
-        class="flex h-screen flex-col bg-gradient-to-r from-blue-100/30 to-sky-100/30 p-8 shadow-sm transition-all duration-1000 dark:from-blue-900/30 dark:to-sky-900/30 sm:p-12 md:p-16 xl:p-24"
+        class="flex h-screen flex-col bg-gradient-to-r from-blue-300/30 to-sky-300/30 p-8 shadow-sm transition-all duration-1000 dark:from-blue-900/30 dark:to-sky-900/30 sm:p-12 md:p-16 xl:p-24"
         :class="webDevInView ? 'rounded-3xl w-11/12 md:w-10/12 scale-100' : 'w-full rounded-none scale-100'"
       >
         <h1
@@ -331,7 +331,7 @@
       class="relative mt-12 flex items-center justify-center overflow-hidden"
     >
       <div
-        class="flex h-screen flex-col bg-gradient-to-r from-fuchsia-100/30 to-pink-100/30 p-8 shadow-sm transition-all duration-1000 dark:from-fuchsia-900/30 dark:to-pink-900/30 sm:p-12 md:p-16 xl:p-24"
+        class="flex h-screen flex-col bg-gradient-to-r from-fuchsia-300/30 to-pink-300/30 p-8 shadow-sm transition-all duration-1000 dark:from-fuchsia-900/30 dark:to-pink-900/30 sm:p-12 md:p-16 xl:p-24"
         :class="mobileDevInView ? 'rounded-3xl w-11/12 md:w-10/12 scale-100' : 'w-full rounded-none scale-100'"
       >
         <h1
@@ -422,13 +422,14 @@
         </div>
 
         <div class="absolute bottom-0">
-          <p
-            class="my-8 flex items-center justify-center text-sm text-gray-600 dark:text-gray-200 md:text-base"
+          <a
+            class="my-8 flex items-center justify-center text-sm text-gray-600 transition-all duration-200 ease-in-out hover:scale-110 md:text-base"
+            href="https://github.com/TunNandaAung/portfolio"
           >
             Built with
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="animate-heart-pulse mx-2 h-5 w-5 text-pink-500"
+              class="animate-heart-pulse mx-2 h-5 w-5 text-pink-600"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -439,7 +440,7 @@
               />
             </svg>
             by Tun Nanda Aung.
-          </p>
+          </a>
         </div>
       </div>
     </section>
