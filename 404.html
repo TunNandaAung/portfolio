@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#28266a" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <!-- <meta name="theme-color" content="#ffffff" /> -->
+
+    <meta
+      name="description"
+      content="Full-stack developer with passion for technologies and builing amazo things."
+    />
+    <meta property="og:title" content="Tun Nanda Aung - Full-Stack Developer" />
+    <meta
+      property="og:description"
+      content="Full-stack developer with passion for technologies and builing things."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://portfolio-playground.vercel.app" />
+    <meta
+      property="og:image"
+      content="https://portfolio-playground.vercel.app/banner.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tunnandaaung" />
+    <meta
+      name="twitter:title"
+      content="Tun Nanda Aung - Full-Stack Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Full-stack developer with passion for technologies and builing things."
+    />
+    <meta
+      name="twitter:image"
+      content="https://portfolio-playground.vercel.app/banner.png"
+    />
+
+    <title>Portolio Playground</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&display=swap"
+    />
+
+    <style>
+      body {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        background: #131313;
+        color: #fff;
+        font-size: 96px;
+        font-family: "Fira Mono", monospace;
+        letter-spacing: -7px;
+      }
+
+      div {
+        animation: glitch 1s linear infinite;
+      }
+
+      @keyframes glitch {
+        2%,
+        64% {
+          transform: translate(2px, 0) skew(0deg);
+        }
+        4%,
+        60% {
+          transform: translate(-2px, 0) skew(0deg);
+        }
+        62% {
+          transform: translate(0, 0) skew(5deg);
+        }
+      }
+
+      div:before,
+      div:after {
+        content: attr(title);
+        position: absolute;
+        left: 0;
+      }
+
+      div:before {
+        animation: glitchTop 1s linear infinite;
+        clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+      }
+
+      @keyframes glitchTop {
+        2%,
+        64% {
+          transform: translate(2px, -2px);
+        }
+        4%,
+        60% {
+          transform: translate(-2px, 2px);
+        }
+        62% {
+          transform: translate(13px, -1px) skew(-13deg);
+        }
+      }
+
+      div:after {
+        animation: glitchBotom 1.5s linear infinite;
+        clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+        -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+      }
+
+      @keyframes glitchBotom {
+        2%,
+        64% {
+          transform: translate(-2px, 0);
+        }
+        4%,
+        60% {
+          transform: translate(-2px, 0);
+        }
+        62% {
+          transform: translate(-22px, 5px) skew(21deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body data-scroll-container class="font-sans">
+    <div title="404">404</div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

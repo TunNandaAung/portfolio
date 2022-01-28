@@ -68,8 +68,8 @@ Alpine.plugin(intersect);
 Alpine.start();
 
 window.onload = () => {
-  document.getElementById("title").classList.add("is-inview");
   updateTheme();
+  document.getElementById("title").classList.add("is-inview");
 };
 
 console.log("Hey there, stranger 👋");
