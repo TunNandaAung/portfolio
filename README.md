@@ -1,15 +1,14 @@
-<p align="center"><img width="100" src="https://github.com/TunNandaAung/portfolio/blob/master/img/profile.png" alt="Logo"></p>
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/46393e0b-b282-4726-8423-c019790dd6f2/deploy-status)](https://app.netlify.com/sites/determined-wright-250cc0/deploys)
+<p align="center"><img width="100" src="./assets/sphere.png" alt="Logo"></p>
 
 # Personal Website
 
-[https://tunnandaaung.me](https://tunnandaaung.me)
+[https://tunnandaaung.netlify.app](https://tunnandaaung.netlify.app)
+[https://tunnandaaung.vercel.app](https://tunnandaaung.vercel.app)
 
 ## Tech stack
 
-- [Vuejs](https://vuejs.org/) 3.0.0
-- [Tailwindcss](https://tailwindcss.com/docs/what-is-tailwind/) 2.0.1
-- Assets compiled with [`JeffreyWay/laravel-mix`](https://github.com/JeffreyWay/laravel-mix/)
-- Illustrations from [HANDZ](https://handz.design/) and [Shapefest](https://shapefest.com/)
-- The live site is hosted on [Netlify](https://www.netlify.com/)
+- [Alpine.js](https://alpinejs.dev/) 3.8
+- [Tailwind CSS](https://tailwindcss.com/) 3.0
+- [Vite](https://vitejs.dev)
+- 3D Icons from [3DICONS](https://3dicons.co/)
+- 3D Shapes from [Shapefest](https://shapefest.com)

@@ -1,0 +1,149 @@
+@import "./locomotive.css";
+@import "./theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: var(--bg-color);
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+.blurry-gradient {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  /* z-index: 10; */
+  background: radial-gradient(
+      circle at 10% 50%,
+      var(--circle-one-color),
+      rgba(255, 255, 255, 0) 25%
+    ),
+    radial-gradient(
+      circle at 85% 30%,
+      var(--circle-two-color),
+      rgba(255, 255, 255, 0) 25%
+    ),
+    radial-gradient(
+      circle at 60% 90%,
+      var(--circle-three-color),
+      rgba(255, 255, 255, 0) 25%
+    );
+}
+
+.title {
+  perspective: 600px;
+  -webkit-perspective: 600px;
+}
+
+.title-line {
+  display: block;
+  opacity: 0;
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transform: translateY(100%) rotateX(-80deg);
+  transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1),
+    transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  /* font-size: 0; */
+}
+
+.title.is-inview .title-line {
+  transform: none;
+  opacity: 1;
+}
+.title.is-inview .title-line:first-child {
+  transition-delay: 0.4s;
+}
+.title.is-inview .title-line:nth-child(2) {
+  transition-delay: 0.5s;
+}
+.title.is-inview .title-line:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.title.is-inview .title-line:nth-child(4) {
+  transition-delay: 0.7s;
+}
+
+.nav-link-text {
+  @apply bg-gradient-to-r from-gray-900 to-gray-900 bg-clip-text text-transparent  dark:from-gray-100 dark:to-gray-100;
+}
+
+.nav-link-image {
+  @apply absolute -top-6 left-1/2 h-32 w-32 -translate-x-48 object-cover opacity-0 transition duration-500 ease-in-out group-hover:-translate-x-3 group-hover:scale-110 group-hover:opacity-100 md:top-0 md:h-48 md:w-48;
+}
+
+.header-box,
+.contact-mail {
+  background: rgba(0, 0, 0, 0)
+    linear-gradient(
+      90deg,
+      var(--emerald),
+      var(--cyan),
+      var(--blue),
+      var(--indigo),
+      var(--purple),
+      var(--pink),
+      var(--fuchsia),
+      var(--rose)
+    )
+    repeat scroll 0% 0%/200% 200%;
+
+  background-size: 200% auto;
+  animation: movingGradient 5s linear infinite alternate;
+}
+
+@keyframes movingGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.social-link {
+  position: relative;
+}
+
+.social-link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 2;
+  content: "";
+  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+  @apply absolute left-1/2 block h-1 w-0 rounded-full bg-gray-800 dark:bg-gray-200 sm:h-1.5 md:h-2;
+}
+
+.social-link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.mail-link {
+  position: relative;
+}
+
+.mail-link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 2;
+  content: "";
+  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+  @apply animate-gradient-xy absolute left-0 block h-1.5 w-0 rounded-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-400 sm:h-2 md:h-2.5;
+}
+
+.mail-link:hover:after {
+  width: 100%;
+  left: 0;
+}
