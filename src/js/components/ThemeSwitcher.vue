@@ -4,53 +4,36 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { onMounted, watch, ref, computed } from "vue";
 import ToggleButton from "./ToggleButton";
 
-export default {
-  components: {
-    ToggleButton,
-  },
-  setup(props) {
-    const color = ref("red");
-    const themes = ref({
-      "theme-light": "#f5f6f9",
-      "theme-dark": "#222",
-    });
-    const selectedTheme = ref("theme-dark");
-    const enablesDarkTheme = ref(true);
+const enablesDarkTheme = ref(true);
 
-    onMounted(() => {
-      selectedTheme.value = localStorage.getItem("theme") || systemTheme.value;
-      enablesDarkTheme.value = selectedTheme.value === "theme-dark";
-    });
+onMounted(() => {
+  selectedTheme.value = localStorage.getItem("theme") || systemTheme.value;
+  enablesDarkTheme.value = selectedTheme.value === "theme-dark";
+});
 
-    const systemTheme = computed(() =>
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "theme-dark"
-        : "theme-light"
-    );
+const systemTheme = computed(() =>
+  localStorage.getItem("theme") === "dark" ||
+  (!("theme" in localStorage) &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ? "dark"
+    : "light"
+);
 
-    watch(
-      () => enablesDarkTheme.value,
-      () => {
-        selectedTheme.value = enablesDarkTheme.value
-          ? "theme-dark"
-          : "theme-light";
-        document.body.className = document.body.className.replace(
-          /theme-\w+/,
-          selectedTheme.value
-        );
+watch(
+  () => enablesDarkTheme.value,
+  () => {
+    selectedTheme.value = enablesDarkTheme.value ? "dark" : "light";
 
-        localStorage.setItem("theme", selectedTheme.value);
-      }
-    );
+    const themeToRemove = enablesDarkTheme.value ? "light" : "dark";
 
-    return {
-      selectedTheme,
-      enablesDarkTheme,
-    };
-  },
-};
+    document.documentElement.classList.add(selectedTheme.value);
+    document.documentElement.classList.remove(themeToRemove);
+
+    localStorage.setItem("theme", selectedTheme.value);
+  }
+);
 </script>
