@@ -36,7 +36,7 @@ function disableHistoryFallback() {
           console.warn("URL not found:", url);
           res.statusCode = 404;
           res.setHeader("Content-type", "text/html");
-          let html = fs.readFileSync(path.join(__dirname, "/404/index.html"));
+          let html = fs.readFileSync(path.join(__dirname, "/404.html"));
           res.write(html);
           res.end();
         } else {

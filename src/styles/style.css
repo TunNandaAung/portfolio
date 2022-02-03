@@ -1,9 +1,15 @@
 @import "./locomotive.css";
 @import "./theme.css";
+@import "./glitch.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::selection {
+  background: theme("colors.indigo.600");
+  color: white;
+}
 
 body {
   background-color: var(--bg-color);

@@ -48,6 +48,14 @@ module.exports = {
         "heart-pulse": {
           "10%": { transform: "scale(1.2)" },
         },
+        "circular-rotation": {
+          "0%": {
+            transform: "rotate(0deg) translate(-20px) rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg)  translate(-20px) rotate(-360deg)",
+          },
+        },
         "gradient-y": {
           "0%, 100%": {
             "background-size": "400% 400%",
@@ -87,6 +95,7 @@ module.exports = {
         "gradient-x": "gradient-x 5s ease infinite",
         "gradient-y": "gradient-y 5s ease infinite",
         "gradient-xy": "gradient-xy 5s ease infinite",
+        "circular-rotation": "circular-rotation 5s linear infinite",
       },
     },
   },

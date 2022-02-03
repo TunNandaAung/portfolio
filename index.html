@@ -70,7 +70,7 @@
 
     <!--Nav background placeholder-->
     <div
-      class="fixed top-3 right-6 z-20 h-10 w-10 transform rounded-full bg-gradient-to-r from-fuchsia-50 to-pink-50 p-2 transition-all duration-500 ease-in-out dark:from-[#1e293b] dark:to-sky-900 sm:p-4 md:top-7 md:right-12"
+      class="fixed top-3 right-6 z-20 h-10 w-10 transform rounded-full bg-gradient-to-r from-fuchsia-50 to-pink-50 p-2 transition-all duration-[900ms] ease-in-out dark:from-[#1e293b] dark:to-sky-900 sm:p-4 md:top-7 md:right-12"
       :class="{ 'scale-[100]': isMenuOpen, 'scale-100 rounded-full': !(isMenuOpen) }"
     ></div>
     <!--End nav background placeholder-->
@@ -166,16 +166,16 @@
         <div
           aria-hidden="true"
           x-show="isMenuOpen"
-          x-transition:enter="transition-all transform duration-500 ease-in-out"
+          x-transition:enter="transition-all transform duration-[900ms] delay-100 ease-in-out"
           x-transition:enter-start="opacity-0"
           x-transition:enter-end="opacity-100"
-          x-transition:leave="transition-all transform duration-500 ease-in-out"
+          x-transition:leave="transition-all transform duration-[500ms] ease-in-out"
           x-transition:leave-start="opacity-100"
           x-transition:leave-end="opacity-0"
           class="relative flex w-full flex-1 flex-col items-center justify-center space-y-8 bg-transparent"
         >
           <a
-            class="group relative flex text-7xl font-bold md:text-9xl lg:text-10xl"
+            class="group lg:text-10xl relative flex text-7xl font-bold md:text-9xl"
             href="#landing"
             @click.prevent="goToSection('landing')"
           >
@@ -187,7 +187,7 @@
             <img src="/assets/rocket.png" alt="Home" class="nav-link-image" />
           </a>
           <a
-            class="group relative flex text-7xl font-bold md:text-9xl lg:text-10xl"
+            class="group lg:text-10xl relative flex text-7xl font-bold md:text-9xl"
             href="#about"
             @click.prevent="goToSection('about')"
           >
@@ -203,7 +203,7 @@
             />
           </a>
           <a
-            class="group relative flex text-7xl font-bold md:text-9xl lg:text-10xl"
+            class="group lg:text-10xl relative flex text-7xl font-bold md:text-9xl"
             href="#contact"
             @click.prevent="goToSection('contact')"
           >
@@ -237,7 +237,7 @@
         class="relative"
       >
         <div
-          class="left:1/3 absolute top-1/2 z-[1] -translate-y-1/2 opacity-50 transition-opacity duration-1000 ease-out hover:opacity-50 md:opacity-90 xl:left-1/2"
+          class="absolute left-1/3 top-1/2 z-[1] -translate-y-1/2 opacity-50 transition-opacity duration-1000 ease-out hover:opacity-50 md:opacity-75 lg:left-1/2 lg:opacity-90"
         >
           <div
             class="sm:[h-420px] header-box h-[390px] w-48 rounded-2xl sm:w-64 md:h-[500px] xl:w-80"
@@ -245,7 +245,7 @@
           ></div>
         </div>
         <h1
-          class="title text-center text-8xl font-extrabold md:text-9xl xl:text-10xl"
+          class="title xl:text-10xl text-center text-8xl font-extrabold md:text-9xl"
           ref="title"
           id="title"
         >
@@ -317,7 +317,7 @@
         <img
           src="/assets/platonic.png"
           alt="Web Development Platonic"
-          class="h-[360px] w-[360px] animate-floating object-cover md:h-[500px] md:w-[500px]"
+          class="animate-floating h-[360px] w-[360px] object-cover md:h-[500px] md:w-[500px]"
           loading="lazy"
         />
       </div>
@@ -364,7 +364,7 @@
           src="/assets/platonic-alt.png"
           alt="Mobile Development Platonic"
           loading="lazy"
-          class="h-[360px] w-[360px] animate-floating object-cover md:h-[500px] md:w-[500px]"
+          class="animate-floating h-[360px] w-[360px] object-cover md:h-[500px] md:w-[500px]"
         />
       </div>
     </section>
@@ -381,7 +381,7 @@
               <span class="block">GET IN TOUCH</span>
               <a
                 href="mailto:tunnanda@duck.com"
-                class="mail-link mt-4 animate-gradient-xy bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-400 bg-clip-text text-transparent"
+                class="mail-link animate-gradient-xy mt-4 bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-400 bg-clip-text text-transparent"
               >
                 EMAIL ME
               </a>
@@ -389,7 +389,7 @@
 
             <div class="flex lg:flex-shrink-0">
               <div
-                class="absolute -top-32 right-0 inline-flex animate-floating sm:-top-40 sm:right-24 md:-top-1/2"
+                class="animate-floating absolute -top-32 right-0 inline-flex sm:-top-40 sm:right-24 md:-top-1/2"
               >
                 <img
                   class="h-56 object-cover sm:h-64 md:h-72"
@@ -425,11 +425,13 @@
           <a
             class="my-8 flex items-center justify-center text-sm text-gray-600 transition-all duration-200 ease-in-out hover:scale-110 dark:text-gray-200 md:text-base"
             href="https://github.com/TunNandaAung/portfolio"
+            target="_blank"
+            rel="noreferrer noopener"
           >
             Built with
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="mx-2 h-5 w-5 animate-heart-pulse text-pink-600"
+              class="animate-heart-pulse mx-2 h-5 w-5 text-pink-600"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
