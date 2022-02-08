@@ -66,8 +66,11 @@ Alpine.data("themeSwitcher", () => ({
 Alpine.plugin(intersect);
 Alpine.start();
 
-window.onload = () => {
+window.addEventListener("DOMContentLoaded", (event) => {
   updateTheme();
+});
+
+window.onload = () => {
   document.getElementById("title").classList.add("is-inview");
 };
 
