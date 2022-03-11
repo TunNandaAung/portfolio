@@ -45,6 +45,14 @@ module.exports = {
             transform: "translateY(10px)",
           },
         },
+        "slide-in-top": {
+          "0%": {
+            transform: "translateY(-100%)",
+          },
+          "100%": {
+            transform: "translateY(0%)",
+          },
+        },
         "heart-pulse": {
           "10%": { transform: "scale(1.2)" },
         },
@@ -96,6 +104,7 @@ module.exports = {
         "gradient-y": "gradient-y 5s ease infinite",
         "gradient-xy": "gradient-xy 5s ease infinite",
         "circular-rotation": "circular-rotation 5s linear infinite",
+        "slide-in-top": "slide-in-top 0.5s ease-in-out forwards",
       },
     },
   },

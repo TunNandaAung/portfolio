@@ -28,12 +28,12 @@
 
     <meta
       name="description"
-      content="Full-stack developer with passion for technologies and builing amazo things."
+      content="Full-stack developer with passion for technologies and building things."
     />
     <meta property="og:title" content="Tun Nanda Aung - Full-Stack Developer" />
     <meta
       property="og:description"
-      content="Full-stack developer with passion for technologies and builing things."
+      content="Full-stack developer with passion for technologies and building things."
     />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://tunnandaaung.netlify.app" />
@@ -49,7 +49,7 @@
     />
     <meta
       name="twitter:description"
-      content="Full-stack developer with passion for technologies and builing things."
+      content="Full-stack developer with passion for technologies and building things."
     />
     <meta
       name="twitter:image"
@@ -70,7 +70,7 @@
 
     <!--Nav background placeholder-->
     <div
-      class="fixed top-3 right-6 z-20 h-10 w-10 transform rounded-full bg-gradient-to-r from-fuchsia-50 to-pink-50 p-2 transition-all duration-[900ms] ease-in-out dark:from-[#1e293b] dark:to-sky-900 sm:p-4 md:top-7 md:right-12"
+      class="fixed top-3 right-6 z-20 h-10 w-10 transform rounded-full bg-gradient-to-r from-fuchsia-50 to-pink-50 p-2 transition-all duration-[900ms] ease-in-out dark:from-slate-900 dark:to-slate-800 sm:p-4 md:top-7 md:right-12"
       :class="{ 'scale-[100]': isMenuOpen, 'scale-100 rounded-full': !(isMenuOpen) }"
     ></div>
     <!--End nav background placeholder-->
@@ -78,8 +78,8 @@
     <button
       @click="isMenuOpen=!isMenuOpen"
       aria-label="Hamburger menu"
-      class="fixed top-2.5 right-5 z-30 rounded-full border border-gray-200 p-2 dark:border-gray-700 sm:p-4 md:top-5 md:right-10"
-      :class="isMenuOpen ? 'bg-transparent border-none' : 'bg-gradient-to-r from-fuchsia-50 to-pink-50 dark:from-[#1e293b] dark:to-sky-900'"
+      class="fixed top-2.5 right-5 z-30 rounded-full p-2 sm:p-4 md:top-5 md:right-10"
+      :class="{ 'bg-transparent border-none':isMenuOpen, 'bg-gradient-to-r border-none from-fuchsia-50 to-pink-50 dark:from-slate-900 dark:to-slate-800':!(isMenuOpen) }"
     >
       <div
         class="relative z-20 flex h-8 w-8 flex-col items-center justify-center"
@@ -97,7 +97,10 @@
       </div>
     </button>
 
-    <div x-cloak class="fixed top-5 left-5 z-30 md:top-10 md:left-10">
+    <div
+      x-cloak
+      class="animate-slide-in-top fixed top-5 left-5 z-30 md:top-10 md:left-10"
+    >
       <button
         x-data="themeSwitcher"
         @click.prevent="switchTheme(isDarkTheme ? 'light' : 'dark')"
@@ -107,7 +110,7 @@
         x-state:on="Dark Theme"
         x-state:off="Light Theme"
         class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 transition-colors duration-500 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:border-gray-700"
-        :class="{ 'bg-sky-900': isDarkTheme, 'bg-gray-200': !isDarkTheme}"
+        :class="{ 'bg-slate-900': isDarkTheme, 'bg-gray-200': !isDarkTheme}"
       >
         <span class="sr-only">Theme Switcher</span>
         <span
@@ -174,50 +177,61 @@
           x-transition:leave-end="opacity-0"
           class="relative flex w-full flex-1 flex-col items-center justify-center space-y-8 bg-transparent"
         >
-          <a
-            class="group lg:text-10xl relative flex text-7xl font-bold md:text-9xl"
-            href="#landing"
-            @click.prevent="goToSection('landing')"
-          >
-            <h1
-              class="nav-link-text group-hover:from-fuchsia-500 group-hover:to-pink-500"
+          <div class="group relative">
+            <a
+              href="#landing"
+              @click.prevent="goToSection('landing')"
+              class="nav-link"
             >
-              Home
-            </h1>
+              <h1
+                class="nav-link-text group-hover:from-fuchsia-500 group-hover:to-pink-500"
+                :class="isMenuOpen ? 'nav-link-text--enter' : 'nav-link-text--leave'"
+              >
+                Home
+              </h1>
+            </a>
             <img src="/assets/rocket.png" alt="Home" class="nav-link-image" />
-          </a>
-          <a
-            class="group lg:text-10xl relative flex text-7xl font-bold md:text-9xl"
-            href="#about"
-            @click.prevent="goToSection('about')"
-          >
-            <h1
-              class="nav-link-text group-hover:from-blue-500 group-hover:to-indigo-500 dark:group-hover:from-blue-600 dark:group-hover:to-indigo-600"
+          </div>
+
+          <div class="group relative">
+            <a
+              href="#about"
+              @click.prevent="goToSection('about')"
+              class="nav-link"
             >
-              About
-            </h1>
+              <h1
+                class="nav-link-text group-hover:from-blue-500 group-hover:to-indigo-500 dark:group-hover:from-blue-600 dark:group-hover:to-indigo-600"
+                :class="isMenuOpen ? 'nav-link-text--enter' : 'nav-link-text--leave'"
+              >
+                About
+              </h1>
+            </a>
             <img
               src="https://res.cloudinary.com/team7/image/upload/v1643208537/portfolio/notebook_mg8d5w.png"
               alt="About"
               class="nav-link-image"
             />
-          </a>
-          <a
-            class="group lg:text-10xl relative flex text-7xl font-bold md:text-9xl"
-            href="#contact"
-            @click.prevent="goToSection('contact')"
-          >
-            <h1
-              class="nav-link-text group-hover:from-sky-500 group-hover:to-cyan-500"
+          </div>
+
+          <div class="group relative">
+            <a
+              href="#contact"
+              @click.prevent="goToSection('contact')"
+              class="nav-link"
             >
-              Contact
-            </h1>
+              <h1
+                class="nav-link-text group-hover:from-sky-500 group-hover:to-cyan-500"
+                :class="isMenuOpen ? 'nav-link-text--enter' : 'nav-link-text--leave'"
+              >
+                Contact
+              </h1>
+            </a>
             <img
               src="https://res.cloudinary.com/team7/image/upload/v1643208537/portfolio/at_cn0lig.png"
-              alt="contact"
+              alt="Contact"
               class="nav-link-image"
             />
-          </a>
+          </div>
         </div>
       </div>
     </nav>

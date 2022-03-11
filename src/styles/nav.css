@@ -1,0 +1,60 @@
+.nav-link {
+  @apply lg:text-10xl relative flex overflow-hidden text-7xl font-bold md:text-9xl;
+}
+
+.nav-link-text {
+  transition: all 1.5s;
+  transition-delay: 0.5s;
+  transform-origin: 0;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
+  transform: translateY(150px);
+  margin-bottom: -100px;
+  overflow: hidden;
+  opacity: 0;
+  @apply bg-gradient-to-r from-gray-900 to-gray-900 bg-clip-text text-transparent  dark:from-gray-100 dark:to-gray-100;
+}
+
+.nav-link-text--enter {
+  animation-name: nav-slide-in;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
+  transform-origin: 0;
+  animation-fill-mode: both;
+}
+
+.nav-link-text--leave {
+  animation-name: nav-slide-out;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
+  transform-origin: 0;
+  animation-fill-mode: both;
+}
+
+@keyframes nav-slide-out {
+  0% {
+    transform: translate(0);
+    margin-bottom: 0px;
+    opacity: 100%;
+  }
+  to {
+    transform: translateY(150px);
+    margin-bottom: -10px;
+  }
+}
+
+@keyframes nav-slide-in {
+  0% {
+    transform: translateY(150px);
+    margin-bottom: -20px;
+  }
+  to {
+    transform: translate(0);
+    margin-bottom: 0px;
+    opacity: 100%;
+  }
+}
+
+.nav-link-image {
+  @apply absolute -top-6 left-1/2 h-32 w-32 -translate-x-48 object-cover opacity-0 transition duration-500 ease-in-out group-hover:-translate-x-3 group-hover:scale-110 group-hover:opacity-100 md:top-0 md:h-48 md:w-48;
+}
