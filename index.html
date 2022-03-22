@@ -99,7 +99,7 @@
 
     <div
       x-cloak
-      class="animate-slide-in-top fixed top-5 left-5 z-30 md:top-10 md:left-10"
+      class="fixed top-5 left-5 z-30 animate-slide-in-top md:top-10 md:left-10"
     >
       <button
         x-data="themeSwitcher"
@@ -177,61 +177,61 @@
           x-transition:leave-end="opacity-0"
           class="relative flex w-full flex-1 flex-col items-center justify-center space-y-8 bg-transparent"
         >
-          <div class="group relative">
-            <a
-              href="#landing"
-              @click.prevent="goToSection('landing')"
-              class="nav-link"
-            >
+          <a
+            class="group relative"
+            href="#landing"
+            @click.prevent="goToSection('landing')"
+          >
+            <div class="nav-link">
               <h1
                 class="nav-link-text group-hover:from-fuchsia-500 group-hover:to-pink-500"
                 :class="isMenuOpen ? 'nav-link-text--enter' : 'nav-link-text--leave'"
               >
                 Home
               </h1>
-            </a>
+            </div>
             <img src="/assets/rocket.png" alt="Home" class="nav-link-image" />
-          </div>
+          </a>
 
-          <div class="group relative">
-            <a
-              href="#about"
-              @click.prevent="goToSection('about')"
-              class="nav-link"
-            >
+          <a
+            href="#about"
+            @click.prevent="goToSection('about')"
+            class="group relative"
+          >
+            <div class="nav-link">
               <h1
                 class="nav-link-text group-hover:from-blue-500 group-hover:to-indigo-500 dark:group-hover:from-blue-600 dark:group-hover:to-indigo-600"
                 :class="isMenuOpen ? 'nav-link-text--enter' : 'nav-link-text--leave'"
               >
                 About
               </h1>
-            </a>
+            </div>
             <img
               src="https://res.cloudinary.com/team7/image/upload/v1643208537/portfolio/notebook_mg8d5w.png"
               alt="About"
               class="nav-link-image"
             />
-          </div>
+          </a>
 
-          <div class="group relative">
-            <a
-              href="#contact"
-              @click.prevent="goToSection('contact')"
-              class="nav-link"
-            >
+          <a
+            href="#contact"
+            @click.prevent="goToSection('contact')"
+            class="group relative"
+          >
+            <div class="nav-link">
               <h1
                 class="nav-link-text group-hover:from-sky-500 group-hover:to-cyan-500"
                 :class="isMenuOpen ? 'nav-link-text--enter' : 'nav-link-text--leave'"
               >
                 Contact
               </h1>
-            </a>
+            </div>
             <img
               src="https://res.cloudinary.com/team7/image/upload/v1643208537/portfolio/at_cn0lig.png"
               alt="Contact"
               class="nav-link-image"
             />
-          </div>
+          </a>
         </div>
       </div>
     </nav>
@@ -259,7 +259,7 @@
           ></div>
         </div>
         <h1
-          class="title xl:text-10xl text-center text-8xl font-extrabold md:text-9xl"
+          class="title text-center text-8xl font-extrabold md:text-9xl xl:text-10xl"
           ref="title"
           id="title"
         >
@@ -331,7 +331,7 @@
         <img
           src="/assets/platonic.png"
           alt="Web Development Platonic"
-          class="animate-floating h-[360px] w-[360px] object-cover md:h-[500px] md:w-[500px]"
+          class="h-[360px] w-[360px] animate-floating object-cover md:h-[500px] md:w-[500px]"
           loading="lazy"
         />
       </div>
@@ -378,7 +378,7 @@
           src="/assets/platonic-alt.png"
           alt="Mobile Development Platonic"
           loading="lazy"
-          class="animate-floating h-[360px] w-[360px] object-cover md:h-[500px] md:w-[500px]"
+          class="h-[360px] w-[360px] animate-floating object-cover md:h-[500px] md:w-[500px]"
         />
       </div>
     </section>
@@ -395,7 +395,7 @@
               <span class="block">GET IN TOUCH</span>
               <a
                 href="mailto:tunnanda@duck.com"
-                class="mail-link animate-gradient-xy mt-4 bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-400 bg-clip-text text-transparent"
+                class="mail-link mt-4 animate-gradient-xy bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-400 bg-clip-text text-transparent"
               >
                 EMAIL ME
               </a>
@@ -403,7 +403,7 @@
 
             <div class="flex lg:flex-shrink-0">
               <div
-                class="animate-floating absolute -top-32 right-0 inline-flex sm:-top-40 sm:right-24 md:-top-1/2"
+                class="absolute -top-32 right-0 inline-flex animate-floating sm:-top-40 sm:right-24 md:-top-1/2"
               >
                 <img
                   class="h-56 object-cover sm:h-64 md:h-72"
@@ -445,7 +445,7 @@
             Built with
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="animate-heart-pulse mx-2 h-5 w-5 text-pink-600"
+              class="mx-2 h-5 w-5 animate-heart-pulse text-pink-600"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
