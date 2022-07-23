@@ -63,6 +63,20 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&display=swap"
     />
+
+    <script>
+      try {
+        if (
+          localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      } catch (_) {}
+    </script>
   </head>
 
   <body x-data="portfolio" data-scroll-container class="font-sans">
@@ -254,7 +268,7 @@
           class="absolute left-1/3 top-1/2 z-[1] -translate-y-1/2 opacity-50 transition-opacity duration-1000 ease-out hover:opacity-50 md:opacity-75 lg:left-1/2 lg:opacity-90"
         >
           <div
-            class="sm:[h-420px] header-box h-[390px] w-48 rounded-3xl sm:w-64 md:h-[500px] xl:w-80 transition-all"
+            class="sm:[h-420px] header-box h-[390px] w-48 rounded-3xl transition-all sm:w-64 md:h-[500px] xl:w-80"
             x-ref="headerBox"
           ></div>
         </div>
@@ -268,9 +282,6 @@
           >
             Hello, World
           </span>
-          <!-- <span class="title-line bg-gradient-to-r from-gray-700 to-neutral-700 bg-clip-text text-transparent">
-          I am <br> Tun Nanda Aung
-        </span> -->
         </h1>
 
         <p

@@ -18,10 +18,8 @@ const updateTheme = () => {
       window.matchMedia("(prefers-color-scheme: dark)").matches)
   ) {
     document.documentElement.classList.add("dark");
-    document.documentElement.classList.remove("light");
   } else {
     document.documentElement.classList.remove("dark");
-    document.documentElement.classList.add("light");
   }
 };
 
@@ -32,9 +30,9 @@ Alpine.data("portfolio", () => ({
   currentSection: "",
   init() {
     this.$refs.landing.addEventListener("mousemove", (e) => {
-      this.$refs.headerBox.style.transform = `translate(${-e.clientX * 0.05}px,${
-        -e.clientY * 0.05
-      }px)`;
+      this.$refs.headerBox.style.transform = `translate(${
+        -e.clientX * 0.05
+      }px,${-e.clientY * 0.05}px)`;
     });
   },
 
@@ -65,10 +63,6 @@ Alpine.data("themeSwitcher", () => ({
 
 Alpine.plugin(intersect);
 Alpine.start();
-
-window.addEventListener("DOMContentLoaded", (event) => {
-  updateTheme();
-});
 
 window.onload = () => {
   document.getElementById("title").classList.add("is-inview");
