@@ -29,7 +29,7 @@ Alpine.data("portfolio", () => ({
   mobileDevInView: false,
   currentSection: "",
   init() {
-    this.$refs.landing.addEventListener("mousemove", (e) => {
+    this.$refs.landing.addEventListener("mousemove", e => {
       this.$refs.headerBox.style.transform = `translate(${
         -e.clientX * 0.05
       }px,${-e.clientY * 0.05}px)`;
