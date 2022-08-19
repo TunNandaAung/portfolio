@@ -1,7 +1,7 @@
 :root {
   --circle-one-color: #4f46e53a;
-  --circle-two-color: #2563eb46;
-  --circle-three-color: #0284c73a;
+  --circle-two-color: #be185d46;
+  --circle-three-color: #0891b23a;
   --bg-color: #f7f2f2;
   --emerald: theme("colors.emerald.200");
   --cyan: theme("colors.cyan.200");
@@ -14,9 +14,9 @@
 }
 
 .dark {
-  --circle-one-color: #4f46e55f;
-  --circle-two-color: #2563eb4d;
-  --circle-three-color: #0284c73f;
+  --circle-one-color: #4f46e52f;
+  --circle-two-color: #be185d3d;
+  --circle-three-color: #0891b22f;
   --bg-color: #1e293b;
   --emerald: theme("colors.emerald.300");
   --cyan: theme("colors.cyan.300");

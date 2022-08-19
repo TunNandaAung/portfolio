@@ -134,7 +134,7 @@ body {
   bottom: 2;
   content: "";
   transition: width 0.5s ease 0s, left 0.5s ease 0s;
-  @apply animate-gradient-xy absolute left-0 block h-1.5 w-0 rounded-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-400 sm:h-2 md:h-2.5;
+  @apply absolute left-0 block h-1.5 w-0 animate-gradient-xy rounded-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-400 sm:h-2 md:h-2.5;
 }
 
 .mail-link:hover:after {
