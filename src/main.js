@@ -1,5 +1,6 @@
 import Alpine from "alpinejs";
 import "./styles/style.css";
+import "./experience.js";
 import intersect from "@alpinejs/intersect";
 import LocomotiveScroll from "locomotive-scroll";
 

@@ -80,7 +80,19 @@ body {
   transition-delay: 0.7s;
 }
 
-.header-box,
+.header-box {
+  background-color: var(--indigo);
+  background-image: radial-gradient(
+      at 38% 90%,
+      var(--indigo) 0,
+      transparent 41%
+    ),
+    radial-gradient(at 2% 26%, var(--blue) 0, transparent 67%),
+    radial-gradient(at 9% 49%, var(--cyan) 0, transparent 59%),
+    radial-gradient(at 38% 42%, var(--indigo) 0, transparent 63%),
+    radial-gradient(at 80% 95%, var(--purple) 0, transparent 30%),
+    radial-gradient(at 85% 59%, var(--pink) 0, transparent 83%);
+}
 .contact-mail {
   background: rgba(0, 0, 0, 0)
     linear-gradient(

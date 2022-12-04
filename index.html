@@ -84,7 +84,7 @@
 
     <!--Nav background placeholder-->
     <div
-      class="fixed top-3 right-6 z-20 h-10 w-10 transform rounded-full bg-gradient-to-r from-fuchsia-50 to-pink-50 p-2 transition-all duration-[900ms] ease-in-out dark:from-slate-900 dark:to-slate-800 sm:p-4 md:top-7 md:right-12"
+      class="fixed top-3 right-6 z-20 h-10 w-10 transform animate-fade-in rounded-full bg-gradient-to-r from-fuchsia-50 to-pink-50 p-2 transition-all duration-[900ms] ease-in-out dark:from-slate-900 dark:to-slate-800 sm:p-4 md:top-7 md:right-12"
       :class="{ 'scale-[100]': isMenuOpen, 'scale-100 rounded-full': !(isMenuOpen) }"
     ></div>
     <!--End nav background placeholder-->
@@ -92,7 +92,7 @@
     <button
       @click="isMenuOpen=!isMenuOpen"
       aria-label="Hamburger menu"
-      class="fixed top-2.5 right-5 z-30 rounded-full p-2 sm:p-4 md:top-5 md:right-10"
+      class="fixed top-2.5 right-5 z-30 animate-slide-in-top rounded-full p-2 sm:p-4 md:top-5 md:right-10"
       :class="{ 'bg-transparent border-none':isMenuOpen, 'bg-gradient-to-r border-none from-fuchsia-50 to-pink-50 dark:from-slate-900 dark:to-slate-800':!(isMenuOpen) }"
     >
       <div
@@ -339,12 +339,16 @@
         data-scroll-delay="0.3"
         data-scroll-target="#web-development"
       >
-        <img
+        <!-- <img
           src="/assets/platonic.png"
           alt="Web Development Platonic"
           class="h-[360px] w-[360px] animate-floating object-cover md:h-[500px] md:w-[500px]"
           loading="lazy"
-        />
+        /> -->
+        <canvas
+          id="webgl-web-dev"
+          class="h-[360px] w-[360px] object-cover md:h-[500px] md:w-[500px]"
+        ></canvas>
       </div>
     </section>
 
@@ -378,19 +382,23 @@
         </p>
       </div>
       <div
-        class="dark: absolute bottom-0 left-12 -z-10 rounded-3xl bg-pink-300/50 dark:bg-pink-600/25"
+        class="absolute bottom-0 left-12 -z-10 rounded-3xl bg-pink-300/50 dark:bg-pink-600/25"
         data-scroll
         data-scroll-speed="3"
         data-scroll-direction="vertical"
         data-scroll-delay="0.3"
         data-scroll-target="#mobile-development"
       >
-        <img
+        <!-- <img
           src="/assets/platonic-alt.png"
           alt="Mobile Development Platonic"
           loading="lazy"
           class="h-[360px] w-[360px] animate-floating object-cover md:h-[500px] md:w-[500px]"
-        />
+        /> -->
+        <canvas
+          id="webgl-mobile-dev"
+          class="h-[360px] w-[360px] object-cover md:h-[500px] md:w-[500px]"
+        ></canvas>
       </div>
     </section>
 

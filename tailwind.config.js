@@ -94,6 +94,14 @@ module.exports = {
             "background-position": "right center",
           },
         },
+        "fade-in": {
+          from: {
+            opacity: 0,
+          },
+          to: {
+            opacity: 1,
+          },
+        },
       },
       animation: {
         floating: "floating 3s ease-in-out infinite",
@@ -105,6 +113,7 @@ module.exports = {
         "gradient-xy": "gradient-xy 5s ease infinite",
         "circular-rotation": "circular-rotation 5s linear infinite",
         "slide-in-top": "slide-in-top 0.5s ease-in-out forwards",
+        "fade-in": "fade-in 1.5s ease-in-out forwards",
       },
     },
   },
