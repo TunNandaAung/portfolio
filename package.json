@@ -12,19 +12,19 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
+    "autoprefixer": "^10.4.13",
     "dat.gui": "^0.7.9",
-    "postcss": "^8.4.14",
-    "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.12",
-    "tailwindcss": "^3.1.6",
-    "vite": "^3.0.2"
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.2",
+    "prettier-plugin-tailwindcss": "^0.2.1",
+    "tailwindcss": "^3.2.4",
+    "vite": "^4.0.4"
   },
   "dependencies": {
-    "@alpinejs/intersect": "^3.10.3",
-    "@tailwindcss/aspect-ratio": "^0.4.0",
-    "alpinejs": "^3.10.3",
+    "@alpinejs/intersect": "^3.10.5",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "alpinejs": "^3.10.5",
     "locomotive-scroll": "^4.1.4",
-    "three": "^0.146.0"
+    "three": "^0.148.0"
   }
 }
