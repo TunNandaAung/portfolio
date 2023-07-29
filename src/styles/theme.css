@@ -1,7 +1,8 @@
 :root {
   --circle-one-color: #4f46e53a;
-  --circle-two-color: #be185d46;
-  --circle-three-color: #0891b23a;
+  --circle-two-color: #2563eb46;
+  --circle-three-color: #e879f93a;
+  --circle-four-color: #0891b23a;
   --bg-color: #f7f2f2;
   --emerald: theme("colors.emerald.200");
   --cyan: theme("colors.cyan.200");
@@ -14,10 +15,11 @@
 }
 
 .dark {
-  --circle-one-color: #4f46e52f;
-  --circle-two-color: #be185d3d;
-  --circle-three-color: #0891b22f;
-  --bg-color: #1e293b;
+  --circle-one-color: #4f46e55f;
+  --circle-two-color: #2563eb4a;
+  --circle-three-color: #e879f93f;
+  --circle-four-color: #0891b23f;
+  --bg-color: black;
   --emerald: theme("colors.emerald.300");
   --cyan: theme("colors.cyan.300");
   --blue: theme("colors.blue.300");
