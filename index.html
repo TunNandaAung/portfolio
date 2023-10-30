@@ -84,7 +84,7 @@
 
     <!--Nav background placeholder-->
     <div
-      class="dark:from-slate-950 fixed top-3 right-6 z-20 h-10 w-10 transform animate-fade-in rounded-full bg-gradient-to-r from-fuchsia-50 to-pink-50 p-2 transition-all duration-[900ms] ease-in-out dark:to-slate-900 sm:p-4 md:top-7 md:right-12"
+      class="fixed right-6 top-3 z-20 h-10 w-10 transform animate-fade-in rounded-full bg-gradient-to-r from-fuchsia-50 to-pink-50 p-2 transition-all duration-[900ms] ease-in-out dark:from-slate-950 dark:to-slate-900 sm:p-4 md:right-12 md:top-7"
       :class="{ 'scale-[100]': isMenuOpen, 'scale-100 rounded-full': !(isMenuOpen) }"
     ></div>
     <!--End nav background placeholder-->
@@ -92,7 +92,7 @@
     <button
       @click="isMenuOpen=!isMenuOpen"
       aria-label="Hamburger menu"
-      class="fixed top-2.5 right-5 z-30 animate-slide-in-top rounded-full p-2 sm:p-4 md:top-5 md:right-10"
+      class="fixed right-5 top-2.5 z-30 animate-slide-in-top rounded-full p-2 sm:p-4 md:right-10 md:top-5"
       :class="{ 'bg-transparent border-none':isMenuOpen, 'bg-gradient-to-r border-none from-fuchsia-50 to-pink-50 dark:from-slate-950 dark:to-slate-900':!(isMenuOpen) }"
     >
       <div
@@ -113,7 +113,7 @@
 
     <div
       x-cloak
-      class="fixed top-5 left-5 z-30 animate-slide-in-top md:top-10 md:left-10"
+      class="fixed left-5 top-5 z-30 animate-slide-in-top md:left-10 md:top-10"
     >
       <button
         x-data="themeSwitcher"
@@ -312,7 +312,7 @@
       class="relative mt-16 flex items-center justify-center overflow-hidden"
     >
       <div
-        class="flex h-screen flex-col bg-gradient-to-r 30 p-8 shadow-sm transition-all duration-1000 sm:p-12 md:p-16 xl:p-24"
+        class="flex h-screen flex-col bg-gradient-to-r p-8 shadow-sm transition-all duration-1000 sm:p-12 md:p-16 xl:p-24"
         :class="webDevInView ? 'rounded-3xl w-11/12 md:w-10/12 scale-100' : 'w-full rounded-none scale-100'"
       >
         <h1
@@ -336,7 +336,7 @@
         </p>
       </div>
       <div
-        class="absolute top-48 md:top-0 md:bottom-0 right-12 -z-10 rounded-3xl"
+        class="absolute right-12 top-48 -z-10 rounded-3xl md:bottom-0 md:top-0"
         data-scroll
         data-scroll-speed="3"
         data-scroll-direction="vertical"
@@ -386,7 +386,7 @@
         </p>
       </div>
       <div
-        class="absolute top-48 md:top-0 md:bottom-0 left-12 -z-10 rounded-3xl"
+        class="absolute left-12 top-48 -z-10 rounded-3xl md:bottom-0 md:top-0"
         data-scroll
         data-scroll-speed="3"
         data-scroll-direction="vertical"
@@ -410,7 +410,7 @@
       <div
         class="relative flex min-h-screen w-full items-center justify-center"
       >
-        <div class="mx-auto w-full py-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="mx-auto w-full px-4 py-24 sm:px-6 lg:max-w-7xl lg:px-8">
           <div class="relative" data-scroll data-scroll-speed="8">
             <h2
               class="text-7xl font-extrabold tracking-tight text-zinc-700 dark:text-zinc-200 sm:text-8xl md:text-9xl"
