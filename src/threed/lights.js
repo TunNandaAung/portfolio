@@ -1,13 +1,13 @@
 import { AmbientLight, HemisphereLight, PointLight } from "three";
 
 export const useLights = () => {
-  const pointLight = new PointLight(0xffffff, 0.9);
+  const pointLight = new PointLight(0xffffff, 1000);
   pointLight.position.set(10, 10, 10);
 
-  const pointLight2 = new PointLight(0xffffff, 0.9);
+  const pointLight2 = new PointLight(0xffffff, 1000);
   pointLight2.position.set(-10, -10, -10);
 
-  const pointLight3 = new PointLight(0xffffff, 0.9);
+  const pointLight3 = new PointLight(0xffffff, 1000);
   pointLight3.position.set(0, 0, 0);
 
   const ambientLight = new AmbientLight(0xffffff, 2);
