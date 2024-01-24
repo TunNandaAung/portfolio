@@ -63,7 +63,8 @@ body {
   transform-origin: center top;
   transform-style: preserve-3d;
   transform: translateY(100%) rotateX(-80deg);
-  transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1),
+  transition:
+    opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1),
     transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
   /* font-size: 0; */
 }
@@ -90,12 +91,11 @@ body {
   background-image: radial-gradient(
       at 38% 90%,
       var(--indigo) 0,
-      transparent 41%
+      transparent 50%
     ),
     radial-gradient(at 2% 26%, var(--blue) 0, transparent 67%),
     radial-gradient(at 9% 49%, var(--cyan) 0, transparent 59%),
     radial-gradient(at 38% 42%, var(--indigo) 0, transparent 63%),
-    radial-gradient(at 80% 95%, var(--purple) 0, transparent 30%),
     radial-gradient(at 85% 59%, var(--pink) 0, transparent 83%);
 }
 
@@ -134,7 +134,9 @@ body {
   background: none repeat scroll 0 0 transparent;
   bottom: 2;
   content: "";
-  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+  transition:
+    width 0.5s ease 0s,
+    left 0.5s ease 0s;
   @apply absolute left-1/2 block h-1 w-0 rounded-full bg-gray-800 dark:bg-gray-200 sm:h-1.5 md:h-2;
 }
 
@@ -151,7 +153,9 @@ body {
   background: none repeat scroll 0 0 transparent;
   bottom: 2;
   content: "";
-  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+  transition:
+    width 0.5s ease 0s,
+    left 0.5s ease 0s;
   @apply absolute left-0 block h-1.5 w-0 animate-gradient-xy rounded-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-400 sm:h-2 md:h-2.5;
 }
 

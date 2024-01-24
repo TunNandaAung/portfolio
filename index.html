@@ -259,9 +259,25 @@
           class="absolute left-1/3 top-1/2 z-[1] -translate-y-1/2 opacity-50 transition-opacity duration-1000 ease-out hover:opacity-50 md:opacity-75 lg:left-1/2 lg:opacity-90"
         >
           <div
-            class="sm:[h-420px] header-box h-[390px] w-48 rounded-3xl transition-all sm:w-64 md:h-[500px] xl:w-80"
+            class="sm:[h-420px] header-box relative h-[390px] w-48 rounded-3xl transition-all sm:w-64 md:h-[500px] xl:w-80"
             x-ref="headerBox"
-          ></div>
+          >
+            <svg
+              class="absolute h-full w-full rounded-3xl dark:opacity-20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <filter id="noiseFilter">
+                <feTurbulence
+                  type="fractalNoise"
+                  baseFrequency="0.9"
+                  numOctaves="3"
+                  stitchTiles="stitch"
+                />
+              </filter>
+
+              <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+            </svg>
+          </div>
         </div>
         <h1
           class="title text-center text-8xl font-extrabold md:text-9xl xl:text-10xl"

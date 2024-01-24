@@ -20,12 +20,12 @@
   --circle-three-color: #e879f93f;
   --circle-four-color: #0891b23f;
   --bg-color: black;
-  --emerald: theme("colors.emerald.300");
-  --cyan: theme("colors.cyan.300");
-  --blue: theme("colors.blue.300");
-  --indigo: theme("colors.indigo.300");
-  --purple: theme("colors.purple.300");
-  --fuchsia: theme("colors.fuchsia.300");
-  --pink: theme("colors.pink.300");
-  --rose: theme("colors.rose.300");
+  --emerald: theme("colors.emerald.950");
+  --cyan: theme("colors.cyan.950");
+  --blue: theme("colors.blue.950");
+  --indigo: theme("colors.indigo.950");
+  --purple: theme("colors.purple.950");
+  --fuchsia: theme("colors.fuchsia.950");
+  --pink: theme("colors.pink.950");
+  --rose: theme("colors.rose.950");
 }
