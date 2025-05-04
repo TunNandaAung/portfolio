@@ -37,10 +37,7 @@
     />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://tunnandaaung.dev" />
-    <meta
-      property="og:image"
-      content="https://tunnandaaung.dev/banner.png"
-    />
+    <meta property="og:image" content="https://tunnandaaung.dev/banner.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@tunnandaaung" />
     <meta
@@ -51,10 +48,7 @@
       name="twitter:description"
       content="Full-stack developer with passion for technologies and building things."
     />
-    <meta
-      name="twitter:image"
-      content="https://tunnandaaung.dev/banner.png"
-    />
+    <meta name="twitter:image" content="https://tunnandaaung.dev/banner.png" />
 
     <title>Tun Nanda Aung - Full-Stack Developer</title>
 
@@ -84,7 +78,7 @@
 
     <!--Nav background placeholder-->
     <div
-      class="fixed right-6 top-3 z-20 h-10 w-10 transform animate-fade-in rounded-full bg-gradient-to-r from-fuchsia-50 to-pink-50 p-2 transition-all duration-[900ms] ease-in-out dark:from-slate-950 dark:to-slate-900 sm:p-4 md:right-12 md:top-7"
+      class="animate-fade-in bg-linear-to-r fixed right-6 top-3 z-20 h-10 w-10 transform rounded-full from-fuchsia-50 to-pink-50 p-2 transition-all duration-[900ms] ease-in-out dark:from-slate-950 dark:to-slate-900 sm:p-4 md:right-12 md:top-7"
       :class="{ 'scale-[100]': isMenuOpen, 'scale-100 rounded-full': !(isMenuOpen) }"
     ></div>
     <!--End nav background placeholder-->
@@ -92,8 +86,8 @@
     <button
       @click="isMenuOpen=!isMenuOpen"
       aria-label="Hamburger menu"
-      class="fixed right-5 top-2.5 z-30 animate-slide-in-top rounded-full p-2 sm:p-4 md:right-10 md:top-5"
-      :class="{ 'bg-transparent border-none':isMenuOpen, 'bg-gradient-to-r border-none from-fuchsia-50 to-pink-50 dark:from-slate-950 dark:to-slate-900':!(isMenuOpen) }"
+      class="animate-slide-in-top fixed right-5 top-2.5 z-30 rounded-full p-2 sm:p-4 md:right-10 md:top-5"
+      :class="{ 'bg-transparent border-none':isMenuOpen, 'bg-linear-to-r border-none from-fuchsia-50 to-pink-50 dark:from-slate-950 dark:to-slate-900':!(isMenuOpen) }"
     >
       <div
         class="relative z-20 flex h-8 w-8 flex-col items-center justify-center"
@@ -113,7 +107,7 @@
 
     <div
       x-cloak
-      class="fixed left-5 top-5 z-30 animate-slide-in-top md:left-10 md:top-10"
+      class="animate-slide-in-top fixed left-5 top-5 z-30 md:left-10 md:top-10"
     >
       <button
         x-data="themeSwitcher"
@@ -256,7 +250,7 @@
         class="relative"
       >
         <div
-          class="absolute left-1/3 top-1/2 z-[1] -translate-y-1/2 opacity-50 transition-opacity duration-1000 ease-out hover:opacity-50 md:opacity-75 lg:left-1/2 lg:opacity-90"
+          class="z-1 absolute left-1/3 top-1/2 -translate-y-1/2 opacity-50 transition-opacity duration-1000 ease-out hover:opacity-50 md:opacity-75 lg:left-1/2 lg:opacity-90"
         >
           <div
             class="sm:[h-420px] header-box relative h-[390px] w-48 rounded-3xl transition-all sm:w-64 md:h-[500px] xl:w-80"
@@ -280,12 +274,12 @@
           </div>
         </div>
         <h1
-          class="title text-center text-8xl font-extrabold md:text-9xl xl:text-10xl"
+          class="title xl:text-10xl text-center text-8xl font-extrabold md:text-9xl"
           ref="title"
           id="title"
         >
           <span
-            class="title-line bg-gradient-to-r from-gray-700 to-neutral-700 bg-clip-text text-transparent dark:from-gray-100 dark:to-neutral-100"
+            class="title-line bg-linear-to-r from-gray-700 to-neutral-700 bg-clip-text text-transparent dark:from-gray-100 dark:to-neutral-100"
           >
             Hello, World
           </span>
@@ -297,7 +291,7 @@
           data-scroll-position="top"
           data-scroll-target="#landing"
           data-scroll-repeat
-          class="header-desc relative z-[2] mx-auto mt-4 max-w-xl text-xl font-semibold leading-loose dark:text-white sm:text-left sm:text-2xl sm:leading-loose md:max-w-2xl md:text-3xl md:leading-loose lg:mx-0 lg:max-w-3xl lg:text-4xl lg:leading-loose xl:max-w-5xl"
+          class="header-desc z-2 relative mx-auto mt-4 max-w-xl text-xl font-semibold leading-loose dark:text-white sm:text-left sm:text-2xl sm:leading-loose md:max-w-2xl md:text-3xl md:leading-loose lg:mx-0 lg:max-w-3xl lg:text-4xl lg:leading-loose xl:max-w-5xl"
         >
           I am a full-stack developer who loves building things and exploring
           new technologies. I am passionate about building great user
@@ -319,13 +313,13 @@
       class="relative mt-16 flex items-center justify-center overflow-hidden"
     >
       <div
-        class="flex h-screen flex-col bg-gradient-to-r p-8 shadow-sm transition-all duration-1000 sm:p-12 md:p-16 xl:p-24"
+        class="bg-linear-to-r shadow-xs flex h-screen flex-col p-8 transition-all duration-1000 sm:p-12 md:p-16 xl:p-24"
         :class="webDevInView ? 'rounded-3xl w-11/12 md:w-10/12 scale-100' : 'w-full rounded-none scale-100'"
       >
         <h1
           data-scroll
           :class="webDevInView ? 'text-5xl sm:text-6xl md:text-7xl xl:text-9xl' : 'text-4xl sm:text-5xl md:text-6xl xl:text-8xl'"
-          class="block bg-gradient-to-r from-sky-900 to-cyan-900 bg-clip-text font-bold text-transparent transition-all duration-1000 dark:from-sky-100 dark:to-cyan-100"
+          class="bg-linear-to-r block from-sky-900 to-cyan-900 bg-clip-text font-bold text-transparent transition-all duration-1000 dark:from-sky-100 dark:to-cyan-100"
         >
           Web <span class="hidden sm:block">Development</span>
         </h1>
@@ -371,12 +365,12 @@
       class="relative mt-12 flex items-center justify-center overflow-hidden"
     >
       <div
-        class="flex h-screen flex-col bg-gradient-to-r p-8 shadow-sm transition-all duration-1000 sm:p-12 md:p-16 xl:p-24"
+        class="bg-linear-to-r shadow-xs flex h-screen flex-col p-8 transition-all duration-1000 sm:p-12 md:p-16 xl:p-24"
         :class="mobileDevInView ? 'rounded-3xl w-11/12 md:w-10/12 scale-100' : 'w-full rounded-none scale-100'"
       >
         <h1
           :class="mobileDevInView ? 'text-5xl sm:text-6xl md:text-7xl xl:text-9xl' : 'text-4xl sm:text-5xl md:text-6xl xl:text-8xl'"
-          class="block bg-gradient-to-r from-fuchsia-900 to-pink-900 bg-clip-text font-bold text-transparent transition-all duration-1000 dark:from-fuchsia-100 dark:to-pink-100"
+          class="bg-linear-to-r block from-fuchsia-900 to-pink-900 bg-clip-text font-bold text-transparent transition-all duration-1000 dark:from-fuchsia-100 dark:to-pink-100"
         >
           Mobile <span class="hidden sm:block">Development</span>
         </h1>
@@ -425,15 +419,15 @@
               <span class="block">GET IN TOUCH</span>
               <a
                 href="mailto:tna@duck.com"
-                class="mail-link mt-4 animate-gradient-xy bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-400 bg-clip-text text-transparent"
+                class="mail-link animate-gradient-xy bg-linear-to-r mt-4 from-fuchsia-500 via-pink-500 to-rose-400 bg-clip-text text-transparent"
               >
                 EMAIL ME
               </a>
             </h2>
 
-            <div class="flex lg:flex-shrink-0">
+            <div class="flex lg:shrink-0">
               <div
-                class="absolute -top-32 right-0 inline-flex animate-floating sm:-top-40 sm:right-24 md:-top-1/2"
+                class="animate-floating absolute -top-32 right-0 inline-flex sm:-top-40 sm:right-24 md:-top-1/2"
               >
                 <img
                   class="h-56 object-cover sm:h-64 md:h-72"
@@ -475,7 +469,7 @@
             Built with
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="mx-2 h-5 w-5 animate-heart-pulse text-pink-600"
+              class="animate-heart-pulse mx-2 h-5 w-5 text-pink-600"
               viewBox="0 0 20 20"
               fill="currentColor"
             >

@@ -1,14 +1,145 @@
-@import "./locomotive.css";
-@import "./theme.css";
-@import "./glitch.css";
-@import "./nav.css";
+@import "./locomotive.css" layer(base);
+@import "./theme.css" layer(base);
+@import "./glitch.css" layer(base);
+@import "./nav.css" layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@plugin '@tailwindcss/aspect-ratio';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: Epilogue, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+
+  --text-10xl: 10rem;
+  --text-10xl--line-height: 1.2;
+
+  --animate-floating: floating 3s ease-in-out infinite;
+  --animate-floating-alt: floating-alt 2.3s ease-in-out infinite;
+  --animate-floating-diagonal: floating-diagonal 3s ease-in-out infinite;
+  --animate-heart-pulse: heart-pulse 1s infinite;
+  --animate-gradient-x: gradient-x 5s ease infinite;
+  --animate-gradient-y: gradient-y 5s ease infinite;
+  --animate-gradient-xy: gradient-xy 5s ease infinite;
+  --animate-circular-rotation: circular-rotation 5s linear infinite;
+  --animate-slide-in-top: slide-in-top 0.5s ease-in-out forwards;
+  --animate-fade-in: fade-in 1.5s ease-in-out forwards;
+
+  @keyframes floating-diagonal {
+    0%,
+    100% {
+      transform: translateY(-10px) translateX(10px);
+    }
+    50% {
+      transform: translateY(5px) translateX(-5px);
+    }
+  }
+  @keyframes floating {
+    0%,
+    100% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+  @keyframes floating-alt {
+    0%,
+    100% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  @keyframes heart-pulse {
+    10% {
+      transform: scale(1.2);
+    }
+  }
+  @keyframes circular-rotation {
+    0% {
+      transform: rotate(0deg) translate(-20px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(-20px) rotate(-360deg);
+    }
+  }
+  @keyframes gradient-y {
+    0%,
+    100% {
+      background-size: 400% 400%;
+      background-position: center top;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: center center;
+    }
+  }
+  @keyframes gradient-x {
+    0%,
+    100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+  @keyframes gradient-xy {
+    0%,
+    100% {
+      background-size: 400% 400%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 ::selection {
-  background: theme("colors.indigo.600");
+  background: var(--color-indigo-600);
   color: white;
 }
 
@@ -137,7 +268,12 @@ body {
   transition:
     width 0.5s ease 0s,
     left 0.5s ease 0s;
-  @apply absolute left-1/2 block h-1 w-0 rounded-full bg-gray-800 dark:bg-gray-200 sm:h-1.5 md:h-2;
+  background: var(--color-gray-800);
+  @apply absolute left-1/2 block h-1 w-0 rounded-full sm:h-1.5 md:h-2;
+}
+
+.dark .social-link:after {
+  background: var(--color-gray-200);
 }
 
 .social-link:hover:after {
@@ -156,7 +292,7 @@ body {
   transition:
     width 0.5s ease 0s,
     left 0.5s ease 0s;
-  @apply absolute left-0 block h-1.5 w-0 animate-gradient-xy rounded-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-400 sm:h-2 md:h-2.5;
+  @apply animate-gradient-xy bg-linear-to-r absolute left-0 block h-1.5 w-0 rounded-full from-fuchsia-500 via-pink-500 to-rose-400 sm:h-2 md:h-2.5;
 }
 
 .mail-link:hover:after {

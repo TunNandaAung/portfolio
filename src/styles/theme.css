@@ -4,14 +4,14 @@
   --circle-three-color: #e879f93a;
   --circle-four-color: #0891b23a;
   --bg-color: #f7f2f2;
-  --emerald: theme("colors.emerald.200");
-  --cyan: theme("colors.cyan.200");
-  --blue: theme("colors.blue.200");
-  --indigo: theme("colors.indigo.200");
-  --purple: theme("colors.purple.200");
-  --fuchsia: theme("colors.fuchsia.200");
-  --pink: theme("colors.pink.200");
-  --rose: theme("colors.rose.200");
+  --emerald: var(--color-emerald-200);
+  --cyan: var(--color-cyan-200);
+  --blue: var(--color-blue-200);
+  --indigo: var(--color-indigo-200);
+  --purple: var(--color-purple-200);
+  --fuchsia: var(--color-fuchsia-200);
+  --pink: var(--color-pink-200);
+  --rose: var(--color-rose-200);
 }
 
 .dark {
@@ -20,12 +20,12 @@
   --circle-three-color: #e879f93f;
   --circle-four-color: #0891b23f;
   --bg-color: black;
-  --emerald: theme("colors.emerald.950");
-  --cyan: theme("colors.cyan.950");
-  --blue: theme("colors.blue.950");
-  --indigo: theme("colors.indigo.950");
-  --purple: theme("colors.purple.950");
-  --fuchsia: theme("colors.fuchsia.950");
-  --pink: theme("colors.pink.950");
-  --rose: theme("colors.rose.950");
+  --emerald: var(--color-emerald-950);
+  --cyan: var(--color-cyan-950);
+  --blue: var(--color-blue-950);
+  --indigo: var(--color-indigo-950);
+  --purple: var(--color-purple-950);
+  --fuchsia: var(--color-fuchsia-950);
+  --pink: var(--color-pink-950);
+  --rose: var(--color-rose-950);
 }
