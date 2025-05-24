@@ -1,10 +1,9 @@
-const { resolve } = require("path");
-const { defineConfig } = require("vite");
+import { resolve, default as path } from "path";
+import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
+import fs from "fs";
 
 function disableHistoryFallback() {
-  const path = require("path");
-  const fs = require("fs");
-
   const ALLOWLIST = [
     // internal requests
     /^\/__vite_ping/,
@@ -28,7 +27,7 @@ function disableHistoryFallback() {
         // remove query params from url (e.g., cache busts)
         const url = req.url.split("?")[0];
 
-        if (ALLOWLIST.some((pattern) => pattern.test(url))) {
+        if (ALLOWLIST.some(pattern => pattern.test(url))) {
           return next();
         }
 
@@ -47,7 +46,7 @@ function disableHistoryFallback() {
   };
 }
 
-module.exports = defineConfig({
+export default defineConfig({
   build: {
     rollupOptions: {
       input: {
@@ -56,5 +55,5 @@ module.exports = defineConfig({
       },
     },
   },
-  plugins: [disableHistoryFallback()],
+  plugins: [disableHistoryFallback(), tailwindcss()],
 });
